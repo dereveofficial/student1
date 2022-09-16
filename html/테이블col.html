@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>table-col</title>
+</head>
+<body>
+  <h1>테이블 컬럼지정</h1>
+  <p>
+    emmet 부모 > 자식
+    emmet 형제 + 바로뒤 형제
+  </p>
+  <p>
+    caption>colgroup caption 부모 colgroup 자식
+    <!-- table>caption>colgroup -->
+
+    caption+colgroup caption 형 colgroup 동생
+     <!-- table>caption+colgrup>col*3 -->
+  </p>
+  <table border="1" width="80%">
+    <caption>테이블 제목</caption>
+    <colgroup>
+      <col>
+      <col>
+      <col>
+    </colgroup>
+    <!-- 3줄 3칸 -->
+    <!-- tr*3>td*3>{내용} -->
+    <!-- 
+      3줄 tr*3
+      3칸 1줄 제목셀3  th*3
+          2,3줄 
+           1칸 제목셀 th
+           2,3칸 데이터셀 td*2
+     -->
+     <!-- 1줄 제목셀th3 th*3 -->
+     <!-- tr>th*3{내용} -->
+     <tr>
+      <th>내용</th>
+      <th>내용</th>
+      <th>내용</th>
+     </tr>
+     <!-- th+td+td는 th+td*2 -->
+     <!-- tr*2>th+td*2>{내용} -->
+  </table>
+
+  <hr>
+  <table>
+    <!-- caption colgroup이 형제하려면 caption+colgroup -->
+    <caption></caption>
+    <colgroup>
+      <!--col이 3개  -->
+      <col>
+      <col>
+      <col>
+    </colgroup>
+    <!-- 1줄 제목셀th3개 -->
+    <!-- tr>th*3>{제목} -->
+    <tr>
+      <th>제목</th>
+      <th>제목</th>
+      <th>제목</th>
+    </tr>
+    <!-- 2,3줄 
+           1칸 제목셀 th
+           2,3칸 데이터셀 td*2  -->
+    <!-- tr*2>th+td*2>{내용} -->
+    <tr>
+      <th></th>
+      <td>내용</td>
+      <td>내용</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>내용</td>
+      <td>내용</td>
+    </tr>
+
+  </table>
+</body>
+</html>
