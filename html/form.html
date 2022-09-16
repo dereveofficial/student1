@@ -7,24 +7,38 @@
   <title>Document</title>
 </head>
 <body>
-  <form action="">
+<form action="">
+<fieldset>
+<legend>폼연습</legend>
 
-  </form>
-  <form action="">
+<div>
+  <input type="checkbox" id="tv">
+  <label for="tv">TV</label>
+  <input type="checkbox" id="news">
+  <label for="news">뉴스</label>
+</div>
+<div>
+  <p>
+    라디오버튼<br>
+    라디오버튼을 그룹으로 묶을때 name값을 동일하게
+  </p>
+  <div>
+    <label for="shipping1">배</label>
+    <input type="radio" id="shipping1" name="shipping" checked>
+    <label for="shipping2">비행기</label>
+    <input type="radio" id="shipping2" name="shipping">
+    <label for="shipping3">기차</label>
+    <input type="radio" id="shipping3" name="shipping">
+  </div>
+  <div>
+    <input type="reset" value="취소">
+    <input type="submit" value="확인">
+  </div>
 
-    <fieldset>
-      <div>
-        
 
-          
-      </div>
-      <div>
-        <input type="reset">
-        <input type="submit">
-      </div>
-    </div>
+</div>
 
-    </fieldset>
-  </form>
+</fieldset>
+</form>
 </body>
 </html>
