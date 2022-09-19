@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자 연습</title>
+  <style>
+    /* #아이디 */
+    #section1{background-color: #77ff77;}
+    #section2{background-color: #e18035;}
+    #section3{background-color: #0953d5;}
+    /* .클래스 */
+    /* .box 문서내 모든 클래스box */
+    .box{color: #f00;}
+    /* 아이디클래스가 없으면 태그 선택자(type 선택자) */
+    h1{color: #00f;}
+    /* 조상 후손은 공백문자가 구분자 */
+    /* section p{color:#ff0;} */
+    /* 부모>자식  >구분자 */
+    section > p{color: #ff0;}
+    /* +인접형제 */
+    h1+p{background-color: #ccc;}
+    /* ~동생형제들 */
+    h1~p{background-color: #3a2;}
+  </style>
+</head>
+<body>
+  <!-- div#wrap
+  태그#아이디명 -->
+  <div id="wrap">
+    <header>헤더</header>
+    <div class="container">
+      <!-- section#section$*3 -->
+      <section id="section1">
+        <p>내용</p>
+        <div class="box">
+          <!-- h1+p+p -->
+          <!-- h1+p*2 -->
+          <p>형님</p>
+          <h1>섹션제목</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa ratione quo praesentium quia itaque sunt nemo recusandae. Explicabo rerum iusto autem perspiciatis blanditiis rem error, dignissimos qui quam accusamus illo!</p>
+          <p>동생</p>
+        </div>
+      </section>
+      <section id="section2">
+        <!-- p+.box -->
+        <p>내용</p>
+        <div class="box">
+          <!-- h1+p+p -->
+          <!-- h1+p*2 -->
+          <h1>섹션제목</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa ratione quo praesentium quia itaque sunt nemo recusandae. Explicabo rerum iusto autem perspiciatis blanditiis rem error, dignissimos qui quam accusamus illo!</p>
+          <p>동생</p>
+        </div>
+      </section>
+      <section id="section3">
+        <p>내용</p>
+        <div class="box">
+          <!-- h1+p+p -->
+          <!-- h1+p*2 -->
+          <h1>섹션제목</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa ratione quo praesentium quia itaque sunt nemo recusandae. Explicabo rerum iusto autem perspiciatis blanditiis rem error, dignissimos qui quam accusamus illo!</p>
+          <p>동생</p>
+        </div>
+      </section>
+
+    </div>
+    <footer>푸터</footer>
+
+  <!-- //#wrap
+   -->
+  </div>
+</body>
+</html>

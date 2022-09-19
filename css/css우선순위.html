@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css 우선순위</title>
+  <style>
+    .box{color:#333;} /*클래스 10점*/
+    div{color:#f00;} /*태그1점*/
+    div.box{color:#0f0;} /*태그+클래스11점*/
+  </style>
+</head>
+<body>
+  <!-- div.box>ul*2>li*3>{내용$} -->
+  <div class="box">
+    <ul>
+      <li>내용1</li>
+      <li>내용2</li>
+      <li>내용3</li>
+    </ul>
+    <ul>
+      <li>내용1</li>
+      <li>내용2</li>
+      <li>내용3</li>
+    </ul>
+  </div>
+</body>
+</html>
