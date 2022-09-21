@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>padding_width_height</title>
+  <style>
+    *{margin:0; padding:0;}
+    .wrap{
+      width:1190px;
+      /* 블록레벨 가운데 정렬 */
+      /* 부모에게 너비 지정 */
+      /* margin:0 auto; */
+      /* 2값 상하좌우 */
+      /*margin:
+      0 상하 0
+      auto 좌우 auto
+      */
+      margin:0 auto;
+    }
+    section{
+      /* padding:50px 100px; 2값은 상하 좌우 */
+      padding:2rem; /*body에 지정된 글자크기의 2배, 1값은 상우하좌 */
+      border:10px dashed #000; 
+      border-left:0;
+      border-right:0;
+      /* margin:2rem; */
+    }
+    .section1{
+      background-color: rgb(229, 174, 11);
+    }
+    .section2{
+      background-color: rgb(81, 194, 255)
+    }
+    .section3{
+      background-color: rgb(83, 235, 101);
+    }
+  </style>
+</head>
+<body><div class="wrap">
+  
+    <div class="slide">
+      슬라이드
+    </div>
+    <!-- section.section$*3>h1>{section$}^p>lorem -->
+    <section class="section1">
+      <h1>section1</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem cum quos quasi dolore, esse id! Deserunt itaque sit sunt vitae, nulla quam molestiae ipsa, praesentium autem ducimus beatae unde eaque.</p>
+    </section>
+    <section class="section2">
+      <h1>section2</h1>
+      <p>Odio ipsam rerum aut aliquam blanditiis iste explicabo impedit eveniet, possimus exercitationem, sint error iure nam beatae cum ab maxime deserunt mollitia numquam molestiae asperiores porro, vel officia ea! Pariatur.</p>
+    </section>
+    <section class="section3">
+      <h1>section3</h1>
+      <p>Nulla repellat eligendi, nam optio ratione expedita dicta assumenda sequi nihil laboriosam inventore quae recusandae ipsa minus repellendus voluptatum deleniti voluptate in quidem maiores culpa facilis labore! Labore, quas qui!</p>
+    </section>
+    <div class="notice">
+      공지사항
+    </div>
+</div>
+</body>
+</html>
