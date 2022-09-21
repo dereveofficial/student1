@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부모요소크기를 따르는 이미지크기</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .wrap{
+    width: 80%;
+    margin:0 auto;
+    background-color: #ccc;
+    }
+    .img-wrap{
+      /* 테스트 너비지정 */
+      width: 50%;
+      min-width: 200px;
+      max-width: 600px;
+      /* 테스트로 width min max */
+      /* border: 1px solid #000;
+      background-color: #f00;
+      margin: 50px 0; */
+    }
+    /* .img-wrap 후손 img태그 */
+    .img-wrap img{
+      display: block;
+      /* width: 100%; */
+      /* 부모의 사용가능한 컨텐츠영역 100% */
+      /* height: auto; */
+      /* height의 초기값은 auto */
+      /* max-width: 100%; */
+      /* width를 지정하지않고 max-widhth 100% */
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="img-wrap ex1">
+      <img src="../assets/images/cherryblossom.jpg" alt="이미지연습1">
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="img-wrap ex1">
+      <img src="../assets/images/cherryblossom.jpg" alt="이미지연습2">
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="img-wrap ex1">
+      <img src="../assets/images/cherryblossom.jpg" alt="이미지연습3">
+    </div>
+
+  </div>
+</body>
+</html>
