@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>너비와 높이 계산</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .container{
+      width:800px;
+      margin: 30px auto; /*블록레벨의 가운데정렬*/
+      padding: 50px;
+      border: 1px solid #000;
+      background-color: #ccc;
+      /* overflow: hidden; 부모요소에 넘치는건 보이지 말아줘 */
+    }
+    .box{
+      background-color: #ef3;
+      width: 700px;
+      border: 10px solid #0f0;
+      padding: 50px;
+      margin: 100px;
+    }
+    .ex1 .box{
+      min-height: 50px;
+    }
+    .ex2 .box{}
+    .ex3 .box{}
+  </style>
+</head>
+<body>
+  <!-- div.container.ex$*3>div.box>{내용$} -->
+  <div class="container ex1">
+    <div class="box">내용1</div>
+  </div>
+  <div class="container ex2">
+    <div class="box">내용2
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi eos quae aperiam hic tempore dignissimos odio id voluptatum non dolorem, sit ipsam a ad cupiditate officiis possimus facere tempora assumenda.
+    </div>
+  </div>
+  <div class="container ex3">
+    <div class="box">내용3</div>
+  </div>
+</body>
+</html>
