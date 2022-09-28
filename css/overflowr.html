@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>overflow</title>
+  <!-- 
+  .box{} 10
+  .box1{} 10
+  .box.box2{} 20
+  .box2{} 10 
+  #sect1.box{} 100+10 한요소에 아이디(레이아웃에 큰 영향을 미치는 기준점이 될 때)와 클래스가 다 선택되어 있을때
+  -->
+  <style>
+  .box{
+    width:300px; 
+    height: 100px; 
+    background-color: #ccc;
+    margin-bottom: 50px; 
+  }
+  .box2{overflow: scroll;}
+  .box3{overflow: auto;}
+  .box4{overflow: hidden;}
+  </style>
+</head>
+<body>
+  <!-- div.box.box$*4>lorem  -->
+  <!-- .box.box$*4>lorem  -->
+  <div class="box box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia accusantium ipsam sint libero voluptatem iste, aliquid culpa? Repellendus sed officia libero ratione at, labore quos nam fugiat, excepturi rem officiis.</div>
+  <div class="box box2">Ex ullam delectus dolorem in officiis repellat dolor natus animi commodi consequatur iure officia, non quis dicta sit. Quidem id quae blanditiis sit at iusto consequuntur delectus dolor et molestiae!</div>
+  <div class="box box3">Maxime quos omnis aliquid a recusandae voluptates distinctio vitae, illo alias deserunt qui ad ex tenetur voluptatum hic labore aliquam? Porro, quidem praesentium. Rem nobis quasi eos repellat corporis pariatur.</div>
+  <div class="box box4">Nihil enim soluta natus laborum, quis molestias neque aut repudiandae possimus sequi corrupti totam aliquid quam rerum alias incidunt, atque dolor ex vitae facilis et? Perspiciatis facilis corrupti animi neque.</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transform</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .section{
+      /* 슬로건 기준요소 */
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      /* background-image: url(background/images/bg.jpg);
+      background-position: center ;
+      background-repeat: no-repeat;
+      background-size: cover; */
+      background: url(background/images/bg.jpg) no-repeat center/cover;
+    }
+    .section .slogan{
+      /* 블록요소 수평수직 가운데 */
+      position: absolute; /*기준요소지정*/
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%); /*본인요소크기의 수평수직이동*/
+      padding: 25px 50px;
+      background-color: rgba(0,0,0,0.2);
+    }
+    .section .slogan span{
+      display: block;
+      color: #fff;
+      /* background-color: #666; */
+      text-align: center;
+    }
+    .section .slogan .title{
+      font-size: 100px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    }
+    .section .slogan .desc{
+      font-size: 20px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="section">
+    <div class="slogan">
+      <span class="title">Title title</span>
+      <span class="desc">Lorem ipsum dolor sit amet.</span>
+    </div>
+  </div>
+</body>
+</html>

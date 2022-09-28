@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>box-shadow</title>
+  <style>
+    *{margin: 0; padding:0;}
+    .box{
+      width:200px;
+      height: 200px;
+      background-color: #ccc;
+      margin-bottom: 50px;
+      margin: 0 auto 50px ; 
+      /* 상우하좌 : 좌우는 가운데 상하는 원하는만큼 줄수있다*/
+      box-shadow: 10px 20px 10px rgba(0, 0, 0, 1);
+    }
+    .box2{
+      /* box-shadow:0px 0px 10px  rgba(0, 0, 0, 1); */
+      box-shadow:0px 0px 10px 5px #bebcfe73;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="box box1"></div>
+  <div class="box box2"></div>
+</body>
+</html>
