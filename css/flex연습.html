@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex-3단갤러리</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .wrap{
+      padding: 1rem;
+      margin: 50px;
+      /* background-color: #ccc; */
+    }
+    .parent{
+      /* min-width: 1190px; */
+      max-width: 1190px;
+      margin: 0 auto;
+      display: flex;
+      /* flex기본값
+      flex-direction: row;
+      flex-wrap: nowrap;
+      flexitem넘쳐날때 줄바꿈여부
+      justify-content: flex-start;
+      align-items: stretch; */
+      flex-wrap: wrap;
+      padding: 1rem;
+      box-sizing: border-box;
+      /* background-color: #999; */
+    }
+    .parent .item{
+      /* flex 컨테이너 공간에 맞게 item 확장x
+      기본값 0*/
+      flex-grow: 0;
+      /* flex 컨테이너 공간에 맞게 item너비축소 기본값 1 */
+      flex-shrink: 0;
+      /* width:25%; 4단 */
+      /* width: 33.333%;3단 */
+      width: 33.333%;
+      /* height: 300px; 높이는 자식에게 */
+      padding: 1rem; 
+      /* 아이템간 여백 제거 */
+      /* border: 1px solid #000; */
+      box-sizing: border-box;
+      /* background-color: #666; */
+    }
+    .parent .item .inner{
+      height: 300px;
+      background-color: #ef8;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="parent">
+      <!-- .item.item$*7>.inner>{item$} -->
+      <div class="item item1">
+        <div class="inner">item1</div>
+      </div>
+      <div class="item item2">
+        <div class="inner">item2</div>
+      </div>
+      <div class="item item3">
+        <div class="inner">item3</div>
+      </div>
+      <div class="item item4">
+        <div class="inner">item4</div>
+      </div>
+      <div class="item item5">
+        <div class="inner">item5</div>
+      </div>
+      <div class="item item6">
+        <div class="inner">item6</div>
+      </div>
+      <div class="item item7">
+        <div class="inner">item7</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
