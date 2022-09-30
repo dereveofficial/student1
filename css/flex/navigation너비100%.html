@@ -26,7 +26,17 @@
     }
 
     .navigation{
-      width:100%;
+      /* 플렉스아이템 */
+      /* width:100%; */
+      /* 아이템의 고유크기를 지정방식
+      width/height가 지정돼있음 width 따르고
+      width/height도 basis도 없을 경우 플렉스 아이템이 자식크기만큼 */
+      flex-basis: auto;
+      /* 아이템이 컨테이너에 맞게 확정여부 */
+      flex-grow: 0;
+      /* 아이템이 컨테이너에 맞게 축소여부 축소해라가기본값 */
+      flex-shrink: 1;
+      
 
     }
     .navigation> ul{
