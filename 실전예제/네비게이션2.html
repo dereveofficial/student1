@@ -8,21 +8,33 @@
   <style>
     *{margin: 0; padding: 0; box-sizing: border-box;}
     ul,ol,li{list-style: none;}
-    
+
+    /*공통*/
+    /* body{ */
+      :root{
+      --header-height:150px;
+      --section-max-wdith:1200px;
+    }
+
+    .wrap{
+    }
+  
     header{
+      /* height: 120px; */
+      top: var(--header-height);
       position: relative;
       background-color: #f8e;
     }
     header .header_wrap{
+      max-width: var(--section-max-wdith);
       display: flex;
       /* 양끝정렬 균등여백 */
       justify-content: space-between;
       /* 교차축 가운데 */
       align-items: center;
-      background-color: #fe8;
       width: 90%;
-      max-width: 1200px;
       margin: 0 auto;
+      background-color: #fe8;
     }
     header .header_wrap .logo{
       width: 120px; height: 80px;
@@ -36,11 +48,11 @@
     
     /* .wrap{margin: 50px;} */
     nav{
-      padding: 1rem;
+      /* padding: 1rem; */
       background-color: #ccc;
     }
     .nav-wrap{
-      padding: 1rem;
+      /* padding: 1rem; */
       background-color: #999;
     }
     
@@ -48,25 +60,50 @@
       /* flex컨테이너 */
       display: flex;
       justify-content: center;
-      padding: 1rem;
+      /* padding: 1rem; */
       background-color: #666;
-      position: relative; /*기준요소*/
     }
     .nav-wrap li.d1{
       /* flex item */
       background-color: #333;
+      padding: 0 1.5rem;
+      line-height: var(--header-height);
+      /* height: var(--header-height); */
     }
     .nav-wrap li.d1 div.d2{
+      display: none;
       position: absolute;
       left: 0px;
-      top: 0px;
+      top: var(--header-height);
+      border: 1px solid #f00;
+      background-color: #ccc;
+      width: 100%;
+      line-height: 1.5;
     }
+
+    .nav-wrap li.d1:hover div.d2{
+      display: block;
+    }
+
+    .nav-wrap li.d1 div.d2 ul{
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      width: 90%;
+      max-width: var(--section-max-wdith);
+      background-color: #999;
+    }
+    .nav-wrap li.d1 div.d2 ul li{
+      padding:1rem 1.5rem;
+    }
+
     
   </style>
 </head>
 <body>
   <!-- 아키테이블 d2스타일 -->
   <!-- nav>.nav-wrap>ul>li.d1.menu$*4>{menu$}+.d2>ul>li.sub$*3>{sub$} -->
+  <!-- nav>.nav-wrap>ul>li.d1.menu$*4>{menu$}+.d2>ul>li.sub$*3>{sub$}-->
   <div class="wrap">
     <header>
       <div class="header_wrap">
@@ -78,9 +115,9 @@
                 menu1
                 <div class="d2">
                   <ul>
-                    <li class="sub1">sub1</li>
-                    <li class="sub2">sub2</li>
-                    <li class="sub3">sub3</li>
+                    <li class="sub1">sub11</li>
+                    <li class="sub2">sub12</li>
+                    <li class="sub3">sub13</li>
                   </ul>
                 </div>
               </li>
@@ -88,9 +125,9 @@
                 menu2
                 <div class="d2">
                   <ul>
-                    <li class="sub1">sub1</li>
-                    <li class="sub2">sub2</li>
-                    <li class="sub3">sub3</li>
+                    <li class="sub1">sub21</li>
+                    <li class="sub2">sub22</li>
+                    <li class="sub3">sub23</li>
                   </ul>
                 </div>
               </li>
@@ -98,9 +135,9 @@
                 menu3
                 <div class="d2">
                   <ul>
-                    <li class="sub1">sub1</li>
-                    <li class="sub2">sub2</li>
-                    <li class="sub3">sub3</li>
+                    <li class="sub1">sub31</li>
+                    <li class="sub2">sub32</li>
+                    <li class="sub3">sub33</li>
                   </ul>
                 </div>
               </li>
@@ -108,20 +145,19 @@
                 menu4
                 <div class="d2">
                   <ul>
-                    <li class="sub1">sub1</li>
-                    <li class="sub2">sub2</li>
-                    <li class="sub3">sub3</li>
+                    <li class="sub1">sub41</li>
+                    <li class="sub2">sub42</li>
+                    <li class="sub3">sub43</li>
                   </ul>
                 </div>
               </li>
             </ul>
           </div>
         </nav>
-        <div class="util">유틸</div> 
+        <div class="util">유틸</div>
       </div>
     </header>
   </div>
-  
-
 </body>
+
 </html>
