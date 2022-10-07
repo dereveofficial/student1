@@ -324,4 +324,53 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap{
 
 
 /* .header_util */
-.header_util{background-color: #999;}
+.header_util{
+  display: flex;
+}
+.header_util .header_lang{}
+.header_lang a{
+  color:#000;/*수정*/
+  font-size:0.8rem;
+}
+.header_lang a[aria-selected="false"]{
+  opacity:0.5; /*추가*/
+}
+.header_lang a:first-child{
+  position: relative; /*:after의 기준요소*/
+  margin:0 20px 0 0;
+  /* color:#000; 삭제*/
+}
+.header_lang a:first-child:after{
+  content:'';
+  display: block;
+  position: absolute;
+  top:0; left: 36px;
+  width:2px; height: 100%;
+  background-color: #000;
+
+}
+.header_util .sitemap_box{
+   width:24px; height: 24px;
+   margin-left:2rem;
+   /* background-color: #f8e; */
+}
+.sitemap_box .btn_sitemap{
+  display: block;
+  width:100%; 
+  height: 100%;
+  position: relative;/*햄버거메뉴 용 span의 기준요소*/
+}
+.sitemap_box .btn_sitemap .btn_line{
+  display: block;
+  position: absolute;
+  right:0;
+  /* width: 100%;  */
+  height: 2px;
+  background-color: #000;
+}
+.sitemap_box .btn_sitemap span:nth-of-type(2){
+  top:2px; width:calc(100% - 5px)}
+.sitemap_box .btn_sitemap span:nth-of-type(3){
+  top:11px; width: calc(100% - 8px);}
+.sitemap_box .btn_sitemap span:nth-of-type(4){
+  top:20px; width:100%;}
