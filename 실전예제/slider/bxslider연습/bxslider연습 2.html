@@ -5,17 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>bxslider연습</title>
-  <!-- <link href="src/css/jquery.bxslider.css" rel="stylesheet" /> -->
+  <link href="src/css/jquery.bxslider.css" rel="stylesheet" />
 	<link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
   <!-- bxSlider CSS file -->
 
-	<ul class="visual">
-		<li><img src="../images/img_main_slide7.jpg" /></li>
-		<li><img src="../images/img_main_slide9.jpg" /></li>
-		<li><img src="../images/img_main_slide10.jpg" /></li>
-	</ul>
+	<div class="box-wrap">
+		<ul class="visual">
+			<li><img src="../images/img_main_slide7.jpg" /></li>
+			<li><img src="../images/img_main_slide9.jpg" /></li>
+			<li><img src="../images/img_main_slide10.jpg" /></li>
+		</ul>
+	</div>
 	
 	<!-- jQuery library -->
 	<script src="src/vendor/jquery-3.1.1.min.js"></script>
@@ -30,8 +32,8 @@
 				moveSlides: 1,    //한번에 움직일 슬라이드 수
 				infiniteLoop: true, //무한루프
 				// slideWidth: 660,  슬라이드의 크기 지정
-				// minSlides: 3, 한번에 보여질 슬라이드 수
-				// maxSlides: 3, 한번에 보여질 슬라이드 수
+				// minSlides: 2, 한번에 보여질 슬라이드 수
+				// maxSlides: 2, 한번에 보여질 슬라이드 수
 				speed: 800,
 			});
 		});

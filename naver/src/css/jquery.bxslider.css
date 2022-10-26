@@ -29,13 +29,13 @@ ul.bxslider {
 }
 /** THEME
 ===================================*/
-/* .bx-wrapper {
-  -moz-box-shadow: 0 0 5px #ccc;
+.bx-wrapper {
+  /* -moz-box-shadow: 0 0 5px #ccc;
   -webkit-box-shadow: 0 0 5px #ccc;
   box-shadow: 0 0 5px #ccc;
   border: 5px solid #fff;
-  background: #fff;
-} */
+  background: #fff; */
+}
 .bx-wrapper .bx-pager,
 .bx-wrapper .bx-controls-auto {
   position: absolute;
@@ -66,21 +66,18 @@ ul.bxslider {
   background: #ccc;/*수정*/
   text-indent: -9999px;
   display: block;
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  outline: 0;
+  width: 10px;height: 10px;margin: 0 5px;outline: 0;
   border: 2px solid #666;/*추가*/
   -moz-border-radius: 50%;/*수정*/
-  -webkit-border-radius: 5px;/*수정*/
-  border-radius: 50%; /*수정*/
+  -webkit-border-radius: 50%;/*수정*/
+  border-radius: 50%;/*수정*/
   box-sizing: border-box; /*추가*/
 }
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active,
 .bx-wrapper .bx-pager.bx-default-pager a:focus {
-  background: #0f0; /*수정*/
-  border: 2px solid #0f0;/*추가*/
+  background: #0f0;/*수정*/
+  border: 2px solid #0f0; /*추가*/
 }
 .bx-wrapper .bx-pager-item,
 .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
@@ -96,7 +93,7 @@ ul.bxslider {
 /* DIRECTION CONTROLS (NEXT / PREV) */
 .bx-wrapper .bx-prev {
   left: 10px;
-  background: url(../images/controls.png') no-repeat 0 -32px;
+  background: url('../images/controls.png') no-repeat 0 -32px;
 }
 .bx-wrapper .bx-prev:hover,
 .bx-wrapper .bx-prev:focus {
@@ -104,7 +101,7 @@ ul.bxslider {
 }
 .bx-wrapper .bx-next {
   right: 10px;
-  background: url(../images/controls.png') no-repeat -43px -32px;
+  background: url('../images/controls.png') no-repeat -43px -32px;
 }
 .bx-wrapper .bx-next:hover,
 .bx-wrapper .bx-next:focus {

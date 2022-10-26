@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .test{
+      width:270px; height:70px;
+      box-sizing: border-box;
+      background:no-repeat center url(../logo.jpg);
+    }
+    .hide-text{
+      text-indent: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .visually-hidden{
+      clip: rect(1px, 1px, 1px, 1px);
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      margin: -1px;
+    }
+  </style>
+</head>
+<body>
+  <div class="hide-text test">
+    텍스트
+  </div>
+
+  <div class="test">
+    <span class="visually-hidden">텍스트</span>
+  </div>
+</body>
+</html>
