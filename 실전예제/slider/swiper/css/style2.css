@@ -1,0 +1,15 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul,ol,li{list-style: none;}
+
+/* swiper */
+.swiper{}
+.swiper .swiper-wrapper{}
+.swiper .swiper-wrapper .swiper-slide{}
+.swiper-slide img{
+  width: 100%; /* 부모의크기에 맞게 이미지 크기 조정 */
+  /* max-width: 100%; 원래 이미지크기 이상 되지 말아라 */
+  height: auto;
+}
+
+/* 가변이미지 */

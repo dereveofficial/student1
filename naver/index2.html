@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>navercorp -swiper</title>
-  <link rel="stylesheet" href="src/css/jquery.bxslider.css">
-  <link rel="stylesheet" href="css/style.css">
+  <title>navercorp - swiper</title>
+  <link rel="stylesheet" href="src/css/swiper8.4.3-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
@@ -397,61 +397,234 @@
   <!-- //header -->
   <!-- 본문 .container -->
   <div class="container">
-    <!-- 슬라이드 .main_slide -->
-    <div class="main_slide">
-      <div>
-        <div>
-          <a href="https://1784.navercorp.com" target="_blank" class="slide_info_box">
-            <h2 class="slide_logo"><span class="blind">네이버 1784</span></h2>
-            <div class="slide_text_box">
-              <p class="slide_title"><strong>네이버 1784에서<br>우리는 혁신을 현실로 만들고 있습니다.</strong></p>
-              <p class="slide_text"><span>네이버의 다양한 기술들로 실험과 도전, 융합을 통해<br>새로운 기회와 가능성을 만들어 갑니다.</span></p>
-            </div>
-          </a>
+    <!-- .swiper.mySwiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div></div>
+          <div><img src="img/main/img_main_slide7.jpg" /></div>
         </div>
-        <div><img src="img/main/img_main_slide7.jpg" /></div>
+        <div class="swiper-slide">
+          <div></div>
+          <div><img src="img/main/img_main_slide9.jpg" /></div>
+        </div>
+        <div class="swiper-slide">
+          <div></div>
+          <div><img src="img/main/img_main_slide10.jpg" /></div>
+        </div>
       </div>
-      <div>
-        <div></div>
-        <div><img src="img/main/img_main_slide9.jpg" /></div>
-      </div>
-      <div>
-        <div></div>
-        <div><img src="img/main/img_main_slide10.jpg" /></div>
-      </div>
+      <!-- //.swiper-wrapper -->
+      <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
     </div>
-    <!-- //슬라이드  .main_slide-->
+    <!-- //슬라이드  .swiper.mySwiper-->
+    <!-- .main_content -->
+    <div class="main_content">
+      <ul class="content_summary">
+          <!-- li.summary_container*4>h3.summary_title+.text_wrap>p.title_text>strong^p.desc_text^a.summary_link -->
+          <li class="summary_container news">
+            <h3 class="summary_title">NEWS</h3>
+            <div class="text_wrap">
+              <p class="title_text"><strong>네이버클라우드, 인텔과 동남아 클라우드 시장 진출 위한 협력 강화</strong></p>
+              <p class="desc_text">
+							네이버클라우드, 인텔과 동남아 클라우드 시장 진출 위한 협력 강화 
+              - 동남아 MSP 모색 및 인텔 파트너와 현지 진출 통한 공동 개발 체계 형성
+              - 네이버클라우드 스타트업 지원 프로그램 내 인텔과의 네트워크 기회 확대 2022-10-12 (사진설명) 인텔 아태 지역 총괄 부사장 스티브 롱(왼쪽)과 네이버클라
+              </p>
+            </div>
+            <a href="" class="summary_link">바로가기 <span class="icon_arrow"></span></a>
+          </li>
+          <li class="summary_container career">
+            <h3 class="summary_title">career</h3>
+            <div class="text_wrap">
+              <p class="title_text"><strong>수 많은 사용자의 목소리에서<br>내 일의 자부심과 무게를 느낍니다.</strong></p>
+              <!-- <p class="desc_text"></p> -->
+            </div>
+            <a href="" class="summary_link">네이버에서 일한다는 것 <span class="icon_arrow"></span></a>
+          </li>
+          <li class="summary_container stock1">
+            <h3 class="summary_title">stock</h3>
+            <div class="text_wrap">
+              <p class="price">161,500<span class="unit">원</span></p>
+              <span class="figure type2">3,000</span>
+              <p class="date">KRX 2022.10.12</p>
+            </div>
+            <a href="" class="summary_link">주가정보 <span class="icon_arrow"></span></a>
+          </li>
+          <li class="summary_container stock2">
+            <h3 class="summary_title">결산공고</h3>
+            <div class="text_wrap">
+              <p class="title_text"><strong>>네이버의 재무상태표를 확인<br class="break"> 할 수 있습니다.</strong></p>
+              <!-- <p class="desc_text"></p> -->
+            </div>
+            <a href="" class="summary_link">결산공고 보러가기 <span class="icon_arrow"></span></a>
+          </li>
+      </ul>
+      <!-- //.content_summary -->
+      <div class="content_service">
+        <!-- ul.service_list_container>li.service_thumbnail_box*6>a>div.thumbnail>img^.description>p.title_text+p.desc_text>lorem7 -->
+        <ul class="service_list_container">
+          <li class="service_thumbnail_box">
+            <a href="">
+              <div class="thumbnail"><img src="img/main/img_main_content13.png" alt=""></div>
+              <span class="description">
+                <p class="title_text">Lorem, ipsum.</p>
+                <p class="desc_text">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+              </span>
+            </a>
+          </li>
+          <li class="service_thumbnail_box">
+            <a href="">
+              <div class="thumbnail"><img src="img/main/img_main_content14.png" alt=""></div>
+              <span class="description">
+                <p class="title_text">Lorem, ipsum.</p>
+                <p class="desc_text">Laboriosam aspernatur omnis sunt deleniti, esse officiis?</p>
+              </span>
+            </a>
+          </li>
+          <li class="service_thumbnail_box">
+            <a href="">
+              <div class="thumbnail"><img src="img/main/img_main_content15.png" alt=""></div>
+              <span class="description">
+                <p class="title_text">Lorem, ipsum.</p>
+                <p class="desc_text">Pariatur sunt similique exercitationem eveniet dolorum dolores.</p>
+              </span>
+            </a>
+          </li>
+          <li class="service_thumbnail_box">
+            <a href="">
+              <div class="thumbnail"><img src="img/main/img_main_content18.png" alt=""></div>
+              <span class="description">
+                <p class="title_text">Lorem, ipsum.</p>
+                <p class="desc_text">Ullam iure expedita amet, impedit itaque blanditiis.</p>
+              </span>
+            </a>
+          </li>
+          <li class="service_thumbnail_box">
+            <a href="">
+              <div class="thumbnail"><img src="img/main/img_main_content19.png" alt=""></div>
+              <span class="description">
+                <p class="title_text">Lorem, ipsum.</p>
+                <p class="desc_text">Sapiente, quisquam illo. Voluptatem, eligendi obcaecati. Assumenda!</p>
+              </span>
+            </a>
+          </li>
+          <li class="service_thumbnail_box">
+            <a href="">
+              <div class="thumbnail"><img src="img/main/img_main_content4.png" alt=""></div>
+              <span class="description">
+                <p class="title_text">Lorem, ipsum.</p>
+                <p class="desc_text">Sed pariatur eaque labore magni ab ipsum.</p>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- //.content_service -->
+      <div class="content_support">
+       <div class="support_info_top">
+        <h3 class="support_title">기술로 다양성을 꽃피우는 플랫폼</h3>
+        <p class="support_text">개인의 다양한 가능성이 의미있는 성공으로 꽃피울 수 있도록 <br/> 네이버가 서비스와 기술플랫폼을 통해 더 가까이 서포트(SUPPORT)합니다. </p>
+       </div>
+       <ul class="support_list_container">
+        <!-- li.support_list_box*4>a>dl.description>dt.title_text>lorem2^dd.desc_text>span.text_line>lorem15 -->
+        <li class="support_list_box">
+          <a href="">
+            <dl class="description">
+              <dt class="title_text">Lorem, ipsum.</dt>
+              <dd class="desc_text"><span class="text_line">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span>Inventore magni quos rem at voluptas similique.</dd>
+            </dl>
+          </a>
+        </li>
+        <li class="support_list_box">
+          <a href="">
+            <dl class="description">
+              <dt class="title_text">Dicta, vero.</dt>
+              <dd class="desc_text"><span class="text_line">Odit porro ad aliquid. Illum blanditiis a numquam </span>dolores delectus obcaecati at distinctio nesciunt sit.</dd>
+            </dl>
+          </a>
+        </li>
+        <li class="support_list_box">
+          <a href="">
+            <dl class="description">
+              <dt class="title_text">Expedita, adipisci!</dt>
+              <dd class="desc_text"><span class="text_line">Enim libero sunt veniam, sed aliquid sequi et eligendi</span> optio labore ipsa? Minus, quod nostrum.</dd>
+            </dl>
+          </a>
+        </li>
+        <li class="support_list_box">
+          <a href="">
+            <dl class="description">
+              <dt class="title_text">Maiores, ipsam.</dt>
+              <dd class="desc_text"><span class="text_line">Adipisci sed sunt nemo asperiores ut, eligendi </span>beatae optio magnam aperiam pariatur amet quos possimus.</dd>
+            </dl>
+          </a>
+        </li>
+       </ul>
+      </div>
+      <!-- //.content_support -->
+    </div>
+    <!-- //.main_content -->
   </div>
   <!-- //본문  //.container-->
 
 
-  <footer>
 
+   <!-- div.footer_wrap>strong.footer_logo>span.blind^ul.footer_menu>li*3>a.footer_menu_item^^div.affiliate_box>button[type="button"]+ul.affiliate_list>li.affiliate_itme*7>a>span^^^^p.footer_copy>strong  -->
+   <footer>
+    <div class="footer_wrap">
+      <strong class="footer_logo flex_item">
+        <span class="blind">naver</span>
+      </strong>
+    <ul class="footer_menu flex_item">
+      <li><a href="" class="footer_menu_item">제휴제안</a></li>
+      <li><a href="" class="footer_menu_item">기업윤리상담센터</a></li>
+      <li><a href="" class="footer_menu_item">개인정보처리방침</a></li>
+    </ul>
+    <div class="affiliate_box flex_item">
+      <button type="button">자회사바로가기</button>
+      <ul>
+        <li><a href=""><span>text</span></a></li>
+        <li><a href=""><span>text</span></a></li>
+        <li><a href=""><span>text</span></a></li>
+        <li><a href=""><span>text</span></a></li>
+        <li><a href=""><span>text</span></a></li>
+        <li><a href=""><span>text</span></a></li>
+        <li><a href=""><span>text</span></a></li>
+      </ul>
+    </div>
+    <p class="footer_copy flex_item">
+      Copyright ©
+      <strong>NAVER Corp.</strong>
+      All Rights Reserved.
+  </p>
+  </div> 
+    
   </footer>
 
 
-  <!-- jquery 연결 -->
-  <script src="src/vendor/jquery-3.1.1.min.js"></script>
-  <!-- bxslide 플러그인 연결 -->
-  <script src="src/js/jquery.bxslider.js"></script>
-  <!-- bxlide 적용 -->
+
+  <!-- swiper 플러그인 연결 -->
+  <script src="src/js/swiper8.4.3-bundle.min.js"></script>
+  <!-- swiper적용 -->
   <script>
-    $(document).ready(function () {
-      $('.main_slide').bxSlider({
-        // mode: 'horizontal',  //움직이는 방향 수평
-        //mode: 'vertical', //움직이는 방향 수직
-        mode: 'fade',   //슬라이드 페이드인 아웃
-        moveSlides: 1,    //한번에 움직일 슬라이드 수
-        infiniteLoop: true, //무한루프
-        // slideWidth: 660,  슬라이드의 크기 지정
-        //minSlides: 2, 한번에 보여질 슬라이드 수
-        //maxSlides: 2, 한번에 보여질 슬라이드 수
-        speed: 400,
-        auto: true,
-        // autoControls: true,
-        stopAutoOnClick: true,
-      });
-    });
+    var swiper1 = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+    }); 
+   
   </script>
 </body>
 
