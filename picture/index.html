@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index-picture</title>
+</head>
+<body>
+  <h1>
+    picture태그
+  </h1>
+  <hr>
+  <p class="desc">
+    사진,이미지 등을 반응형으로 넣을때 사용합니다.
+  </p>
+  <div class="picture-wrap">
+    <picture>
+      <source srcset="img/img_480x800.jpg" media="(max-width:576px)">
+      <source srcset="img/img_768x768.jpg" media="(max-width:768px)">
+      <source srcset="img/img_1920x810.jpg" media="(max-width:1200px)">
+      <img src="img/img_1920x810.jpg" alt="이미지설명">
+    </picture>
+  </div>
+
+  <style>
+    *{margin: 0; padding: 0;}
+    *{box-sizing: border-box;}
+    /* 
+    가변이미지
+    블록요소 부모 너비지정
+    img요소(picture전체) 자식 부모의 너비를 따르게하세요
+    */
+
+    h1{
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      background-color: rgba(255,255,255,0.5);
+    }
+    p.desc{
+      position: absolute;
+      top: 50px;
+      width: 100%;
+      background-color: rgba(255,255,255,0.5);
+    }
+    .picture-wrap{
+      width: 100%;
+    height: 100vh;}
+
+  
+    .picture-wrap picture img{
+      object-fit: cover;
+      object-position: left center;
+      width: 100vw;
+      height: 100vh;
+      /* heigt:auto; 
+      이미지 가로세로비율 유지하며 사이즈조절 */
+      /* 이미지크기상관없이 무조건 꽉채워라 위드스 */
+      /* 이미지 자신의 크기보다 커지지 말아라는 맥스위드스 */
+      /* max-width: 100%; */
+    }
+
+  </style>
+
+</body>
+</html>
