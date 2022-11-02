@@ -1,0 +1,17 @@
+.xans-board-listsgroup { margin:0 0 20px; }
+.xans-board-listsgroup h3 { padding:0 0 10px; }
+.xans-board-listsgroup div.boardList { color:#8f8f8f; padding:0 0 6px; border-bottom:3px solid #333; font-size:.9em; }
+.xans-board-listsgroup table th { padding:9px 0 7px; border-top:3px solid #333; border-bottom:3px solid #333; font-weight:normal; color:#202020; }
+.xans-board-listsgroup table td { line-height:1.4em;  text-align:center; padding:9px 0 7px; border-top:1px solid #e9e9e9;}
+.xans-board-listsgroup table .number { width:52px; }
+.xans-board-listsgroup table .category { width:104px; }
+.xans-board-listsgroup table td.category { width:94px; }
+.xans-board-listsgroup table .subject {}
+.xans-board-listsgroup table td.subject { text-align:left; }
+.xans-board-listsgroup table .subject img { vertical-align:middle; margin:0 1px; }
+.xans-board-listsgroup table .name { width:84px; }
+.xans-board-listsgroup table .date { width:74px; }
+.xans-board-listsgroup table .hit { width:45px; }
+.xans-board-listsgroup table .grade { width:60px; }
+.xans-board-listsgroup table .writer { width:84px; }
+.xans-board-listsgroup table .recom { width:45px; }

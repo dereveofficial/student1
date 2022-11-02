@@ -1,0 +1,97 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <h3>현재 위치</h3>
+    <ol>
+        <li class="first"><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>상품검색</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2><span>상품검색</span></h2>
+</div>
+
+<div module="search_form">
+<!--@css(/css/module/product/search_form.css)-->
+    <div id="searchBox">
+        <fieldset>
+            <legend>상품 검색</legend>
+            <p><strong>상품분류</strong>{$form.category_no}</p>
+            <p><strong>{$keyword_name}</strong>{$form.keyword}</p>
+            <p><strong>판매가격대</strong>{$form.product_price1} ~ {$form.product_price2}</p>
+            <p><strong>검색정렬기준</strong>{$form.order_by}</p>
+            <p class="btn"><input type="image" src="http://img.echosting.cafe24.com/design/skin/mono/product/btn_prdSearch.gif" alt="검색" /></p>
+        </fieldset>
+    </div>
+
+    <div id="searchResult">
+        <p class="record">총 <span>{$total_count}</span>개 의 상품이 검색되었습니다.</p>
+        <!-- ul class="viewType">
+            <li class="btn_view" rel='image' style='{$imageBold}' ><img src="http://img.echosting.cafe24.com/design/skin/mono/product/ico_viewImg.gif" alt="" /> <span>이미지형</span></li>
+            <li class="btn_view" rel='zoomin' style='{$zoominBold}' ><img src="http://img.echosting.cafe24.com/design/skin/mono/product/ico_viewZoom.gif" alt="" /> <span>확대형</span></li>
+            <li class="btn_view" rel='list' style='{$listBold}' ><img src="http://img.echosting.cafe24.com/design/skin/mono/product/ico_viewList.gif" alt="" /> <span>리스트형</span></li>
+        </ul -->
+        <ul class="listType">
+            <li class="btn_order first" rel='name' style='{$nameBold}' >상품명순</li>
+            <li class="btn_order" rel='price' style='{$priceBold}'>높은가격순</li>
+            <li class="btn_order" rel='priceasc' style='{$priceascBold}'>낮은가격순</li>
+            <li class="btn_order" rel='manu_name' style='{$manu_nameBold}'>제조사순</li>
+        </ul>
+    </div>
+
+    <p class="nodata {$search_fail_display|display}">검색결과가 없습니다.</p>
+</div>
+
+<div module="Search_Result">
+<!--@css(/css/module/product/search_result.css)-->
+<!--@js(/js/module/product/search_result.js)-->
+<!--
+$count = 8
+-->
+    <ul>
+        <li>
+            <a href="/product/detail.html{$param}" class="prdImg"><img src="{$image_medium}" alt="" /></a>
+            <span class="zoom">{$zoom_icon}</span>
+            <a href="/product/detail.html{$param}" class="name">{$product_name}</a>
+            <strong class="price">{$price_unit_head}{$product_price}{$price_unit_tail}</strong>
+            <span class="btns">
+                <span class="bag"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_bag.gif" alt="장바구니넣기" onclick='{$basket_action}' class="{$basket_display|display}" /></span>
+                <span class="option">{$option_preview_icon}</span>
+            </span>
+        </li>
+        <li>
+            <a href="/product/detail.html{$param}" class="prdImg"><img src="{$image_medium}" alt="" /></a>
+            <span class="zoom">{$zoom_icon}</span>
+            <a href="/product/detail.html{$param}" class="name">{$product_name}</a>
+            <strong class="price">{$price_unit_head}{$product_price}{$price_unit_tail}</strong>
+            <span class="btns">
+                <span class="bag"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_bag.gif" alt="장바구니넣기" onclick='{$basket_action}' class="{$basket_display|display}" /></span>
+                <span class="option">{$option_preview_icon}</span>
+            </span>
+        </li>
+    </ul>
+</div>
+
+<div module="search_paging">
+    <!--@css(/css/module/product/search_paging.css)-->
+    <!--@js(/js/module/product/search_paging.js)-->
+
+    <p><a href="{$param_first}"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_pageFirst.gif" alt="첫 페이지" /></a> </p>
+    <p><a href="{$param_before}"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_pagePrev.gif" alt="이전 페이지" /></a></p>
+
+    <ol>
+        <li><a href="{$param}" title="페이지로 이동">[{$no}]</a></li>
+        <li><a href="{$param}" title="페이지로 이동">[{$no}]</a></li>
+        <li><a href="{$param}" title="페이지로 이동">[{$no}]</a></li>
+        <li><a href="{$param}" title="페이지로 이동">[{$no}]</a></li>
+        <li><a href="{$param}" title="페이지로 이동">[{$no}]</a></li>
+        <li><a href="{$param}" title="페이지로 이동">[{$no}]</a></li>
+        <li><a href="{$param}" title="페이지로 이동">[{$no}]</a></li>
+        <li><a href="{$param}" title="페이지로 이동">[{$no}]</a></li>
+        <li><a href="{$param}" title="페이지로 이동">[{$no}]</a></li>
+        <li><a href="{$param}" title="페이지로 이동">[{$no}]</a></li>
+    </ol>
+
+    <p><a href="{$param_next}"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_pageNext.gif" alt="다음 페이지" /></a> </p>
+    <p><a href="{$param_last}"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_pageLast.gif" alt="마지막 페이지" /></a></p>
+</div>

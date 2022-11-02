@@ -1,0 +1,14 @@
+.xans-myshop-boardlistPaging { clear:both; text-align:center; }
+.xans-myshop-boardlistPaging { padding:13px 0; }
+.xans-myshop-boardlistPaging { text-align:center; margin:20px 0 0;}
+.xans-myshop-boardlistPaging p,
+.xans-myshop-boardlistPaging ol,
+.xans-myshop-boardlistPaging li { display:inline; }
+.xans-myshop-boardlistPaging img {vertical-align:middle; }
+.xans-myshop-boardlistPaging ol { margin:0 7px; }
+.xans-myshop-boardlistPaging li { margin:0 9px 0 0; padding:0 0 0 11px; font-size:.9em; background:url(http://img.echosting.cafe24.com/design/skin/mono/bg_page.gif) left center no-repeat; }
+.xans-myshop-boardlistPaging li:first-child { background:none; }
+.xans-myshop-boardlistPaging li strong { color:#f26522; }
+.xans-myshop-boardlistPaging li a { color:#202020; }
+.xans-myshop-boardlistPaging li a:hover { color:#f26522; text-decoration:underline; }
+.xans-myshop-boardlistPaging a.nolink { cursor:default; }

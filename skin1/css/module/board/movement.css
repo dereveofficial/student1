@@ -1,0 +1,8 @@
+.xans-board-movement { margin:20px auto; width:960px;}
+.xans-board-movement li { overflow:hidden; padding:7px 0; font-size:11px; }
+.xans-board-movement li strong { width:60px; float:left;  color:#8f8f8f; font-weight:normal; }
+.xans-board-movement li a { float:left; }
+.xans-board-movement li a { color:#888888; text-decoration:underline;}
+.xans-board-movement li a:hover { color:#333333; text-decoration:underline;}
+.xans-board-movement li.next { border:none; }
+.xans-board-movement li.next strong { color:#202020;}

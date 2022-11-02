@@ -1,0 +1,8 @@
+.xans-layout-statelogon { overflow:hidden; zoom:1; }
+.xans-layout-statelogon .member { float:right; padding:0 4px 0 0; }
+.xans-layout-statelogon .member .myinfo { position:relative; padding:0 10px 0 0; color:#8f8f91; }
+.xans-layout-statelogon .member strong { font-weight:normal; color:#202020; }
+.xans-layout-statelogon .member a,
+.xans-layout-statelogon .member a:hover { color:#525259; }
+.xans-layout-statelogon .util { float:right; padding:0 4px 0 0; }
+.xans-layout-statelogon .util img { margin:0 0 0 4px; }

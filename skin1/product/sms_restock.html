@@ -1,0 +1,33 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Product_RestockSms">
+<!--@css(/css/module/product/restockSms.css)-->
+    <h1><span>재입고 알림 SMS</span></h1>
+    <div class="layInner">
+        <div class="prdArea">
+            <p class="prdImg"><img src="{$product_image}" alt="" /></p>
+            <h2>{$product_name}</h2>
+            {$simple_desc}
+            <div>{$opt_str}</div>
+            <div>{$option_add}</div>
+        </div>
+
+        <div class="usedArea">
+            <p class="info">품절된 상품의 재입고시 문자메세지로 알려드립니다.</p>
+            <p class="member"><span><strong>{$member_name}</strong>님의 휴대폰번호</span> {$form.member_update}</p>
+            <p class="contact">{$form.hp1} - {$form.hp2} - {$form.hp3}</p>
+            <p class="guide">
+                SMS 요청이 완료된 상품은 관심상품 목록으로 저장됩니다.<br />
+                SMS요청상품의 가격, 옵션 구성 등의상품정보가 변동될 수 있으므로,<br />
+                재입고시 상품정보 확인 후 구매하시기 바랍니다.<br />
+                재입고 SMS알림은 요청일로부터 <strong>{$restock_month}개월</strong>간 유효합니다. 
+            </p>
+        </div>
+        <!-- -->
+        <div class="btnArea">
+            <p>
+                <a href="#none" onclick="window.close();"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_linkCancel.gif" alt="취소하기" /></a>
+                <a href="#none" onclick="{$action_write}"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_closeTxt.gif" alt="확인하기" /></a>
+            </p>
+        </div>
+    </div>
+</div>

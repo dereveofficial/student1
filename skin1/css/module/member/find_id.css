@@ -1,0 +1,37 @@
+.bgbg {width:100%; height:700px; background-image:url('/test/images/login_bg.jpg'); background-position:center center; background-repeat:no-repeat; background-size:cover;}
+
+.xans-member-findid { overflow:hidden; font-size:11px; color:#8f8f91; text-align:center;   padding-top:60px; margin-top:0px; width:100%; }
+.xans-member-findid .whitebg { background-color: transparent; background-color: rgba(255, 255, 255, 0.8);  /* FF3+, Saf3+, Opera 10.10+, Chrome, IE9 */            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#ffffff); /* IE6–IE9 */  zoom: 1; height:350px; padding:50px;}
+
+.xans-member-findid .inner { overflow:hidden; width:900px; margin:0 auto;  text-align:left; color:#333333;  background:  transparent url("/test/images/find_bg.jpg") no-repeat right top;}
+
+.xans-member-findid .inner .mainCopy { margin:10px 0; padding:0; font-size:16px; color:#333; font-weight:bold; }
+.xans-member-findid .inner .subCopy {padding:0; font-size:11px; color:#555555;}
+
+
+.xans-member-findid .inner input { font-size:11px; }
+
+.xans-member-findid .inner input { font-size:11px; }
+.xans-member-findid .inner table {margin:10px 0 20px 0;}
+.xans-member-findid .inner table td.opt { width:80px; padding:3px 0;}
+.xans-member-findid .inner table td.ion { width:300; padding:3px 0;}
+.xans-member-findid .inner table td { font-size:11px; background:none; margin-right:10px; }
+.xans-member-findid .inner table td.ion input {height:26px;  width:270px;  padding:0; background-color:#9e9e9e; color:#ffffff;}
+
+
+.xans-member-findid .inner p.check {color:#333333; }
+.xans-member-findid .inner p.check input { font-size:11px; background:none; margin-right:10px; }
+.xans-member-findid .inner p.check img { display:block; padding:8px 0 4px; }
+.xans-member-findid .inner p.check span { display:block; padding:2px 0 0; color:#8f8f91; }
+.xans-member-findid .inner p.check span.type { padding:10px 0; }
+.xans-member-findid .inner p.check span label { padding:0 15px 0 0; }
+.xans-member-findid .inner .findType { padding:0 0 20px; }
+.xans-member-findid .inner .findType input {height:26px;  width:350px;  padding:5px; background-color:#9e9e9e; color:#ffffff;}
+.xans-member-findid .inner .findType span { display:block; padding:3px 0 0; font-size:11px; color:#000; }
+.xans-member-findid .inner .findType span.question { margin:2px 0 0; padding:2px 5px; width:168px; background:#34a7b3; color:#fff; font-size:11px;}
+.xans-member-findid .inner .findType .question input {  }
+.xans-member-findid .inner .findType span.ipin { line-height:18px; }
+.xans-member-findid .inner .findType span.ipin .text { padding:0 0 10px; color:#8f8f91; }
+.xans-member-findid .inner .lostInput {border:1px solid #bcbcbc; width:166px; height:14px; padding:2px 5px; }
+.xans-member-findid .inner #ssn1 { width:70px; }
+.xans-member-findid .inner #ssn2 { width:70px; }

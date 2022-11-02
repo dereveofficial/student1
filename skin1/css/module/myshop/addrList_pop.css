@@ -1,0 +1,23 @@
+.layPop { background:#b4bdc5; display:inline-block; .display:inline; zoom:1; position:relative; }
+.layPop .close { position:absolute; right:0; top:0; text-align:right; }
+.layPop .close img { cursor:pointer; }
+.layPop h1 { color:#272823; font-size:26px; text-decoration:underline; }
+.layPop h1 span { display:block; padding:28px 25px 25px; }
+.layPop .titleArea h2 { color:#fff; }
+.layInner { position:relative; padding:20px 25px 0; background:#fff; color:#000; border-top:1px solid #99a2aa; }
+
+.xans-myshop-addrlist h2 { font-size:11px; padding:0 0 0 15px; background:url(http://img.echosting.cafe24.com/design/skin/mono/order/ico_couponSelect.gif) 0 50% no-repeat; }
+.xans-myshop-addrlist #addInfo { margin:20px 0 10px; }
+.xans-myshop-addrlist #addInfo h2 {color:#f26522; }
+.xans-myshop-addrlist #addInfo ul { margin:10px 0 0; }
+.xans-myshop-addrlist table { margin:20px 0 0; }
+.xans-myshop-addrlist table th { padding:7px 0 0; height:33px; border-bottom:2px solid #99a2aa; border-top:2px solid #99a2aa; color:#000; font-weight:normal; }
+.xans-myshop-addrlist table td { padding:9px 0; text-align:center; border-bottom:1px solid #dedcdc; }
+.xans-myshop-addrlist table td.address { text-align:left; }
+.xans-myshop-addrlist .noData { padding:50px; }
+
+.xans-myshop-addrlist .btnArea { text-align:right; overflow:hidden; background:#fff; width:100%; padding:30px 30px 30px 27px ; margin:0; position:relative; left:-25px;}
+.xans-myshop-addrlist .btnArea img { float:left; padding:0 1px 0 0; cursor:pointer; }
+.xans-myshop-addrlist .btnArea p.btnLeft { float:left; }
+.xans-myshop-addrlist .btnArea p.btnRight { float:right; }
+.xans-myshop-addrlist .btnArea p.btnRight img { float:left; padding:0 0 0 1px; }

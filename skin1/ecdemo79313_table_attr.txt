@@ -1,0 +1,1 @@
+module_no,bordercolorlight,bordercolordark,bordercolor,bgcolor,cellspacing,cellpadding,th_bgcolor,th_fgcolor,td_bgcolor,td_fgcolor,td_selected_color,td_unselected_color

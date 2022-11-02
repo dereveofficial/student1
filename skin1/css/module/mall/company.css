@@ -1,0 +1,57 @@
+.bgbg {width:100%; height:700px; background-image:url('/test/images/welcomebg.jpg'); background-position:center center; background-repeat:no-repeat; background-size:cover;}
+
+.xans-mall-company {  font-size:11px; padding-top:60px; margin-top:0px; width:100%; }
+.xans-mall-company .whitebg { background-color: transparent; background-color: rgba(255, 255, 255, 0.8);  /* FF3+, Saf3+, Opera 10.10+, Chrome, IE9 */            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#ffffff); /* IE6 IE9 */  zoom: 1; padding:30px;  height:430px;}
+
+.xans-mall-company .whitebg_n { 
+    background-color: transparent; background-color: rgba(255, 255, 255, 0.8); 
+    /* FF3+, Saf3+, Opera 10.10+, Chrome, IE9 */            
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#ffffff); 
+    /* IE6 IE9 */  
+    zoom: 1; 
+    padding:30px;  
+    height:500px;
+}
+
+
+.xans-mall-company .cont { text-align:center; margin:30px  auto; width:960px;}
+.xans-mall-company .titleArea {  text-align:left; font-size:18px; color:#333333; font-weight:700;}
+
+.xans-mall-company .subtitle_left { float:left; width:540px; margin:20px 0; text-align:left; font-size:13px; color:#333333; font-weight:700;}
+.xans-mall-company .subtitle_right { float:right; width:300px; margin:20px 0; text-align:left; font-size:13px; color:#333333; font-weight:700;}
+
+.xans-mall-company .txt_left { float:left; width:600px; text-align:left; font-size:11px; line-height:16px; color:#555555; font-weight:500;}
+.xans-mall-company .txt_right {  float:right; width:300px; text-align:left; font-size:11px; line-height:16px; color:#555555; font-weight:500;}
+
+
+
+/*contact*/
+.contact_all { width:100%; height:100%; text-align:center;  background-image:url('/test/images/welcomebg.jpg'); background-position:center center; background-repeat:no-repeat; background-size:cover;}
+.contact { margin:-30px auto 0; width:960px;}
+.contact .titleArea { text-align:left; font-size:14px; color:#333333; font-weight:700; margin:0 0 20px 0;}
+.contact .txt {  width:100%; text-align:left; font-size:11px; line-height:16px; color:#555555; margin:0 0 20px 0;}
+.contact .txt_left { float:left; width:600px; text-align:left; font-size:11px; line-height:16px; color:#555555; border:8px solid #f1f1f1;}
+
+.contact .subtitle_right { float:right; width:300px; margin:0 0 4px 0; text-align:left; font-size:13px; color:#333333; font-weight:700;}
+.contact .txt_right { float:right; width:300px;  margin:0 0 20px 0; text-align:left; font-size:11px; line-height:16px; color:#555555;}
+.contact .social { float:right; width:300px;  margin:20px 0 0 0; text-align:left;}
+.contact .social img {margin:0 20px 0 0;}
+
+/*stock*/
+.xans-mall-company .s_cont { text-align:center; margin:0px  auto; width:960px;}
+.xans-mall-company .s_titleArea {  text-align:left; font-size:18px; color:#333333; font-weight:700;}
+
+.xans-mall-company .s_subtitle_left { float:left; width:420px; margin:20px 0; text-align:left; font-size:13px; color:#333333; font-weight:700;}
+.xans-mall-company .s_subtitle_right { float:right; width:420px; margin:20px 0; text-align:left; font-size:13px; color:#333333; font-weight:700;}
+
+.xans-mall-company .s_txt_left { float:left; width:420px; text-align:left; font-size:11px; line-height:16px; color:#555555; font-weight:500; }
+.xans-mall-company .s_txt_left h1 { font-size:13px; font-weight:bold; color:#333333; margin:0 0 2px 0;}
+.xans-mall-company .s_txt_left .onstock { border:0px solid #000; background:url('/images/dormyinn.png') no-repeat right top;}
+.xans-mall-company .s_txt_left .onstock2 { border:0px solid #000; background:url('/images/knockingon.png') no-repeat right top;}
+.xans-mall-company .s_txt_left .onstock3 { border:0px solid #000; background:url('/images/kudshop.png') no-repeat right top;}
+.xans-mall-company .s_txt_left .onstock4 { border:0px solid #000; background:url('http://www.kangdongho.com/etc/site/hyundai.png') no-repeat right top;}
+
+.xans-mall-company .s_txt_right {  float:right; width:420px; text-align:left; font-size:11px; line-height:16px; color:#555555; font-weight:500;}
+.xans-mall-company .s_txt_right h1 { font-size:13px; font-weight:bold; color:#333333; margin:0 0 10px 0;}
+.xans-mall-company .s_txt_right .offstock { border:0px solid #000; background:url('/images/njoyny1.png') no-repeat right top;}
+.xans-mall-company .s_txt_right .offstock2 { border:0px solid #000; background:url('/images/knockingon.png') no-repeat right top;}

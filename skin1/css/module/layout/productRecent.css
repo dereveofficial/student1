@@ -1,0 +1,10 @@
+.xans-layout-productrecent { display:block; margin:0 0 15px; text-align:center; }
+.xans-layout-productrecent h2 { height:27px; font-size:12px; }
+.xans-layout-productrecent h2 a { color:#333; }
+.xans-layout-productrecent .btn {}
+.xans-layout-productrecent .btn img { cursor:pointer; }
+.xans-layout-productrecent ul {width:86px; margin:0 auto; }
+.xans-layout-productrecent li img { display:block; width:86px; }
+.xans-layout-productrecent li span { display:block; padding:0 0 5px; font-size:12px; line-height:18px; }
+.xans-layout-productrecent a,
+.xans-layout-productrecent a:hover { color:#838382; }

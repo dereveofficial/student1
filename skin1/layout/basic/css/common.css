@@ -1,0 +1,46 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,500italic,700,900);
+/* **************************** //필수 CSS 수정 및 삭제 불가 **************************** */
+
+/* tag reset */
+
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, img {margin:0; padding:0; }
+html, body {width:100%; height: 100%; overflow-x:hidden; overflow-y:auto; margin:0; padding:0;}
+body, code { font-family: 'Roboto', 'sans-serif'; font-weight: 400; color:#333; background:#fff; overflow-x:hidden; } /* font:0.75em "돋움", Dotum, AppleGothic, sans-serif; */
+li{list-style:none; }
+
+p { } /* font-family: Verdana, Geneva, sans-serif;"돋움"; */
+img, fieldset{border:none; vertical-align:top; }
+input, select { background-color:#f1f1f1; border:none; font-size:11px; vertical-align:middle;  height:21px; padding:0; color:#555555;}
+textarea { background-color:#f1f1f1; border:none; font-size:11px; vertical-align:middle; }
+hr.layout {display:none;}
+a,a:link,a:visited{text-decoration:none; color:#000;}
+a:hover{text-decoration:none;}
+a:active{text-decoration:none;}
+table{border-spacing:0; border:0; border-collapse:collapse; width:100%; }
+th, td {border:0; vertical-align:top;  }
+legend { height:0; width:0; display:block; text-indent:-9999em; }
+caption { visibility:hidden; position:absolute; left:-1000px; top:-1000px; height:0; width:0; display:none; }
+button { padding:0; margin:0; border:0; cursor:pointer; overflow:visible; }
+.objHidden { visibility:hidden; position:absolute; left:-1000px; top:-1000px; height:0; width:0; }
+table tr.radioType input,
+span.noBorder input { border:none !important; width:auto !important; height:auto !important; margin:0 3px 0 0 !important; vertical-align:middle !important; background:none !important; }
+#content_CONTAINER td { width:auto !important; }
+table.nneditor-table { width:auto !important; }
+/* 결제진행바 */
+#progressPaybarBackground { position:absolute; z-index:99; left:0; top:0; width:100%; height:100%; }
+#progressPaybarView { position:absolute; z-index:100; top:160px; left:20px; width:471px; font-size:12px; }
+#progressPaybarView .box { height:180px; background:url(http://img.cafe24.com/images/ec_hosting/popup/layer_guide/bg_layer_box1.gif) 0 0 no-repeat; }
+#progressPaybarView .box .graph { padding:15px 0 0 0; text-align:center;}
+#progressPaybarView .box .graph span { display:block; text-align:center; margin:20px 0; }
+#progressPaybarView .box .txt { text-align:center; padding:15px 0 0; color:#555555; }
+div.layerProgress { filter:alpha(opacity=40); opacity:0.4; -moz-opacity:0.4; background-color:#999; }
+
+/* contents */
+#accNav {position:absolute; top:0; left:0; z-index:100; width:100%; height:0;}
+#accNav p, #accNav ul, #accNav ul li {height:0;}
+#accNav p a {position:absolute; left:0; top:0; display:block; overflow:hidden; width:1px; height:1px; margin-left:-1px; margin-bottom:-1px;  text-align:center; color:#000; white-space:nowrap;}
+#accNav p a:focus, #accNav p a:hover, #accNav p a:active {width:100%; height:auto; padding:10px 0; background:#c4122f; color:#fff; z-index:100;}
+
+.displaynone { display:none; }
+/* **************************** 필수 CSS 수정 및 삭제 불가 **************************** */

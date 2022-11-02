@@ -1,0 +1,34 @@
+.bgbg {width:100%; height:700px; background-image:url('/test/images/login_bg.jpg'); background-position:center center; background-repeat:no-repeat; background-size:cover;}
+.xans-member-login { overflow:hidden; font-size:11px; color:#8f8f91; text-align:center;   padding-top:60px; margin-top:0px; width:100%; }
+.xans-member-login .whitebg { background-color: transparent; background-color: rgba(255, 255, 255, 0.8);  /* FF3+, Saf3+, Opera 10.10+, Chrome, IE9 */            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#ffffff); /* IE6–IE9 */  zoom: 1; height:350px;}
+
+.xans-member-login .login { display:inline-block; .display:inline; zoom:1; width:350px; margin:0;  vertical-align:top; text-align:left; border:0px solid #e8e8e8; padding:20px;}
+
+.xans-member-login .login h3 { margin:20px 0;}
+.xans-member-login .login .subtxt { margin:0 0 20px 0;}
+.xans-member-login .login .check { width:80px; height:30px; float:left;padding-top:6px; font-weight:bold; }
+.xans-member-login .login .formcheck { height:30px; float:left; }
+.xans-member-login .login .formcheck img { display:block; }
+.xans-member-login .login .formcheck input { width:180px; height:26px;   padding:5px; background-color:#9e9e9e; color:#ffffff;}
+.xans-member-login .login .security { float:left; margin:5px; height:35px;display:block; }
+.xans-member-login .login ul {  padding:0; float:left; margin-top:20px; border-top:1px solid #dedcdc; width:295px; }
+.xans-member-login .login li { float:left;  padding:10px; border-bottom:1px solid #dedcdc;}
+.xans-member-login .login .btn {clear:both; display:block;}
+
+.xans-member-login .join { display:inline-block; .display:inline; zoom:1; width:350px; margin:0 30px;   vertical-align:top; text-align:left; border:0px solid #e8e8e8; padding:20px;}
+.xans-member-login .join h3 { margin:20px 0;}
+.xans-member-login .join .subtxt { margin:0 0 40px 0;}
+.xans-member-login .join .btn {clear:both; display:block;}
+
+
+.xans-member-login .noMember { display:inline-block; .display:inline; zoom:1; width:200px; margin:00; vertical-align:top; text-align:left;  padding:20px;}
+.xans-member-login .noMember p { padding:5px 0 0; height:119px;  line-height:1.4em;  }
+.xans-member-login .noMember ul { overflow:hidden; padding:8px 0 0;}
+.xans-member-login .noMember li { padding:0 0 0 7px; background:url(http://img.echosting.cafe24.com/design/skin/mono/ico_login.gif) 0 50% no-repeat; }
+.xans-member-login .noMember li a,
+.xans-member-login .noMember li a:hover {color:#8f8f91; }
+.xans-member-login .displaynone { display:none; }
+
+.xans-member-login .noMember h3 { margin:20px 0;}
+.xans-member-login .noMember .subtxt { margin:0 0 40px 0;}
+.xans-member-login .noMember .btn {clear:both; display:block;}

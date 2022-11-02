@@ -1,0 +1,11 @@
+.xans-layout-statelogoff { overflow:hidden; zoom:1; }
+.xans-layout-statelogoff .member { float:right; padding:0 7px 0 0;}
+.xans-layout-statelogoff .member .myinfo { }
+.xans-layout-statelogoff .member strong { font-weight:normal; color:#7b6d6d; }
+.xans-layout-statelogoff .member a,
+.xans-layout-statelogoff .member a:hover { display:inline-block; color:#7b6d6d; }
+.xans-layout-statelogoff .util { float:right; padding:0 4px 0 0; }
+.xans-layout-statelogoff .util img { margin:0 0 0 4px; }
+.xans-layout-statelogoff .util a{ color:#7b6d6d; }
+.xans-layout-statelogoff .member .bar,.xans-layout-statelogoff .util .bar{display:inline-block;width:1px;height:10px;margin:0px 10px;background:#d1c1ba;vertical-align:middle; }
+

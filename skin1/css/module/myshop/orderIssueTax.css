@@ -1,0 +1,26 @@
+.layPop { background:#b4bdc5; display:inline-block; .display:inline; zoom:1; position:relative; }
+.layPop .close { position:absolute; right:0; top:0; text-align:right; }
+.layPop .close img { cursor:pointer; }
+.layPop h1 { color:#272823; font-size:26px; text-decoration:underline; }
+.layPop h1 span { display:block; padding:28px 25px 25px; }
+.layPop .titleArea h2 { color:#fff; }
+.layInner { position:relative; padding:20px 25px 0; background:#fff; border-top:1px solid #99a2aa; }
+.layPop .btnArea { overflow:hidden; background:#fff; width:100%; padding:30px 30px 30px 27px; margin:0; position:relative; left:-25px; text-align:right; }
+.layPop .btnArea img { cursor:pointer; }
+
+.xans-myshop-orderissuetax {}
+.xans-myshop-orderissuetax p.info {font-size:11px; }
+.xans-myshop-orderissuetax h2 { padding:27px 0 10px; color:#f26522; font-size:11px; text-decoration:underline; }
+.xans-myshop-orderissuetax #mall_addr_addr1 { margin:3px 0; width:380px; }
+.xans-myshop-orderissuetax #mall_addr_addr2 { width:380px; }
+.xans-myshop-orderissuetax #email1 { width:100px; }
+.xans-myshop-orderissuetax #email2 { width:100px; }
+.xans-myshop-orderissuetax #mall_addr_zip1 { width:40px; text-align:center; }
+.xans-myshop-orderissuetax #mall_addr_zip2 { width:40px; text-align:center;  }
+.xans-myshop-orderissuetax #company_condition { width:380px; }
+.xans-myshop-orderissuetax #company_line { width:380px; }
+
+.xans-myshop-orderissuetax table { border:0; }
+.xans-myshop-orderissuetax table th { width:100px; padding:4px 0 5px; text-align:left; font-size:11px; font-weight:normal; }
+.xans-myshop-orderissuetax table td { padding:4px 0 5px; font-size:11px; }
+.xans-myshop-orderissuetax table td input { padding:2px 2px 1px; border:1px solid #99a2aa; }

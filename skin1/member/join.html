@@ -1,0 +1,374 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--상단위치-->
+<div module="Product_menupackage">
+<!--@css(/css/module/product/menupackage.css)-->
+    <div class="path" module="product_headcategory">
+    <div class="titleArea">
+        <h2><span>Register</span></h2>
+    </div>
+        <ol>
+		<li class="first"><a href="/">De r&ecirc;ve</a></li>
+		<li title="현재 위치">Register</li>
+        </ol>
+    </div>
+</div>
+<!--상단위치끝-->
+
+
+
+<div module="member_join">
+<!--@css(/css/module/member/join.css)-->
+<div class="titleArea">
+    <h2><span>Welcome! New Customer</span></h2>
+	by creating an account, you will be able to move through the checkout process faster,<br />
+store multiple shipping addresses, view and track your orders and more.<br /><br />
+De r&ecirc;ve에 가입을 하시면 주문 시 정보를 매번 새로 입력하시지 않아도 되는 편리함과<br />
+할인 쿠폰, 구매 금액 적립 등의 회원 혜택을 받으실 수 있습니다. 회원 가입 시 즉시 사용이 가능한 5000원 할인 쿠폰을 드립니다.
+</div>
+<!--
+    $returnUrl = /member/join_result.html
+    $checkIdUrl = /member/check_id.html
+    $personalName = 이름
+    $personalSsn = 주민등록번호
+    $companyName = 법인명
+    $companySsn = 법인번호
+    $foreignerSsn1 = 외국인 등록번호
+    $foreignerSsn2 = 여권번호
+    $foreignerSsn3 = 국제운전면허증번호
+ -->
+
+
+    <div class="boardView1">
+        <table summary="회원정보 중 기본정보 입력란입니다." class="boardView joinForm">
+            <tr class="radioType">
+                <th>회원구분</th>
+                <td>{$form.member_type}</td>
+            </tr>
+
+            <tr id="companyWrap" class="radioType">
+                <th>사업자구분</th>
+                <td>{$form.company_type}</td>
+            </tr>
+
+            <tr id="authMember">
+                <th>회원인증</th>
+                <td>
+
+                    <div id="authWrap" style="display:none;">
+                        <!-- 개인 회원 인증 -->
+                        <div id="personAuth">
+                            <div id="personalTypeWrap">{$form.personal_type}</div>
+
+                            <!-- 실명 인증 -->
+                            <div id="realNameAuth">
+                                <p><span>이름</span>{$form.real_name}</p>
+                                <p><span>주민등록번호</span>{$form.real_ssn1} - {$form.real_ssn2} <a href="#" onclick="checkRealName()"><img src="http://img.echosting.cafe24.com/design/skin/mono/member/btn_memJoin1.gif" alt="실명인증" class="authBtn"></a></p>
+                                <p>개정된 '주민등록법'에 의해 타인에 주민등록번호를 도용하여 부정사용하는 자는 3년 이하의 징역 또는 1천만원 이하의 벌금에 처해지게 됩니다. 만약, 타인의 주민번호를 도용하여 온라인 회원가입을 하시는 분은 지금 즉시, 명의 도용을 중단하시길 바랍니다.</p>
+
+                                 <p>회사는 회원의 본인확인 및 서비스제공을 위하여 고유식별정보를 수집하여 보관하며 개인정보취급방침에 따라 <br />보유 및 이용합니다.
+                                 고유식별정보 제공을 거부하는 경우 서비스 이용이 제한됩니다.</p>
+                                 {$form.identification_check}
+                            </div>
+
+                            <!-- 아이핀 -->
+                            <div id="ipinWrap">
+                                <p>
+                                    <a href="#" onclick="{$action_ipin_open}"><img src="http://img.echosting.cafe24.com/design/skin/mono/member/btn_memJoin2.gif" alt="아이핀 인증" /></a>
+                                    아이핀이란, 회원님의 개인정보 보호를 위해 웹사이트에 주민등록번호를 제공하지 않고 본인임을 확인하는 인터넷상의 개인식별번호 서비스입니다. 아이핀을 통한 가입을 원하시면 아이핀 인증 버튼을 눌러 진행해 주십시오.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 법인 사업자 인증 -->
+                        <div id="businessAuth">
+                            <p>법인명</p>
+                            <span>{$form.bname}</span>
+                            <p>법인번호</p>
+                            <span>
+                                {$form.bssn1} - {$form.bssn2}
+                                <a href="#" onclick="{$action_business_dupl}"><img src="http://img.echosting.cafe24.com/design/skin/mono/member/btn_memJoin4.gif" alt="중복 확인" /></a>
+                            </span>
+                        </div>
+
+                        <!-- 외국인 회원 인증 -->
+                        <div id="foreignerAuth">
+                            <ul>
+                                <li><span class="authTitle">이름</span> <span class="authForm">{$form.foreigner_name}</span></li>
+                                <li><span class="noBorder">{$form.foreigner_type}</span> <span class="authSsn">{$form.foreigner_ssn} <a href="#" onclick="{$action_foreigner_check}"><img src="http://img.echosting.cafe24.com/design/skin/mono/member/btn_memJoin4.gif" alt="중복 확인" /></a></span></li>
+                            </ul>
+                            <p>회사는 회원의 본인확인 및 서비스제공을 위하여 고유식별정보를 수집하여 보관하며 개인정보취급방침에 따라 <br />보유 및 이용합니다.
+                            고유식별정보 제공을 거부하는 경우 서비스 이용이 제한됩니다.</p>
+                            {$form.f_identification_check}
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <h3>My Details</h3>
+    <p class="chkAdd">회원가입을 위한 필수입력 항목을 입력해 주십시오.</p>
+	<p class="chkAdd2">Tips</p>
+
+<!--팁 부분-->
+   <div class="boardView3">
+        <table class="boardView4">
+            <tbody>
+                <tr>
+                    <td>* 아이디는 영문소문자/숫자, 4~16자로 입력하세요.</td>
+                </tr>
+                <tr>
+                    <td>* 비밀번호는 {$passwd_type_desc}</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>* 비밀번호를 찾기위해 필요한 항목입니다.</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>* 실명을 입력해주세요.</td>
+                </tr>
+                <tr>
+                    <td>* 상품을 받을 수 있는 정확한 주소를 입력하세요.</td>
+                </tr>
+                <tr>
+                    <td>* 기본 주소</td>
+                </tr>
+                <tr >
+                    <td>* 나머지 주소</td>
+                </tr>
+                <tr>
+                    <td ></td>
+                </tr>
+                <tr>
+                    <td>* 이메일과 문자메세지로 새로운 소식과 상품주문/배송과정등을 확인 할 수 있습니다.</td>
+                </tr>
+                <tr >
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+	<!--팁 끝-->
+
+    <div class="boardView">
+        <table summary="회원정보 중 기본정보 입력란입니다." class="boardView joinForm">
+            <caption>회원정보</caption>
+
+            <tbody>
+                <tr>
+                    <th scope="row">I D</th>
+                    <td>{$form.member_id} <a href="#none" title="아이디 중복 확인(새창으로 열기)" onclick="{$action_check_id}"><img src="/test/images/btn_join_25.jpg" title="아이디 중복 확인" /></a></td>
+                </tr>
+                <tr class="{$display_nick|display}">
+                    <th scope="row">별명</th>
+                    <td>{$form.nick_name} (한글2~10자/영문 대소문자4~20자/숫자 혼용가능) <p id="{$nick_msg}"></p></td>
+                </tr>
+                <tr>
+                    <th scope="row">Password</th>
+                    <td>{$form.passwd}  </td>
+                </tr>
+                <tr>
+                    <th scope="row">Confirm Password</th>
+                    <td>{$form.user_passwd_confirm}</td>
+                </tr>
+                <tr>
+                    <th scope="row">비밀번호 확인 질문</th>
+                    <td>{$form.hint}</td>
+                </tr>
+                <tr>
+                    <th scope="row">비밀번호 확인 답변</th>
+                    <td>{$form.hint_answer}</td>
+                </tr>
+                <tr>
+                    <th scope="row" id="{$name_title}">Name</th>
+                    <td>
+                        <span id="{$name_contents}">{$form.name}</span> 
+                        <span id="under14Msg" class="displaynone">* 14세 미만 사용자는 법정대리인 동의가 필요합니다.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" id="ssnTitle">주민등록번호</th>
+                    <td id="ssnContents">{$form.ssn1} {$dash} {$form.ssn2}</td>
+                </tr>
+                <!-- 아래의 내용은 개인정보보호정책상 삭제되면 안되는 부분입니다.  개인을 구별할 수 있는 고유식별정보(주민등록번호, 여권번호, 외국인등록번호, 국제운전면허증등)를 수집 혹은 이용할 경우 꼭 필요한 문구입니다. 삭제시 법적제제를 받을 수 있습니다. -->
+                <tr id="identification_check_nonauth" class="{$identification_display|display}">
+                    <th scope="row">개인정보사용체크</th>
+                    <td>
+                        <p>회사는 회원의 본인확인 및 서비스제공을 위하여 고유식별정보를 수집하여 보관하며 개인정보취급방침에 따라 <br />보유 및 이용합니다.
+                        고유식별정보 제공을 거부하는 경우 서비스 이용이 제한됩니다.</p>
+                        {$form.identification_check}
+                    </td>
+                </tr>
+                <tr id="{$companyRow}">
+                    <th scope="row">상호명</th>
+                    <td id="companyName">{$form.cname}</td>
+                </tr>
+                <tr id="{$companyNoRow}">
+                    <th scope="row">사업자번호</th>
+                    <td id="companySsn">{$form.cssn}</td>
+                </tr>
+                <tr id="nation">
+                    <th>국적</th>
+                    <td>{$form.citizenship}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Address</th>
+                    <td>
+                        {$form.postcode1} - {$form.postcode2}
+                        <a href="#none" title="우편번호 검색(새창으로 열기)" onclick="{$action_find_address}" id="{$btn_find_post}"><img src="/test/images/btn_join_31.jpg" alt="우편번호 검색" /></a><br />
+                        {$form.addr1}<br />
+                        {$form.addr2}
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Telephone</th>
+                    <td>{$form.phone}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Mobile</th>
+                    <td>{$form.mobile}  <span class="noBorder {$display_is_sms|display}">{$form.is_sms}</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">E-mail</th>
+                    <td>{$form.email}</td>
+                </tr>
+                <tr class="radioType {$display_is_news_mail|display}">
+                    <th scope="row">News Letter</th>
+                    <td>뉴스 메일을 받으시겠습니까? {$form.is_news_mail}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <h3>Add Information</h3>
+
+    <div class="boardView1">
+        <table summary="회원정보 중 추가정보 입력란입니다." class="boardView joinForm">
+        <caption>회원 추가정보</caption>
+
+        <tbody>
+            <tr class="{$display_birthday|display}">
+                <th scope="row">Birthdate</th>
+                <td>{$form.birth_year}년 {$form.birth_month}월 {$form.birth_day}일 <span class="noBorder">{$form.is_solar_calendar}</span></td>
+            </tr>
+
+            <tr class="{$display_marry|display}">
+                <th scope="row">결혼기념일</th>
+                <td>{$form.marry_year}년 {$form.marry_month}월 {$form.marry_day}일</td>
+            </tr>
+
+            <tr class="{$display_partner|display}">
+                <th scope="row">배우자 생일</th>
+                <td>{$form.partner_year}년 {$form.partner_month}월 {$form.partner_day}일</td>
+            </tr>
+
+            <tr class="{$display_job|display}">
+                <th scope="row">직업</th>
+                <td>{$form.job}</td>
+            </tr>
+
+            <tr class="{$display_job_class|display}">
+                <th scope="row">직종</th>
+                <td>{$form.job_class}</td>
+            </tr>
+
+            <tr class="{$display_school|display}">
+                <th scope="row">최종학력</th>
+                <td>{$form.school}</td>
+            </tr>
+
+            <tr class="inter radioType {$display_inter|display}">
+                <th scope="row">관심분야</th>
+                <td>
+                    <fieldset>
+                        <legend>관심분야</legend>
+                        {$form.inter_check}
+                    </fieldset>
+                </td>
+            </tr>
+
+            <tr class="{$display_region|display}">
+                <th scope="row">지역</th>
+                <td>{$form.region}</td>
+            </tr>
+
+            <tr class="{$display_internet|display}">
+                <th scope="row">인터넷 이용장소</th>
+                <td>{$form.internet}</td>
+            </tr>
+
+            <tr class="{$display_child|display}">
+                <th scope="row">자녀</th>
+                <td>{$form.child}</td>
+            </tr>
+
+            <tr class="{$display_car|display}">
+                <th scope="row">자동차</th>
+                <td>{$form.car}</td>
+            </tr>
+
+            <tr class="{$display_earning|display}">
+                <th scope="row">연소득</th>
+                <td>{$form.earning}</td>
+            </tr>
+
+            <tr class="{$display_add1|display}">
+                <th scope="row">{$title_add1}</th>
+                <td>{$form.add1}</td>
+            </tr>
+
+            <tr class="{$display_add2|display}">
+                <th scope="row">{$title_add2}</th>
+                <td>{$form.add2}</td>
+            </tr>
+
+            <tr class="{$display_add3|display}">
+                <th scope="row">{$title_add3}</th>
+                <td>{$form.add3}</td>
+            </tr>
+
+            <tr class="{$display_add4|display}">
+                <th scope="row">{$title_add4}</th>
+                <td>{$form.add4}</td>
+            </tr>
+
+            <tr class="{$display_reco_id|display}">
+                <th scope="row">추천인 ID</th>
+                <td>{$form.reco_id}</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <h3>Terms of use</h3>
+    <div class="agreeArea">
+        <div class="agreeInner">
+            {$service_desc}
+        </div>
+        <p class="okok"><span>이용약관에 동의하십니까?</span> {$form.agree_service_check}</p>
+    </div>
+
+    <h3>Privacy Policy</h3>
+    <div  class="agreeArea">
+        <div class="agreeInner">
+            {$privacy_desc}
+        </div>
+        <p class="okok"><span>개인정보 수집 및 이용에 동의하십니까?</span> {$form.agree_privacy_check}</p>
+    </div>
+
+    <div class="btnArea">
+        <p class="btnRight">
+            <a href="/"><img src="/test/images/btn_join_cancel_36.jpg" onmouseover="this.src='/test/images/btn_join_cancel_over_36.jpg'" onmouseout="this.src='/test/images/btn_join_cancel_36.jpg'" title="메인페이지로 가기" /></a>
+            <a href="#none" onclick="{$action_func_join}"><img src="/test/images/btn_regi_07.jpg" onmouseover="this.src='/test/images/btn_regi_over_07.jpg'" onmouseout="this.src='/test/images/btn_regi_07.jpg'" title="회원가입하기" /></a>
+        </p>
+    </div>
+</div>

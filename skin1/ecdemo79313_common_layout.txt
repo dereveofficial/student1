@@ -1,0 +1,1 @@
+temp_type,page_name,module_id,is_display,display_order,left_right,type

@@ -1,0 +1,14 @@
+.xans-layout-jointbuy { margin:25px 0; }
+.xans-layout-jointbuy h2 { padding:30px 0 17px; }
+.xans-layout-jointbuy h2 img { display:block; }
+#snbR .xans-layout-jointbuy h2 { padding-top:0; }
+
+.xans-layout-jointbuy li { height:288px; text-align:center; }
+.xans-layout-jointbuy li img,
+.xans-layout-jointbuy li a { display:block; max-width:180px; }
+.xans-layout-jointbuy li span { display:block; text-align:center; line-height:1.4em; }
+.xans-layout-jointbuy li span.prdCustom {text-decoration:line-through; }
+.xans-layout-jointbuy .player { overflow:hidden; text-align:center; }
+.xans-layout-jointbuy .player img { cursor:pointer; }
+.xans-layout-jointbuy .player .prevButton { float:left; }
+.xans-layout-jointbuy .player .nextButton { float:right; }

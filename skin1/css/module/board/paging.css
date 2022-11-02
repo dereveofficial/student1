@@ -1,0 +1,15 @@
+.xans-board-paging { clear:both; text-align:left; padding:0; text-align:center; margin:20px auto 50px; width:950px; }
+.xans-board-paging .pagingdh {float:left;}
+.xans-board-paging p,
+.xans-board-paging ol,
+.xans-board-paging li { display:inline; }
+.xans-board-paging img {vertical-align:middle; }
+.xans-board-paging ol { margin:0 7px; }
+.xans-board-paging li { margin:0 5px 0 0; padding:0 0 0 5px; font-size:11px; }
+.xans-board-paging li:first-child { background:none; }
+.xans-board-paging li strong { color:#000000; }
+.xans-board-paging li a { color:#888888; }
+.xans-board-paging li a:hover { color:#000000; text-decoration:none; }
+.xans-board-paging a.nolink { cursor:default; }
+
+.xans-board-paging .boardbtndh { float:right; }

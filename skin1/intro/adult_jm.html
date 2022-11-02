@@ -1,0 +1,60 @@
+<!--@layout(/layout/basic/intro.html)-->
+<div module="Intro_adultjmPackage">
+<!--@css(/css/module/intro/adultjmPackage.css)-->
+<div class="loginBox">
+	<h1><img src="http://img.echosting.cafe24.com/design/skin/mono/intro/h1_login.gif" alt="로그인" /></h1>
+	<div module="Member_AdultHead" class="msg">
+		<p class="info">
+			<img src="http://img.echosting.cafe24.com/design/skin/mono/intro/h2_adultjPackage.gif" alt="19세 미만의 미성년자는 출입을 금합니다." />
+			이 정보내용은 청소년 유해 매체물로서 정보통신망 이용촉진법 및<br />
+			정보 보호등에 관한 법률 및 청소년 보호법의 규정에 의하여 <br />
+			19세 미만의 청소년은 사용할 수 없습니다. <br />
+			<a href="{$outlink}"><img src="http://img.echosting.cafe24.com/design/skin/mono/intro/btn_under19.gif" alt="19세 미만 나가기" /></a>
+		</p>
+	</div>
+
+	<div class="idcheck">
+		<div module="Member_Adult">
+			<h2>비회원 성인인증</h2>
+			<p class="login">
+				<span class="inputType">
+					<span class="name"><strong>이름(실명)</strong> {$form.realname} </span>
+					<span class="number"><strong>주민번호("-" 제외)</strong> {$form.ssn}<br /></span>
+				</span>
+				<span class="btn"><a href="#none" onclick="{$action_submit}"><img src="http://img.echosting.cafe24.com/design/skin/mono/intro/btn_confirm.gif" alt="확인" /></a></span>
+			</p>
+			<p class="nameChk">입력하신 고유식별정보는 별도 저장되지 않으며, <br />본인확인인용으로만 이용됩니다. <br />이에 동의하지 않으실 경우, 서비스 이용이 제한됩니다.<br />
+			{$form.identification_check}</p>
+		</div>
+
+		<div module="Member_Login">
+		<!--
+            $forbidIpUrl = member/adminFail.html
+            $defaultReturnUrl = /index.html
+		-->
+			<h2>회원 로그인</h2>
+			<p class="login">
+				<span class="inputType">
+					<span class="name"><strong>아이디</strong> {$form.member_id} </span>
+					<span class="number"><strong>비밀번호</strong> {$form.member_passwd}<br /></span>
+				</span>
+				<span class="btn"><a href="#none" onclick="{$action_func_login}"><img src="http://img.echosting.cafe24.com/design/skin/mono/intro/btn_login.gif" alt="로그인" /></a></span>
+			</p>
+			<p class="join">
+				<a href="/member/id/find_id.html{$skip_intro}" class="first">아이디</a>
+				<a href="/member/passwd/find_passwd_info.html{$skip_intro}">비밀번호 찾기</a>
+				<a href="/member/join.html{$skip_intro}'">회원 가입 하기</a>
+			</p>
+		</div>
+
+		<p class="info">
+			<strong>허위로 주민등록번호 생성시 법적 처벌을 받습니다. </strong>
+			미성년자 차단을 위하여 한국신용평가정보의성인 인증 서비스를 도입하여 <br />
+			정확한 주민등록번호와 실명을 확인한 후 성인인증을 합니다. <br />
+			성인인증은 한번만 거치면 인증기간동안 별도의 인증절차 없이 이용하실 수 있습니다. <br />
+			그리고 입력하신 주민번호와 이름은 기록되지 않습니다.
+		</p>
+	</div>
+
+</div>
+</div>

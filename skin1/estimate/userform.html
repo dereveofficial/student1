@@ -1,0 +1,48 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Estimate_Userform">
+<!--@css(/css/module/estimate/userform.css)-->
+	<!-- 
+	$action_url = /estimate/print.html
+	-->
+	<h1><span>견적서 신청자 정보 입력</span></h1>
+
+	<div class="layInner">
+		<h2>신청자 정보</h2>
+		{$form.begin}
+		<table border="1" summary="신청자 정보 입력란입니다.">
+			<caption>신청자 정보</caption>
+			<colgroup>
+				<col width="20%" />
+				<col width="auto" />
+			</colgroup>
+			<tr>
+				<th scope="row">신청자명</th>
+				<td>{$form.user_name}</td>
+			</tr>
+			<tr>
+				<th scope="row">연락처</th>
+				<td>{$form.phone1} - {$form.phone2} - {$form.phone3}</td>
+			</tr>
+			<tr>
+				<th scope="row">이메일</th>
+				<td>{$form.email}</td>
+			</tr>
+			<tr class="radioType">
+				<th scope="row">개인정보<br />취급방침</th>
+				<td>
+					<div class="agree">{$privacy_agreement}</div>
+					개인정보취급방침에 동의하십니까? {$form.agree_T} <label for="agreement_check_T">동의함</label> {$form.agree_F} <label for="agreement_check_F">동의안함</label>
+				</td>
+			</tr>
+		</table>
+		{$form.end}
+
+		<!-- -->
+		<div class="btnArea">
+			<p class="btnLeft">
+				<a href="#none" onclick="{$action_confirm}"><img src="http://img.echosting.cafe24.com/design/skin/mono/myshop/btn_vatInvoice.gif" alt="확인" /></a>
+			</p>
+		</div>
+	</div>
+
+</div>

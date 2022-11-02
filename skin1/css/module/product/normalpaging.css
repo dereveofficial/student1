@@ -1,0 +1,14 @@
+.xans-product-normalpaging { clear:both; text-align:center; padding:8px 0; text-align:center; margin:20px auto; width:900px; border-bottom:2px solid #e8e8e8; }
+.xans-product-normalpaging .pagingdh {float:right; background-color:#ffffff; padding-left:20px;}
+.xans-product-normalpaging p,
+.xans-product-normalpaging ol,
+.xans-product-normalpaging li { display:inline; }
+.xans-product-normalpaging img {vertical-align:middle; }
+.xans-product-normalpaging p { margin-right:0; }
+.xans-product-normalpaging ol { margin:0 7px; }
+.xans-product-normalpaging li { margin:0 5px 0 0; padding:0 0 0 5px; font-size:11px;}
+.xans-product-normalpaging li:first-child { background:none; }
+.xans-product-normalpaging li strong { color:#000000; }
+.xans-product-normalpaging li a { color:#888888; }
+.xans-product-normalpaging li a:hover { color:#000000; text-decoration:none; }
+.xans-product-normalpaging li a.nolink { cursor:default; }

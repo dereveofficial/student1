@@ -1,0 +1,44 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="MyShop_OrderIssueCash">
+<!--@css(/css/module/myshop/orderIssueCash.css)-->
+<h1><span>현금영수증 신청양식 작성</span></h1>
+    {$form.order_id}
+
+	<div class="layInner">
+		<table border="1" summary="현금영수증 신청 양식입니다." class="popViewType">
+			<caption>현금영수증 신청 양식</caption>
+			<thead>
+				<tr class="radioType">
+					<th scope="row">구분</th>
+					<td>{$form.user_type}</td>
+				</tr>
+			</thead>
+
+			<tbody id="private">
+				<tr>
+					<th scope="row">{$form.ssn_identity} {$form_label.ssn}</th>
+					<td>{$form.ssn}</td>
+				</tr>
+
+				<tr>
+					<th scope="row">{$form.mobile_identity} {$form_label.mobile}</th>
+					<td>{$form.mobile}</td>
+				</tr>
+			</tbody>
+
+			<tbody id="corporation" class="displaynone">
+				<tr>
+					<th scope="row">{$form.regno_identity} {$form_label.regno}</th>
+					<td>{$form.regno}</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<!-- -->
+		<div class="btnArea">
+			<p class="btnLeft">
+				<input type="image" src="http://img.echosting.cafe24.com/design/skin/mono/myshop/btn_cash.gif" alt="현금영수증 신청" />
+			</p>
+		</div>
+	</div>
+</div>

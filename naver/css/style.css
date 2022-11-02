@@ -227,7 +227,7 @@ header {
 .main_content{}
 
 footer{
-  background-color:  rgba(0, 0, 0, 0.3);
+  background-color:  #f8f8f8;
 }
 
 header .header_wrap,
@@ -821,15 +821,18 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
   footer .footer_wrap{
     display: flex;
     position: relative;
+    justify-content: flex-start;
+    align-items: center;
   }
   .footer_wrap .flex_item{
+  
     /* 나중삭제 */
     /* width:25%; */
     /* 플렉스아이템이 자신의 크기만큼만 가져가기위해서 width  지정X 
     flex-basis:auto;*/
     box-sizing: border-box;
-    background-color: #fff;
-    border: 1px solid #000;
+    /* background-color: #fff; */
+    /* border: 1px solid #000; */
   }
   .footer_wrap .footer_logo{
     /* 플렉스아이템 크기고유지정 */
@@ -860,13 +863,35 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
   .footer_wrap .footer_menu li a{}
 
   .footer_wrap .affiliate_box{
+    position: relative;
     order: 1;
     margin-left: auto; /*❤❤❤❤❤*/
     /*플렉스 컨테이너의 남은 공간을 알아서 여백으로 왼쪽에 주세요 */
   }
   .footer_wrap .affiliate_box ul{
-    display: none;
+    /* display: none; */
   }
+  .footer_wrap .affiliate_box .affiliate_list{
+    display: none;
+    position: absolute;
+    /* box에 기준요소 지정 */
+    width: 200px;
+    left: -20px; bottom: -10px;
+    padding: 1.5rem 2rem;
+
+    /* 나중에삭제 */
+    background-color: #fff;
+    border: 1px solid #999;
+  }
+  .footer_wrap .affiliate_box .affiliate_list .affiliate_item{}
+  .footer_wrap .affiliate_box .affiliate_list .affiliate_item a{
+    color: #999;
+    font-size: 0.7rem;
+  }
+  .footer_wrap .affiliate_box .affiliate_list .affiliate_item a:hover{
+    color: var(--naver-color);
+  }
+
   .footer_wrap .footer_copy{
     position: absolute;
     left: 50%; top: 0;
@@ -968,4 +993,34 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
   width:40px;
 }
 
+/* 
+반응형웹설정
+ */
 
+ /* 데스크탑에만 보이는 desktop-only */
+ .desktop_only{
+  display: block;
+ }
+ @media(max-width: 1199.98px){
+  .desktop_only{
+    display: none;
+   }
+ }
+/* 768px 이하의 스크린에서 보일 css지정 */
+@media(max-width:767.98px){
+  header .header_wrap,
+  footer .footer_wrap{
+  max-width: none;
+  margin: 0 50px;
+}
+}
+
+
+/* 1200이하의 스크린에서 보일 css지정 */
+@media (max-width:1199.98px){
+  header .header_wrap,
+  footer .footer_wrap{
+  max-width: none;
+  margin: 0 auto;
+}
+}

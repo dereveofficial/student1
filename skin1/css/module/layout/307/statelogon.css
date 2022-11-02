@@ -1,0 +1,10 @@
+.xans-layout-statelogon { display:inline; text-align:right; padding:1px 0 0; }
+.xans-layout-statelogon p { display:inline; }
+.xans-layout-statelogon a { padding:0 6px 0 9px; color:#6d595b; background:url(http://img.echosting.cafe24.com/design/skin/junior001/bg_util.gif) 0 50% no-repeat; }
+.xans-layout-statelogon a:hover {}
+
+.xans-layout-statelogon span.myinfo { }
+.xans-layout-statelogon span.myinfo strong { }
+
+.xans-layout-statelogon a.modify { background:none; color:#d24c49; }
+.xans-layout-statelogon a.modify:hover { color:#d24c49; }

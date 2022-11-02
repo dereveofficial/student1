@@ -1,0 +1,23 @@
+.xans-board-title-11 .pathBoard { overflow:hidden; margin:3px 0 17px; }
+.xans-board-title-11 .pathBoard h3 { float:left; text-indent:-9999em; margin:0; }
+.xans-board-title-11 .pathBoard ol { float:right; }
+.xans-board-title-11 .pathBoard li { padding:0 0 0 22px; display:inline; font-size:.9em; background:url(http://img.echosting.cafe24.com/design/skin/mono/bg_path.gif) 0 50% no-repeat; }
+.xans-board-title-11 .pathBoard li.first { background:none; }
+
+.xans-board-title-11 .titleAreaBoard { margin:17px 0 30px; }
+.xans-board-title-11 .titleAreaBoard:after {content:""; display:block; clear:both; }
+.xans-board-title-11 .titleAreaBoard h2 { height:21px; border-bottom:1px solid #dedcdc; zoom:1;}
+.xans-board-title-11 .titleAreaBoard h2 span { height:21px; padding:0 5px 0 0; color:#272823; font-size:16px; float:left; border-bottom:1px solid #272823; }
+.xans-board-title-11 .titleAreaBoard p { padding:3px 0 0; clear:both; font-size:.9em; line-height:1.5em; color:#8f8f8f; }
+
+.xans-board-read-11 {clear:both; margin:18px 0 30px; border-top:3px solid #333; border-bottom:3px solid #333; }
+
+.xans-board-read-11 table { background:#f6f7f9; font-size:.9em; }
+.xans-board-read-11 table th { width:120px; padding:5px; font-weight:normal; border-bottom:1px solid #e6e6e6; line-height:2em; color:#000; text-align:left; }
+.xans-board-read-11 table td { width:616px; padding:5px; font-weight:normal; border-bottom:1px solid #e6e6e6; line-height:2em; color:#8b8b8c;  }
+.xans-board-read-11 table td img { vertical-align:middle; }
+.xans-board-read-11 table th.subject { display:none; }
+.xans-board-read-11 table td.subject { width:566px; padding:5px 0 5px 20px; }
+.xans-board-read-11 table .date { width:140px; }
+.xans-board-read-11 table tr.content th { display:none; }
+.xans-board-read-11 table tr.content td { padding:20px; background:#fff; width:100%;}

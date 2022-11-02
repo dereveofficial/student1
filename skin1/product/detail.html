@@ -1,0 +1,505 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!-- 상단 제품 정보  -->
+<!--
+$category_page = /product/list.html
+$project_page = /product/project.html
+$jointbuy_page = /product/jointbuy.html
+-->
+<div module="Product_menupackage">
+<!--@css(/css/module/product/menupackage.css)-->
+    <div class="path" module="product_headcategory">
+    <div class="titleArea">
+        <h2><span>{$title_text}</span></h2>
+    </div>
+		<!--<h3>현재 위치</h3>-->
+        <ol>
+            <li class="first"><a href="/">De r&ecirc;ve</a></li>
+            <li class="{$disp_cate_1|display}"><!--<a href="/product/list.html{$param_1}">{$name_1}</a>-->{$name_1}</li>
+            <li class="{$disp_cate_2|display}" title="Here Now"><a href="/product/list.html{$param_2}">{$name_2}</a></li>
+            <li class="{$disp_cate_3|display}" title="현재 위치"><strong><a href="/product/list.html{$param_3}">{$name_3}</a></strong></li>
+        </ol>
+    </div>
+    
+<div module="product_detail">
+<!--@css(/css/module/product/detail.css)-->
+
+
+    <!-- 이미지 영역 -->
+
+    <div id="imgArea" module="product_image">
+
+        <p class="prevImg"><a href="#none" onclick="{$action_prev_product}" style="display:{$btn_prev_display};"><img src="/test/images/item_prev_next_03.jpg" onmouseover="this.src='/test/images/item_prev_next_over_03.jpg'" onmouseout="this.src='/test/images/item_prev_next_03.jpg'" title="Prev Item" /></a></p>
+        <p class="nextImg"><a href="#none" onclick="{$action_next_product}" style="display:{$btn_next_display};"><img src="/test/images/item_prev_next_06.jpg" onmouseover="this.src='/test/images/item_prev_next_over_06.jpg'" onmouseout="this.src='/test/images/item_prev_next_06.jpg'"title="Next Item" /></a></p>
+
+        <div class="keyImg"><!--<a href="#none" alt="{$product_code}" onclick="{$action_zoom}">--><img src="{$big_img}" alt="" class="{$big_img_class} {$img_display|display}" /><!--</a>--></div>
+			        <div class="listImg">
+        <ul>
+            <li><img src="{$tiny_img}" class="{$thumb_img_class}" alt="" /></li>
+            <li>{$add_img_1}</li>
+            <li>{$add_img_2}</li>
+            <li>{$add_img_3}</li>
+            <li>{$add_img_4}</li>
+        </ul>
+        </div>
+        <!--<p class="moreImg"><a href="#none" onclick="{$action_zoom}"><img src="http://img.echosting.cafe24.com/design/skin/mono/product/btn_prdZoom.gif" alt="크게보기" /></a></p>-->
+    </div>
+
+
+    <!-- //이미지 영역 -->
+
+    <!-- 상세정보 내역 -->
+    <div id="prdInfo">
+        <h3><!-- [{$product_code}]  -->{$name}
+            <span>{$soldout_icon} <!-- {$recommend_icon} {$new_icon} {$mileage_icon} {$product_icons}--></span>
+        </h3>
+        <div class="detailArea">
+            {$product_detail}
+        </div>
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=donghokang"></script>
+<!-- AddThis Button END -->
+<div class="line"></div>
+        <p class="{$delvtype_display|display}">({$eng_name}) 해외배송 가능</p>
+
+        <table border="1" summary="{$name} 기본 정보입니다.">
+            <caption>{$name} 기본 정보</caption>
+
+            <tbody>
+            <tr class="{$product_price_display|display}">
+                <th scope="row">PRICE</th>
+                <td>
+                <strong id="span_product_price_text" class="{$product_price_class}">{$disp_product_price}</strong> 
+                <a href="#none" class="{$sms_restock_display|display}" sms_restock_login_display="{$sms_restock_login_display}" name="btn_restock" id="btn_restock" onclick="{$action_sms_restock}"><img src="http://img.echosting.cafe24.com/design/skin/mono/product/btn_sms.gif" alt="재입고 알림 SMS" /></a>
+                </td>
+            </tr>
+            <!--<tr class="{$custom_price_display|display}">
+                <th scope="row">소비자가</th>
+                <td><strong class="sale">{$disp_product_custom}</strong></td>
+            </tr>-->
+            <tr class="mileage {$mileage_content_display|display}">
+                <th scope="row">POINT</th>
+                <td>
+                    <ul>
+                        <li class="{$mileage_display|display}">
+                            <span id="span_mileage_text">{$mileage_value|numberformat}</span>
+                            <span class="{$mileage_percent_display|display}">({$mileage_percent}%)</span>
+                        </li>
+                        <li class="{$cash_mileage_display|display}">
+                            <img src="{$cash_mileage_icon}" alt="무통장 결제시 적립금" />
+                            {$cash_mileage_value|numberformat} 원
+                            <span class="{$cash_mileage_percent_display|display}">({$cash_mileage_percent} %)</span>
+                        </li>
+                        <li class="{$card_mileage_display|display}">
+                            <img src="{$card_mileage_icon}" alt="카드 결제시 적립금" />
+                            {$card_mileage_value|numberformat} 원
+                            <span class="{$card_mileage_percent_display|display}">({$card_mileage_percent} %)</span>
+                        </li>
+                        <li class="{$tcash_mileage_display|display}">
+                            <img src="{$tcash_mileage_icon}" alt="실시간 계좌 이체시 적립금" />
+                            {$tcash_mileage_value|numberformat} 원
+                            <span class="{$tcash_mileage_percent_display|display}">({$tcash_mileage_percent} %)</span>
+                        </li>
+                        <li class="{$mileage_mileage_display|display}">
+                            <img src="{$mileage_mileage_icon}" alt="적립금 결제시 적립금" />
+                            {$mileage_mileage_value|numberformat} 원
+                            <span class="{$mileage_mileage_percent_display|display}">({$mileage_mileage_percent} %)</span>
+                        </li>
+                        <li class="{$cell_mileage_display|display}">
+                            <img src="{$cell_mileage_icon}" alt="휴대폰 결제시 적립금" />
+                            {$cell_mileage_value|numberformat} 원
+                            <span class="{$cell_mileage_percent_display|display}">({$cell_mileage_percent} %)</span>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="{$naver_mileage_display|display}">
+                <th scope="row">제휴 적립금</th>
+                <td>
+                    네이버 마일리지 {$naver_mileage_rate} 적립 
+                    <img src="{$sNpIconUrl}" id="imgNaverMileageHelp" onclick="{$action_np_help}" />
+                </td>
+            </tr>
+            <tr class="{$allotment_display|display}">
+                <th scope="row">무이자할부</th>
+                <td>{$allotment_period}<br />{$allotment_card}</td>
+            </tr>
+            <tr class="{$manu_display|display}">
+                 <th scope="row">제조사</th>
+                 <td>{$manu_name}</td>
+             </tr>
+            <tr class="{$made_display|display}">
+                <th scope="row">원산지</th>
+                <td>{$made_in}</td>
+            </tr>
+            <tr>
+                <th scope="row">ITEM CODE</th>
+                <td>{$product_code}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">QUANTITY</th>
+                <td>
+                    <p>{$form.quantity}<img src="/test/images/arrowdown.png" title="up" class="{$quantity_up_class}" style="cursor:pointer;" /><img src="/test/images/arrowup.png" title="down" class="{$quantity_down_class}" style="cursor:pointer;" /></p>
+                </td>
+            </tr>
+            <tr class="{$delvtype_display|display}">
+                <th scope="row">국내/해외배송</th>
+                <td>
+                    <span class="delivery">
+                        <label for="chkDelivery1">{$form.delvtypeA} 국내배송</label>
+                        <label for="chkDelivery2">{$form.delvtypeB} 해외배송</label>
+                    </span>
+                </td>
+            </tr>
+           <!-- <tr class="{$sns_display|display}">
+                <th scope="row">SNS 상품홍보</th>
+                <td class="social">{$facebook_icon} {$twitter_icon} {$me2day_icon} {$yozm_icon}</td>
+            </tr>
+            <tr>
+                <th scope="row">QR코드</th>
+                <td>
+                    <img src="{$qrcode}" alt="" class="qrcode" />
+                    <p class="qrcode"><a href="{$qrcode}" target="_blank">이미지저장</a> | <a href="#none" class="{$qrcode_url_copy_class}">코드URL복사</a></p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">QR코드 보내기</th>
+                <td>
+                    <a href="#none" onclick="SnsLinkAction('facebook','{$product_code}');"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_facebook.gif" alt="페이스북으로 보내기" /></a> <a href="#none" onclick="SnsLinkAction('twitter','{$product_code}');"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_twitter.gif" alt="트위터로 보내기" /></a> <a href="#none" onclick="SnsLinkAction('me2day','{$product_code}');"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_meto.gif" alt="미투데이로 보내기" /></a> <a href="#none" onclick="SnsLinkAction('yozm','{$product_code}');"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_yo.gif" alt="요즘로 보내기" /></a>
+                </td>
+            </tr>-->
+            <!-- <tr class="cyworld {$cyworld_scrap_display|display}"> 
+                <th scope="row">싸이월드 스크랩</th> 
+                <td> 
+                    <a href="#none" onclick="{$action_cyworld_scrap}"><img src="{$cyworld_scrap_button}" alt="싸이월드 스크랩" /></a> 
+                    <img src='{$cyworld_info_button}' alt="" onmouseover="{$action_info_mouseover}" onmouseout="{$action_info_mouseout}" />  --> 
+                    <!-- 싸이월드 스크랩 도움말 레이어
+                    <div class="cyTooltip"> 
+                        <div id="divNate" style="display:none;"> 
+                            <p class="inner"><strong>[ {$mall_name} ]</strong>의 상품을 편리하게 <strong>싸이월드의 미니홈피, 클럽, 블로그로 스크랩</strong> 할 수 있습니다. </p> 
+                        </div> 
+                    </div> 
+                </td> 
+            </tr>  --> 
+            </tbody>
+
+            <tbody module="product_option" >
+            <tr module="product_option">
+                <th>{$option_name}</th>
+                <td>{$form.option}</td>
+            </tr>
+            <tr module="product_addoption">
+                <th>{$add_option_name}</th>
+                <td>{$form.add_option}</td>
+            </tr>
+            </tbody>
+        </table>
+
+		<div id="zoom_wrap"></div>
+
+        <!-- 옵션 추가 구매 -->
+        <div module="product_multioption">
+            <div class="{$multiple_option_template_class}">
+                <table border="1" summary="옵션 추가" style="margin-bottom:10px;">
+                    <caption>옵션 추가</caption>
+                    <tbody>
+                    <tr module="product_option">
+                        <th scope="row">{$option_name}</th>
+                        <td>{$form.option}</td>
+                    </tr>
+                    <tr module="product_addoption">
+                        <th scope="row">{$add_option_name}</th>
+                        <td>{$form.add_option}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">QUANTITY</th>
+                        <td><input type="text" value="1" class="{$multiple_option_quantity_class}"/></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p class="{$multiple_option_delete_class}" style="cursor:pointer; font-weight:500;">DELETE OPTION</p>
+            </div>
+
+            <p class="{$multiple_option_add_class}"  style="cursor:pointer; font-weight:500;">ADD OPTION</p>
+        </div>
+        
+        <p class="{$naver_mileage_exception_display|display}"><img src="http://img.echosting.cafe24.com/design/skin/mono/txt_naver.gif" alt="개인결제창을 통한 결제 시 네이버 마일리지 적립 및 사용이 가능합니다." /></p>
+
+		<!-- 네이트 C Log (공감하기 버튼)
+        <div module="product_NateClog"> 
+            {$nate_c_log} 
+        </div>  --> 
+<div class="line"></div>		
+        <div class="btnArea" module="product_action">
+            <p class="btnLeft">
+                <a href="#none" onclick="{$action_basket}" class="{$basket_display|display}"><img src="/test/images/btn_buy_03.jpg" onmouseover="this.src='/test/images/btn_buy_over_03.jpg'" onmouseout="this.src='/test/images/btn_buy_03.jpg'" title="Add to ShoppingBag"></a>
+                <a href="#none" onclick="{$action_wishlist}" class="{$wishlist_display|display}" style="margin-left:8px;"><img src="/test/images/btn_buy_05.jpg" onmouseover="this.src='/test/images/btn_buy_over_05.jpg'" onmouseout="this.src='/test/images/btn_buy_05.jpg'" title="Add to WishList"></a>
+            </p>
+            <!--<p class="btnRight">
+                <a href="/"><img src="http://img.echosting.cafe24.com/design/skin/mono/product/btn_prdGo.gif" alt="쇼핑 계속하기" /></a>
+                <a href="#none" onclick="{$action_buy}" class="{$buy_display|display}"><img src="http://img.echosting.cafe24.com/design/skin/mono/product/btn_prdOrder.gif" alt="바로 구매하기" /></a>
+            </p>-->
+            <!-- 네이버 체크아웃 구매 버튼 
+            <div id="NaverChk_Button"></div>
+        </div> -->
+
+        <div module="myshop_benefit">
+            <p class="myInfo" style="font-size:11px;">
+                {$member_name} 님은 <strong>{$group_name}</strong> 회원이십니다.
+                <span class="typeBlock {$display_no_benefit|display}"><strong>{$dc_pay} {$dc_min_price}</strong> 구매시 <strong>{$dc_price}{$dc_type}</strong>을 {$use_dc} 받으실 수 있습니다. {$dc_max_percent}</span>
+                <span class="typeBlock {$display_with_all|display}"><strong>{$dc_pay} {$dc_min_price_mileage}</strong> 구매시 <strong>{$dc_price_mileage}{$dc_type_mileage}</strong>을 {$use_dc_mileage} 받으실 수 있습니다. {$dc_max_mileage_percent}</span>
+            </p>
+        </div>
+
+        {$common_event_b}
+
+
+<div module="fancyboxdh"><!-- 팬시박스모듈-->
+<link rel="stylesheet" type="text/css" href="/test/css/jquery.fancybox.css" />
+<script src="/test/js/jquery.fancybox.js"></script>
+
+<div class="detail_bottom"><!-- 하단 정보와 게시판 버튼 - 라이트 박스 필요 -->
+<a href="#" class="btn-example" onclick="layer_open2('layer3');return false;"  title="Size Guide"><div class="detail_bottom_btn">SIZE GUIDE</div></a>
+<a href="#" class="btn-example" onclick="layer_open3('layer4');return false;" title="Delivery Information"><div class="detail_bottom_btn">shopping guide</div></a>
+<a href="#" class="btn-example" onclick="layer_open('layer2');return false;" title="Q & A"><div class="detail_bottom_btn">Q & A</div></a>
+</div><!-- 하단 정보와 게시판 버튼 - 라이트 박스 필요 끝-->
+
+
+<div class="layera"><!-- 사이즈가이드-->
+	<div class="bg"></div>
+	<div id="layer3" class="pop-layera">
+		<div class="pop-container">
+			<div class="pop-conts"><!--content //-->				
+				<p class="ctxt">
+				<div class="title">Coming Soon! Size Guide.</div>
+				<div class="btn-r"><a href="#" class="cbtn"><img src="/test/images/btn_close.png"></a></div>
+				<div class="txtsub">현재 드레브의 사이즈 가이드는 준비중입니다.</div>
+				</p>
+							
+			</div><!--// content-->
+		</div>
+	</div>
+</div><!-- 사이즈가이드-->
+
+<div class="layerb"><!-- 배송정보-->
+	<div class="bg"></div>
+	<div id="layer4" class="pop-layerb">
+		<div class="pop-container">
+			<div class="pop-conts"><!--content //-->				
+				<p class="ctxt">
+				<div class="btn-r"><a href="#" class="cbtn"><img src="/test/images/btn_close.png"></a></div>
+				<!-- 추가옵션모듈-->
+				    <!-- 배송 -->
+    <div id="myxframe" style="padding:0; margin:0; width:100%; height:100%; overflow:hidden;">
+<iframe src="/test/detail_shop_guide.html" width="100%" height="470" marginheight="0" frameborder="0" scrolling="no"  name="myxxframe" id="myxxframe"></iframe>
+</div>    
+       
+    <!-- //배송 -->
+<!-- 추가옵션모듈-->
+				</p>
+							
+			</div><!--// content-->
+		</div>
+	</div>
+</div><!-- 배송정보-->
+
+<div class="layerc"><!-- 교환반품정보-->
+	<div class="bg"></div>
+	<div id="layer5" class="pop-layerc">
+		<div class="pop-container">
+			<div class="pop-conts"><!--content //-->				
+				<p class="ctxt">
+				<div module="product_additional"><!-- 추가옵션모듈-->
+    <!-- 교환 및 반품 -->
+        <div class="title">Returns</div>
+        <div class="txtsub">{$exchange_info}</div>
+    <!-- //교환 및 반품 -->
+				</div>
+				</p>
+				<a href="#" class="cbtn"><div class="btn-r">CLOSE</div></a>		
+			</div><!--// content-->
+		</div>
+	</div>
+</div><!-- 교환반품정보-->
+
+<div class="layer"><!-- 질문답변게시판-->
+	<div class="bg"></div>
+	<div id="layer2" class="pop-layer">
+		<div class="pop-container">
+			<div class="pop-conts"><!--content //-->				
+				<p class="ctxt">
+				<div module="product_additional"><!-- 추가옵션모듈-->
+				  <!-- 상품 Q&A -->
+    <div id="prdQnA">
+        <div class="title">Item Q & A</div>
+<div class="btn-r"><a href="#" class="cbtn"><img src="/test/images/btn_close.png"></a></div>
+        <div id="qnaArea" class="txtsub">
+            <span>상품에 대해 궁금한 점을 해결해 드립니다.</span>
+
+            <div module="product_qna">
+			<!--@css(/css/module/product/additional.css)-->
+            <!--@js(/js/module/product/qna.js)-->
+            
+            <table border="1" summary="상품의 사용후기입니다." class="boardList">
+                <caption>상품 질문과 답변</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col" class="number" >No</th>
+                        <th scope="col" class="subject">Subject</th>
+                        <th scope="col" class="name">Name</th>
+                        <th scope="col" class="date">Date</th>
+                        <th scope="col" class="hit">Hit</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="first">
+                        <td>{$no}</td>
+                        <td class="subject">{$icon_re}{$icon_lock} <a href="/product/provider/review_read.xml{$param_read}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
+                        <td>{$member_icon} {$writer}</td>
+                        <td>{$write_date|date:Y-m-d}</td>
+                        <td>{$hit_count}</td>
+                    </tr>
+
+                    <tr>
+                        <td>{$no}</td>
+                        <td class="subject">{$icon_re}{$icon_lock} <a href="/product/provider/review_read.xml{$param_read}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
+                        <td>{$member_icon} {$writer}</td>
+                        <td>{$write_date|date:Y-m-d}</td>
+                        <td>{$hit_count}</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            
+            <div module="product_qnapaging">
+                <!--@js(/js/module/product/pager.js)-->
+                <p><a href="{$param_first}"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_pageFirst.gif" alt="첫 페이지" /></a> </p>
+                <p><a href="{$param_before}"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_pagePrev.gif" alt="이전 페이지" /></a></p>
+            
+                <ol>
+                    <li><a href="{$param}" title="페이지로 이동">[{$no}]</a></li>
+                    <li><a href="{$param}" title="페이지로 이동">[{$no}]</a></li>
+                    <li><a href="{$param}" title="페이지로 이동">[{$no}]</a></li>
+                    <li><a href="{$param}" title="페이지로 이동">[{$no}]</a></li>
+                    <li><a href="{$param}" title="페이지로 이동">[{$no}]</a></li>
+                </ol>
+            
+                <p><a href="{$param_next}"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_pageNext.gif" alt="다음 페이지" /></a> </p>
+                <p><a href="{$param_last}"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_pageLast.gif" alt="마지막 페이지" /></a> </p>
+            </div>
+
+            <div class="boardBtn">
+                <a href="{$qna_write}"><div class="boardBtndh">WRITE</div></a>
+            </div>
+        </div>
+    </div>
+    <!-- //상품 Q&A -->
+				</div>
+				</p>
+			
+			</div><!--// content-->
+		</div>
+	</div>
+</div><!-- 질문답변게시판-->
+<!--페이정보 추가옵션모듈끝-->
+<!--<div module="product_additional">
+<div class="paymenttxt">{$payment_info}</div>
+</div>-->
+<!--페이정보 추가옵션모듈끝-->
+</div><!-- 팬시박스모듈끝-->
+	
+
+
+
+
+	</div>
+    <!-- //상세정보 내역 -->
+
+
+
+
+<div module="product_additional">
+    <!--@css(/css/module/product/additional.css)-->
+    <!-- 관련 상품 -->
+    <div id="prdRelated">
+        
+        <!-- 관련 상품 리스트 -->
+        <div class="inner" module="product_relation">
+            <div id="relatedArea" module="product_relationlist">
+			<div class="titleh3">You may like these</div>
+                <ul>
+                    <li>
+                        <a href="/product/detail.html{$param}" class="prdImg"><img src="{$img}" width="80" alt="" /></a>
+                        <!--<a href="/product/detail.html{$param}" class="name">{$name} {$soldout_icon} {$recommend_icon} {$new_icon} {$product_icons}</a>
+                        <strong class="price">{$product_price|numberformat}원</strong><br />
+                        {$mileage_icon} {$mileage_value}-->
+                    </li>
+                    <li>
+                        <a href="/product/detail.html{$param}" class="prdImg"><img src="{$img}" width="80" alt="" /></a>
+                        <!--<a href="/product/detail.html{$param}" class="name">{$name} {$soldout_icon} {$recommend_icon} {$new_icon} {$product_icons}</a>
+                        <strong class="price">{$product_price|numberformat}원</strong><br />
+                        {$mileage_icon} {$mileage_value}-->
+                    </li>
+                    <li>
+                        <a href="/product/detail.html{$param}" class="prdImg"><img src="{$img}" width="80" alt="" /></a>
+                        <!--<a href="/product/detail.html{$param}" class="name">{$name} {$soldout_icon} {$recommend_icon} {$new_icon} {$product_icons}</a>
+                        <strong class="price">{$product_price|numberformat}원</strong><br />
+                        {$mileage_icon} {$mileage_value}-->
+                    </li>
+                    <li>
+                        <a href="/product/detail.html{$param}" class="prdImg"><img src="{$img}" width="80" alt="" /></a>
+                       <!--<a href="/product/detail.html{$param}" class="name">{$name} {$soldout_icon} {$recommend_icon} {$new_icon} {$product_icons}</a>
+                        <strong class="price">{$product_price|numberformat}원</strong><br />
+                        {$mileage_icon} {$mileage_value}-->
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="/product/detail.html{$param}" class="prdImg"><img src="{$img}" width="80" alt="" /></a>
+                       <!--<a href="/product/detail.html{$param}" class="name">{$name} {$soldout_icon} {$recommend_icon} {$new_icon} {$product_icons}</a>
+                        <strong class="price">{$product_price|numberformat}원</strong><br />
+                        {$mileage_icon} {$mileage_value}-->
+                    </li>
+                    <li>
+                        <a href="/product/detail.html{$param}" class="prdImg"><img src="{$img}" width="80" alt="" /></a>
+                        <!--<a href="/product/detail.html{$param}" class="name">{$name} {$soldout_icon} {$recommend_icon} {$new_icon} {$product_icons}</a>
+                        <strong class="price">{$product_price|numberformat}원</strong><br />
+                        {$mileage_icon} {$mileage_value}-->
+                    </li>
+                    <li>
+                        <a href="/product/detail.html{$param}" class="prdImg"><img src="{$img}" width="80" alt="" /></a>
+                        <!--<a href="/product/detail.html{$param}" class="name">{$name} {$soldout_icon} {$recommend_icon} {$new_icon} {$product_icons}</a>
+                        <strong class="price">{$product_price|numberformat}원</strong><br />
+                        {$mileage_icon} {$mileage_value}-->
+                    </li>
+                    <li>
+                        <a href="/product/detail.html{$param}" class="prdImg"><img src="{$img}" width="80" alt="" /></a>
+                       <!--<a href="/product/detail.html{$param}" class="name">{$name} {$soldout_icon} {$recommend_icon} {$new_icon} {$product_icons}</a>
+                        <strong class="price">{$product_price|numberformat}원</strong><br />
+                        {$mileage_icon} {$mileage_value}-->
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- //관련 상품 리스트 -->
+    </div>
+    <!-- //관련 상품 -->
+</div>
+
+
+
+
+</div>
+<!-- //상단 제품 정보 -->
+
+
+
+
+<!--@define(cmc_log)-->

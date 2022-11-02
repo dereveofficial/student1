@@ -1,0 +1,51 @@
+.xans-board-title-1001 .pathBoard { overflow:hidden; margin:3px 0 17px; }
+.xans-board-title-1001 .pathBoard h3 { float:left; text-indent:-9999em; margin:0; }
+.xans-board-title-1001 .pathBoard ol { float:right; }
+.xans-board-title-1001 .pathBoard li { padding:0 0 0 22px; display:inline; font-size:.9em; background:url(http://img.echosting.cafe24.com/design/skin/mono/bg_path.gif) 0 50% no-repeat; }
+.xans-board-title-1001 .pathBoard li.first { background:none; }
+
+.xans-board-title-1001 .titleAreaBoard { margin:17px 0 30px; }
+.xans-board-title-1001 .titleAreaBoard:after {content:""; display:block; clear:both; }
+.xans-board-title-1001 .titleAreaBoard h2 { height:21px; border-bottom:1px solid #dedcdc; zoom:1;}
+.xans-board-title-1001 .titleAreaBoard h2 span { height:21px; padding:0 5px 0 0; color:#272823; font-size:16px; float:left; border-bottom:1px solid #272823; }
+.xans-board-title-1001 .titleAreaBoard p { padding:3px 0 0; clear:both; font-size:.9em; line-height:1.5em; color:#8f8f8f; }
+
+.memoList input,
+.memoList textarea { border:1px solid #bcbcbc; background:#fff; color:#202020; padding:1px 0 2px 4px; }
+
+.replyModify { padding:15px 20px; background:#e2e9dc url(http://img.echosting.cafe24.com/design/skin/mono/bg_dot_board.gif) 0 0 repeat-x; }
+.replyModify p { padding:0 0 5px; }
+.replyModify .modify textarea { width:570px; }
+
+.commentView { padding:10px 20px; background:#e2e9dc url(http://img.echosting.cafe24.com/design/skin/mono/bg_dot_board.gif) 0 0 repeat-x; }
+
+.memoList { background:#f0f4ed; border-top:3px solid #333; border-bottom:3px solid #333; }
+.memoList .memoCont { overflow:hidden; padding:20px; border-top:1px solid #e9e9e9; color:#8f8f8f; }
+.memoList .reply { background:#fefcec url(http://img.echosting.cafe24.com/design/skin/mono/bg_dot_board.gif) 0 0 repeat-x; }
+.memoList .inner { padding:0 0 0 20px; background:#fefcec url(http://img.echosting.cafe24.com/design/skin/mono/board/bg_memoRe.gif) 0 0 no-repeat; overflow:hidden; zoom:1; }
+.memoList .memoCont p.user { float:left; color:#202020; }
+.memoList .memoCont p.btn { float:right; color:#202020;  padding:0 0 0 20px;}
+.memoList .memoCont p.btn a,
+.memoList .memoCont p.btn a:hover {color:#202020; padding:0 7px 0 0; background:url(http://img.echosting.cafe24.com/design/skin/mono/board/bg_btnLine.gif) right center no-repeat; }
+.memoList .memoCont p.btn a.last { padding:0; background:none !important; }
+.memoList .reply p.user span.re { padding:0 10px 0 0; }
+.memoList .reply p.btn a,
+.memoList .reply p.btn a:hover {color:#8f8f8f; background:url(http://img.echosting.cafe24.com/design/skin/mono/board/bg_btnLine2.gif) right center no-repeat;}
+.memoList .memoCont .writer { overflow:hidden; zoom:1; }
+.memoList .memoCont p.date { float:right; }
+.memoList .memoCont p.memo { clear:both; padding:10px 0 0; }
+.memoList .reply p.memo { padding:10px 0 0 28px; }
+
+.xans-board-memowrite-1001 { margin:20px 0; padding:15px 20px; border:1px solid #d2d2cf; background:#f5f6ec; font-size:.9em; }
+.xans-board-memowrite-1001 legend { display:none; }
+.xans-board-memowrite-1001 p { padding:5px 0; color:#000; }
+.xans-board-memowrite-1001 p label { padding:0 10px 0 0; }
+.xans-board-memowrite-1001 p a { margin:0 -2px 0 0;}
+.xans-board-memowrite-1001 textarea { width:638px; height:46px; }
+.xans-board-memowrite-1001 p.grade input { border:0; padding:0; background:none; }
+.xans-board-memowrite-1001 p span.secret input { border:none; }
+
+.xans-board-memowrite-1001 input,
+.xans-board-memowrite-1001 textarea { border:1px solid #bcbcbc; background:#fff; color:#202020; padding:1px 0 2px 4px; }
+.xans-board-memowrite-1001 .memo textarea { width:635px; }
+.xans-board-memowrite-1001 #attendCommentBtnWrap input { border:none !important; width:auto !important; height:auto !important; margin:0 !important; padding:0 !important; }

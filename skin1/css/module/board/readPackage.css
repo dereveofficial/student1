@@ -1,0 +1,82 @@
+/* 게시판 전체 공통 */
+.xans-board-title .pathBoard { overflow:hidden; margin:3px 0 17px; }
+.xans-board-title .pathBoard h3 { float:left; text-indent:-9999em; margin:0; }
+.xans-board-title .pathBoard ol { float:right; }
+.xans-board-title .pathBoard li { padding:0 0 0 22px; display:inline; font-size:.9em; background:url(http://img.echosting.cafe24.com/design/skin/mono/bg_path.gif) 0 50% no-repeat; }
+.xans-board-title .pathBoard li.first { background:none; }
+
+.xans-board-title .titleAreaBoard { margin:17px 0 30px; *zoom:1; }
+.xans-board-title .titleAreaBoard:after {content:""; display:block; clear:both; }
+.xans-board-title .titleAreaBoard h2 { height:21px; border-bottom:1px solid #dedcdc; zoom:1;}
+.xans-board-title .titleAreaBoard h2 span { height:21px; padding:0 5px 0 0; color:#272823; font-size:16px; float:left; border-bottom:1px solid #272823; }
+.xans-board-title .titleAreaBoard p { padding:3px 0 0; clear:both; font-size:.9em; line-height:1.5em; color:#8f8f8f; }
+
+/* read */
+/*상단 제목*/
+.xans-board-read div.boardView1 { margin:30px auto 0; padding:20px; color:#333; width:960px; font-size:11px;  border:8px solid #f1f1f1; }
+
+.xans-board-read table.top {background:#ffffff;   margin-top:0; font-size:11px; width:100%;}
+.xans-board-read table.top tr {}
+.xans-board-read table.top td {padding:0;}
+.xans-board-read table.top td.subjectdh { font-size:18px; font-weight:bold; color:#333333; padding:0;}
+.xans-board-read table.top td ul { overflow:hidden; text-align:right;  }
+.xans-board-read table.top td ul li {  display:inline; overflow:hidden; margin:0 0 0 20px; color:#888888; }
+
+/*내용*/
+.xans-board-read div.boardView2 { margin:20px auto; padding:20px; color:#333; width:960px; font-size:11px; line-height:16px;border:8px solid #f1f1f1;}
+.xans-board-read table.cont {background:#ffffff;   margin-top:0; font-size:11px; width:100%;}
+.xans-board-read table.cont tr {}
+.xans-board-read table.cont td {padding:0;}
+.xans-board-read table.cont td.view {  }
+.xans-board-read table.cont td.view .detail { padding:10px; }
+.xans-board-read table.cont td.view .detail img {margin:10px 0;}
+
+.xans-board-read table.cont .items { padding:10px;; border:1px solid #ddd; width:100%;}
+.xans-board-read table.cont .prdArea { float:left; margin:0;}
+.xans-board-read table.cont .prdArea img { width:100px; }
+.xans-board-read table.cont .prdInfo {  float:right; padding:60px; font-size:12px;}
+.xans-board-read table.cont .prdInfo a { font-size:12px;  font-weight:bold; color:#333333; text-decoration:underline; margin:0;}
+.xans-board-read table.cont .prdInfo a:hover { color:#888888}
+.xans-board-read table.cont .prdInfo span { font-size:11px;  font-weight:bold; color:#555555; margin:0 0 0 20px;}
+.xans-board-read table.cont .prdInfo img { vertical-align:middle; margin:0 0 0 10px;}
+
+
+/*하단*/
+.xans-board-read div.boardView3 { margin:0 auto; padding:10px 20px; color:#333; width:960px; font-size:11px; line-height:16px;border:8px solid #f1f1f1;}
+.xans-board-read table.bot {background:#ffffff;   margin-top:0; font-size:11px; width:100%;}
+.xans-board-read table.bot tr {}
+.xans-board-read table.bot input {  color:#202020; padding:2px; }
+.xans-board-read table.bot th {  text-align:left; padding:5px 0; font-size:11px; color:#afafaf;  line-height:16px;  }
+.xans-board-read table.bot td {  text-align:left; padding:5px 0; font-size:11px;  color:#888888;  vertical-align:middle;  }
+
+
+
+.xans-board-read .btnArea { text-align:right; overflow:hidden; margin:20px auto; width:960px;}
+.xans-board-read .btnArea.miniType { margin:10px 0 20px; padding:0 15px; }
+.xans-board-read .btnArea img { padding:0 1px 0 0; cursor:pointer; }
+
+.xans-board-read .btnArea .btnLeft { float:left; }
+.xans-board-read .btnArea .btnLeft .boardBtndh { float:left; width:80px; height:32px; line-height:26px; margin-left:20px; padding:0; text-align:left; background-color:#ffffff; border:0px solid #d4d4d4;}
+.xans-board-read .btnArea .btnLeft .boardBtndh:hover {background-color:#ffffff;  border:0px solid #e8e8e8;}
+.xans-board-read .btnArea .btnLeft a { color:#333333; font-size:12px; font-weight:700;}
+.xans-board-read .btnArea .btnLeft a:hover { color:#afafaf; font-size:12px;  font-weight:700;}
+
+.xans-board-read .btnArea p.btnRight { float:right; }
+.xans-board-read .btnArea p.btnRight img { float:left; padding:0 0 0 1px; }
+
+/* read-상품타입 */
+.xans-board-product { padding:0; margin:0 auto; width:100%;}
+.xans-board-product .prdArea { float:left; margin:0; border:1px solid #fff; }
+.xans-board-product .prdArea img { width:100px; }
+.xans-board-product .prdInfo { width:400px; float:right; padding:20px 20px 0 0; }
+.xans-board-product .prdInfo h3 { font-size:14px; color:#555555;}
+.xans-board-product .prdInfo h3 img { vertical-align:middle; }
+.xans-board-product .price { margin:15px 0; font-size:11px; font-weight:bold; color:#555555; }
+.xans-board-product .btn {}
+
+/* detail reset */
+
+table{border-spacing:0; border:0; border-collapse:collapse; width:100%; }
+th, td {border:0; vertical-align:top;  }
+
+

@@ -1,0 +1,16 @@
+.xans-layout-category { background:#cccccc; text-align:center; }
+.xans-layout-category h2 { display:none; }
+.xans-layout-category .postion { position:relative; width:960px; z-index:99; }
+.xans-layout-category ul { display:inline-block; .display:inline; zoom:1; height:28px; }
+.xans-layout-category li { float:left; z-index:99; }
+.xans-layout-category li a { display:block; font-size:11px; color:#6d595b; height:14px; padding:8px 5px 6px; width:150px; text-align:center; }
+.xans-layout-category li a:hover { text-decoration:underline; font-weight:bold; }
+
+.xans-layout-category .sub-category { position:absolute; left:0; top:28px; width:100%; z-index:90; background:#f2f1ea; }
+.xans-layout-category .sub-category ul { display:block; width:auto; height:auto; padding:6px; overflow:hidden; zoom:1; }
+.xans-layout-category .sub-category li {}
+.xans-layout-category .sub-category a { padding:0; font-size:11px; height:auto; line-height:18px; color:#818181; font-weight:normal; text-align:left; }
+.xans-layout-category .sub-category a:hover { background:none; font-weight:bold; }
+
+.xans-layout-category li.pst1 .sub-category ul { margin:0 0 0 285px; background:url(http://img.echosting.cafe24.com/design/skin/junior001/bg_categorySub.gif) 30px 0 no-repeat; }
+.xans-layout-category li.pst2 .sub-category ul { margin:0 0 0 370px; background:url(http://img.echosting.cafe24.com/design/skin/junior001/bg_categorySub.gif) 110px 0 no-repeat; }

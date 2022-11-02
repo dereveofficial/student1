@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset="utf-8"" />
+	<title>기본 레이아웃</title>
+	<!--@css(/layout/basic/css/common.css)-->
+</head>
+<body>
+<div module="board_ReadPackage_11">
+    <!--@css(/css/module/board/readPackage_11.css)-->
+    <div module="Board_Read_11">
+    <!--
+        $secret_page_url = /board/opdiary/secret.html
+        $delete_success_url = /board/opdiary/list.html
+     -->
+        <table border="1" summary="운영일지입니다." class="boardView boardBlog">
+        <caption>운영일지</caption>
+            <tbody>
+            <tr>
+                <th class="subject" scope="row">제목</th>
+                <td class="subject">{$subject}  {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
+                <th class="date" scope="row">작성일</th>
+                <td class="date">{$write_date}</td>
+            </tr>
+            <tr class="content">
+                <th scope="row">내용</th>
+                <td colspan="3">{$content}{$content_image}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div module="board_CommentPackage_11">
+<!--@css(/css/module/board/commentPackage.css)-->
+	<!-- 코멘트 리스트 -->
+    <div module="Board_CommentList_11">
+    <!--
+        $delete_page_url = /board/opdiary/comment_del.html
+        $delete_success_url = /board/opdiary/read_blog.html
+    -->
+        <ul class="boardReply">
+            <li>
+                <strong class="name">{$comment_name}</strong>
+                <span class="date">{$comment_write_date}</span>
+                <span class="btns">
+                    <a href="javascript:;" onclick="{$action_comment_delete}" ><img src="http://img.echosting.cafe24.com/design/skin/mono/board/btn_icoDel.gif" alt="댓글 삭제" /></a>
+                </span>
+                <span class="comment">
+                    <span class="{$is_spam_display|display}"><img src="http://img.cafe24.com/images/ec_admin/community/spam_filter/icon_jucha.gif" alt="스팸글" /></span>
+                    {$comment_content}
+                </span>
+            </li>
+            <li>
+                <strong class="name">{$comment_name}</strong>
+                <span class="date">{$comment_write_date}</span>
+                <span class="btns">
+                    <a href="javascript:;" onclick="{$action_comment_delete}" ><img src="http://img.echosting.cafe24.com/design/skin/mono/board/btn_icoDel.gif" alt="댓글 삭제" /></a>
+                </span>
+                <span class="comment">
+                    <span class="{$is_spam_display|display}"><img src="http://img.cafe24.com/images/ec_admin/community/spam_filter/icon_jucha.gif" alt="스팸글" /></span>
+                    {$comment_content}
+                </span>
+            </li>
+        </ul>
+    </div>
+
+    <div module="board_commentwrite_11">
+        <!-- 댓글권한 있음 -->
+        <div class={$comment_write_display|display}>
+            <fieldset>
+                <legend>댓글 입력</legend>
+                
+                <p><span class="{$comment_input_name|display}">이름 {$form.comment_name} </span>비밀번호 {$form.comment_password}</p>
+                <p>
+                    {$form.comment}
+                    <a href="#none" onclick="{$action_comment_insert}" class="{$comment_button|display}"><img src="http://img.echosting.cafe24.com/design/skin/mono/board/btn_reOk.gif" alt="확인" /></a>
+                </p>
+                <p>{$comment_byte} / {$comment_size} byte</p>
+                <p class="{$config.use_captcha_comment|display}">
+                    {$captcha_image}<br />
+                    {$form.captcha}
+                    * 왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)
+                </p>
+            </fieldset>
+        </div>
+        <!-- 댓글권한 없음 -->
+        <div class="{$comment_write_display_none|display}">
+            <p>{$comment_auth_name}에게만 댓글 작성 권한이 있습니다.</p>
+        </div>
+    </div>
+
+    <!-- 코멘트 페이징 -->
+    <div module="board_commentpaging_11">
+        <!--@js(/js/module/board/pager.js)-->
+        <p><a href="{$param_prev}"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_pagePrev.gif" alt="이전 페이지" /></a></p>
+        <ol>
+            <li><a href="{$param_num}" title="페이지로 이동">[{$page_num}]</a></li>
+            <li><a href="{$param_num}" title="페이지로 이동">[{$page_num}]</a></li>
+        </ol>
+        <p><a href="{$param_next}"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_pageNext.gif" alt="다음 페이지" /></a> </p>
+    </div>
+</div>
+</body>
+</html>

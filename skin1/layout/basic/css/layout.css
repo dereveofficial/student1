@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+
+
+/* layout */
+#wrap { position:relative; width:100%; margin:0 auto;	}
+#header { width:100%; margin:0 auto; color:#202020; top:0px; font-size:.9em;padding-top:0px;  background-color:#ffffff;} /* overflow:hidden; 원래 있었음 */
+#header img { vertical-align:top; }
+
+#container { width:100%; margin:0 auto; zoom:1;padding-top:60px;}
+#container:after {content:""; display:block; clear:both; }
+
+#container #snbL { float:left; width:145px; padding-right:15px;}
+#container #contents {float:left; width:100%; }
+#main #container #contents { width:1000px; margin:0 auto;  }
+#container #snbR {float:right; width:180px; }
+
+#footer { position:relative; clear:both; width:100%; height:50px; padding-top:10px; margin:0 auto; overflow:hidden; zoom:1; line-height:16px;}
+
+#quickL { position:absolute; top:100px; left:0; width:100px; min-height:200px;}
+#quickR { position:absolute; top:100px; right:0; width:80px; min-height:200px; }
+
+/* HEADER */
+#header .inner {float:left; width:100%px; padding:35px 0px 0 60px;}
+#header .bookmark,
+#header .desktop { float:right; }
+#header .bookmark { padding:0 0 0 20px; }
+#header .desktop { padding:0 0 0 5px; }
+
+/* Collection */
+#topdh { margin:0 auto; text-align:center;}
+.locationdh { margin:0 auto; width:960px; padding:45px 0 0 0; height:70px;}
+.titledh {float:left; font-family: 'Roboto', 'sans-serif'; font-weight: 500; font-size: 12px; color:#333333;}
+.heredh {float:right; font-family: 'Roboto', 'sans-serif'; font-weight: 400; font-size:9px; color:#888888;}
+.line_dh {margin:40px auto 10px; text-align:center; max-width:100%; width:98%; height:30px; border:none; background-image:url('/test/images/bg_line.jpg');}
+.line_title_dh {margin:0 auto; padding-top:7px; background-color:#ffffff;  width:100px; font-size:14px; font-weight: 700;}
+
+/* MAIN */
+#kvMain { clear:both; margin:0 0 15px;text-align:center; }
+
+#main #container #snbL { margin-top:0; }
+#main #container #snbR { margin-top:-25px; }
+
+#main #prdArea2 { margin:30px 0; /* padding:0 0 30px; border-bottom:40px solid #f39761; */ }
+#main #prdArea3 { padding:0 0 30px;  border-bottom:40px solid #e4b1b0; }
+#main .btnMore a { display:block; padding:20px 0 4px 529px; }
+
+#boardArea { overflow:hidden; margin:30px 0; font-size:11px;}
+.mainBoard p { margin:10px 0 0;}
+.mainBoard thead {visibility:hidden; position:absolute; left:-1000px; top:-1000px; height:0; width:0; }
+.mainBoard td { border:none; font-size:11px; line-height:1.8em; }
+.mainBoard td.title a,
+.mainBoard td.title a:hover { text-decoration:underline; color:#8f8f91; }
+
+
+#board2nd { float:right; width:270px; }
+#board2nd h2 { height:20px; margin:0 0 20px; border-bottom:1px solid #dedcdc; }
+#board3rd td { display:none; }
+#board3rd td.title { display:block; width:auto; }
+
+/* COMMON */
+
+.path { overflow:hidden; margin:3px 0 17px; }
+.path h3 { float:left; text-indent:-9999em; margin:0; }
+.path ol { float:right; }
+.path li { padding:0 0 0 22px; display:inline; font-size:.9em; background:url(/test/images/bg_path.gif) 0 50% no-repeat; }
+.path li.displaynone { display:none; }
+.path li.first { background:none; }
+
+.titleArea { margin:0;}
+.titleArea:after {content:""; display:block; clear:both;}
+.titleArea h2 { }
+.titleArea h2 span { }
+.titleArea h3 { margin:0 0 20px; font-size:14px;font-family: Verdana, Geneva, sans-serif;"돋움"; }
+.titleArea p { padding:3px 0 0; clear:both; font-size:.9em; line-height:1.5em; color:#8f8f8f;}
+
+#banners { margin:25px 0 0; overflow:hidden; zoom:1; }
+#banners p img { display:block; border-bottom:1px solid #e7e6d8; }
+
+.utilBanner { margin:25px 0 0; }
+
+
+/* 컨텐츠 하단 리스트 형식 안내 */
+#message { font-size:.9em; color:#8B8B8C; clear:both; }
+#message h3 { padding:0 0 18px 0; margin:0; }
+#message li { padding:0 0 0 10px; line-height:18px; background:url(http://img.echosting.cafe24.com/design/skin/mono/ico_info.gif) 0 2px no-repeat; }
+#message li > strong { display:block; padding:0 0 5px; }
+#message li ul { padding:0 0 20px; }
+#message li li { padding:0; background:none;}
+#message p.info { padding:0 0 15px 10px; line-height:18px; background:url(http://img.echosting.cafe24.com/design/skin/mono/ico_info.gif) 0 2px no-repeat; color:#34a7b3; }
+#message a,
+#message a:hover {color:#8B8B8C; }
+#message em { color:#34a7b3; text-decoration:underline; font-style:normal; }
+
+/* 주문내역 조회 안내 문구 */
+#inquiry { overflow:hidden; margin:0 0 20px; }
+#inquiry p { float:left; font-size:.9em; color:#8f8f8f; line-height:2.0em;}
+#inquiry p.icon { float:right; overflow:hidden; }
+#inquiry p.icon img { float:left; padding:20px 10px 0; }
+
+/* 주문 관련 안내 문구 */
+.basketInfo { font-size:.9em; color:#8B8B8C; margin:30px 0;}
+.basketInfo h3 { padding:0 0 18px 0; line-height:18px; color:#34a7b3; font-weight:normal; }
+.basketInfo li { padding:0 0 0 10px; line-height:18px; background:url(http://img.echosting.cafe24.com/design/skin/mono/ico_info.gif) 0 2px no-repeat; }
+.basketInfo li > strong { display:block; padding:0 0 5px; }
+.basketInfo li ul { padding:0 0 20px; }
+.basketInfo li li { padding:0; background:none;}
+.basketInfo a,
+.basketInfo a:hover {color:#8B8B8C; }
+.basketInfo.mileageType { margin:50px 0 0;}
+.basketInfo.couponType em { color:#34a7b3; text-decoration:underline; }
+
+/* 배송 주소록 관리 */
+#addManage { font-size:.9em; color:#8B8B8C; }
+#addManage h3 { padding:0 0 18px 0; margin:0; }
+#addManage li { padding:0 0 0 10px; line-height:18px; background:url(http://img.echosting.cafe24.com/design/skin/mono/ico_info.gif) 0 2px no-repeat; }
+#addManage li > strong { display:block; padding:0 0 5px; }
+
+/*  마이 쿠폰 안내 문구 */
+.couponInfo { margin:0 0 30px; }
+.couponInfo li { padding:0 0 0 10px; color:#8f8f8f; font-size:11px;  line-height:18px; background:url(http://img.echosting.cafe24.com/design/skin/mono/ico_info.gif) 0 2px no-repeat; }
+.couponInfo strong { color:#f26522; }
