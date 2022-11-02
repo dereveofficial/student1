@@ -1,0 +1,84 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="Board_ListPackage_9">
+<!--@css(/css/module/board/listPackage_9.css)-->
+    <div module="board_title_9">
+        <div class="pathBoard">
+            <h3>현재 위치</h3>
+            <ol>
+                <li class="first"><a href="/">홈</a></li>
+                <li><a href="/myshop/index.html">마이쇼핑</a></li>
+                <li title="현재 위치"><strong>{$board_name}</strong></li>
+            </ol>
+        </div>
+
+        <div class="titleAreaBoard">
+            <p class="imgArea">{$board_top_image}</p>
+            <h2><span>{$board_name}</span></h2>
+            <p>{$board_info}</p>
+        </div>
+    </div>
+
+	<div class="boardList">
+		<table border="1" summary="1:1 맞춤상담 목록 입니다">
+		<caption>1:1 맞춤상담 목록</caption>
+
+		<thead module="board_listheader_9">
+			<tr>
+				<th scope="col" class="number">번호</th>
+				<th scope="col" class="subject">제목</th>
+				<th scope="col" class="writer">작성자</th>
+				<th scope="col" class="date {$config.use_date|display}">작성일</th>
+				<th scope="col" class="consult">답변</th>
+			</tr>
+		</thead>
+
+		<tbody module="board_list_9">
+		<!-- 
+			$login_page_url = /member/login.html
+			$count = 10
+		 -->
+			<tr class="first">
+				<td class="number">{$no}</td>
+				<td class="subject"><a href="/board/consult/read.html{$param_read}">{$subject|cut:22,...}</a> {$icon_new}{$icon_hit}{$icon_file}</td>
+				<td class="writer">{$member_icon}{$writer}</td>
+				<td class="date {$date_display|display}" >{$write_date}</td>
+				<td align="consult">{$consult}</td>
+			</tr>
+			<tr>
+				<td class="number">{$no}</td>
+				<td class="subject"><a href="/board/consult/read.html{$param_read}">{$subject|cut:22,...}</a> {$icon_new}{$icon_hit}{$icon_file}</td>
+				<td class="writer">{$member_icon}{$writer}</td>
+				<td class="date {$date_display|display}" >{$write_date}</td>
+				<td align="consult">{$consult}</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+
+	<div module="board_ButtonList_9">
+		<p><a href="/board/consult/write.html{$param_write}" class="{$write_display|display}"><img src="http://img.echosting.cafe24.com/design/skin/mono/board/btn_write.gif" alt="글쓰기" /></a></p>
+	</div>
+</div>
+
+<div module="board_paging_9">
+	<!--@css(/css/module/board/paging.css)-->
+	<!--@js(/js/module/board/pager.js)-->
+	<p><a href="{$param_first}"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_pageFirst.gif" alt="첫 페이지" /></a></p>
+	<p><a href="{$param_prev}"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_pagePrev.gif" alt="이전 페이지" /></a></p>
+	
+	<ol>
+		<li><a href="{$param_num}" title="페이지로 이동">[{$page_num}]</a></li>
+		<li><a href="{$param_num}" title="페이지로 이동">[{$page_num}]</a></li>
+	</ol>
+	
+	<p><a href="{$param_next}"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_pageNext.gif" alt="다음 페이지" /></a></p>
+	<p><a href="{$param_last}"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_pageLast.gif" alt="마지막 페이지" /></a></p>
+</div>
+
+<div module="board_search_9">
+<!--@css(/css/module/board/search.css)-->
+	<fieldset class="boardSearch">
+		<legend>게시물 검색</legend>
+		<p>{$form.consult} {$form.search_date} {$form.search_key}{$form.search} <a href="#none" onclick="{$action_search}"><img src="http://img.echosting.cafe24.com/design/skin/mono/board/btn_find.gif" alt="찾기" /></a></p>
+	</fieldset>
+</div>

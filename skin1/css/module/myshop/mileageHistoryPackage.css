@@ -1,0 +1,30 @@
+.xans-myshop-mileagehistorypackage {margin:0 auto 20px; padding:0; color:#333; width:900px; font-size:11px;}
+.xans-myshop-mileagehistorypackage .titleArea { margin:20px 0 30px 0; font-size:11px; color:#888888; padding:0 25px;}
+.xans-myshop-mileagehistorypackage .titleArea span { font-size:12px; font-weight:bold; margin:0 0 10px 0; color:#555555;}
+
+.xans-myshop-mileagehistorypackage .xans-myshop-summary { overflow:hidden; background:none; border:8px solid #f1f1f1; padding:20px; }
+.xans-myshop-mileagehistorypackage .xans-myshop-summary ul { margin:0; overflow:hidden; }
+.xans-myshop-mileagehistorypackage .xans-myshop-summary li { color:#888888; float:left; overflow:hidden; padding:10px 50px; width:50%; }
+.xans-myshop-mileagehistorypackage .xans-myshop-summary li strong {  float:left;  font-weight:normal; color:#555555; }
+.xans-myshop-mileagehistorypackage .xans-myshop-summary li span {  float:right;  padding:0; text-align:left; font-weight:bold;  color:#555555;}
+.xans-myshop-mileagehistorypackage .xans-myshop-summary li.total strong { color:#555555; }
+.xans-myshop-mileagehistorypackage .xans-myshop-summary li.total span { color:#000000; }
+
+.xans-myshop-mileagehistorypackage .tab { margin:40px 0 0 0; height:34px; border-bottom:2px solid #f1f1f1; }
+.xans-myshop-mileagehistorypackage .tab ul { overflow:hidden; zoom:1; }
+.xans-myshop-mileagehistorypackage .tab li { float:left; margin:0 10px 0 0; width:180px; height:34px; text-align:center; background-color:#f1f1f1; font-weight:bold; font-size:11px; color:#555555; line-height:20px; padding-top:8px;}
+.xans-myshop-mileagehistorypackage .tab li a {color:#888888;}
+.xans-myshop-mileagehistorypackage .tab li a:hover {color:#333333;}
+
+.xans-myshop-mileagehistorypackage .xans-myshop-historylist { overflow:hidden; background:none; border:8px solid #f1f1f1; padding:0px;}
+.xans-myshop-mileagehistorypackage .xans-myshop-historylist table th { padding:10px 10px; font-size:11px; color:#afafaf; font-weight:400; height:40px; line-height:20px; border-bottom:2px solid #f1f1f1;}
+.xans-myshop-mileagehistorypackage .xans-myshop-historylist table td {  padding:10px 10px; font-size:11px; text-align:center; border-top:2px solid #f1f1f1; color:#888888;}
+.xans-myshop-mileagehistorypackage .xans-myshop-historylist table .first td { background:none; }
+.xans-myshop-mileagehistorypackage .xans-myshop-historylist table a,
+.xans-myshop-mileagehistorypackage .xans-myshop-historylist table a:hover { color:#8f8f8f; }
+.xans-myshop-mileagehistorypackage .xans-myshop-historylist table .mileage { font-weight:bold; color:#000000; }
+
+.xans-myshop-mileagehistorypackage .xans-myshop-historylist table td.nodata { padding:20px; text-align:center; }
+
+.xans-myshop-mileagehistorypackage #message {color:#888888; font-size:11px; margin:0 auto 30px;}
+.xans-myshop-mileagehistorypackage #message h3 {color:#888888; font-size:12px;}

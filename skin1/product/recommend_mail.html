@@ -1,0 +1,48 @@
+<!--@layout(/layout/basic/popup.html)-->
+
+<div module="Product_RecommMail">
+	<!--@css(/css/module/product/recommend_mail.css)-->
+	<h1><span>추천메일 보내기</span></h1>
+	<div class="layInner">
+        <div class="prdArea">
+            <p class="prdImg"><img src="{$product_image}" alt="" /></p>
+            <h2>{$product_name} <span>{$img_soldout} {$img_recomm} {$img_new} {$img_user}</span></h2>
+            <p>{$product_price}</p>
+        </div>
+		<table border="1" summary="메일 보내기 폼">
+			<caption>메일 보내기 폼</caption>
+			<tr>
+				<th scope="row" class="name">보내는사람</th>
+				<td class="name">{$form.from_name} </td>
+				<th scope="row" class="mail">이메일 </th>
+				<td class="mail">{$form.from_email} </td>
+			</tr>
+			<tr>
+				<th scope="row" class="name">받는사람</th>
+				<td class="name">{$form.to_name} </td>
+				<th scope="row" class="mail">이메일 </th>
+				<td class="mail">{$form.to_email} </td>
+			</tr>
+			<tr>
+				<th scope="row">내용</th>
+				<td colspan="3"> {$form.content}
+				<p class="chk">{$form.is_html}</p></td>
+			</tr>
+			<tr>
+				<th scope="row">자동발송금지<br />보안문자</th>
+				<td colspan="3">
+					{$captcha_image}
+					<p>{$form.tmp_image_name_str} 영문, 숫자 조합을 입력하세요(대소문자구분)</p>
+				</td>
+			</tr>
+		</table>
+
+		<!-- -->
+        <div class="btnArea">
+            <p>
+                <a href="#none" onClick="{$action_check}"><img src="http://img.echosting.cafe24.com/design/skin/mono/product/btn_sendMail.gif" alt="메일보내기" /></a>
+            </p>
+        </div>
+
+	</div>
+</div>

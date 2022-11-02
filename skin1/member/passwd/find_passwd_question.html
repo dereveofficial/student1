@@ -1,0 +1,60 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--상단위치-->
+<div module="Product_menupackage">
+<!--@css(/css/module/product/menupackage.css)-->
+    <div class="pathlogin" module="product_headcategory">
+    <div class="titleArea">
+        <h2>Find Password step.2</h2>
+    </div>
+        <ol>
+		<li class="first"><a href="/">De r&ecirc;ve</a></li>
+		<li>Login / Register</li>
+		<li title="현재 위치">Find Password step.2</li>
+        </ol>
+    </div>
+</div>
+<!--상단위치끝-->
+<!--login bg start --><div class="bgbg">
+<div module="member_findPasswdQuestion">
+<!--@css(/css/module/member/find_passwd_question.css)-->
+	<!--
+		$nextURL = /member/passwd/find_passwd_result.html
+	-->
+	<div class="whitebg">
+
+	<div class="inner">
+		<p class="mainCopy">Forgot your Password? step.2</p>
+		<p class="subCopy">회원가입시 설정한 질문에 대한 답변을 기입해주세요.</p>		
+		<fieldset>
+			<legend>비밀번호 찾기 2단계 힌트답변 입력</legend>
+			<p class="check">
+				<span>{$form.check_method}</span>
+			</p>
+
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr class="question">
+    <td class="opt">Question</td>
+    <td class="ion">{$passwd_question}</td>
+  </tr>
+  <tr>
+    <td class="opt">Answer</td>
+    <td class="ion">{$form.passwd_answer}</td>
+  </tr>
+</table>
+
+			<p class="btn">
+				<a href="#" onclick="{$action_func_find_passwd}"><img src="/test/images/btn_findid_15.jpg" onmouseover="this.src='/test/images/btn_findid_over_15.jpg'" onmouseout="this.src='/test/images/btn_findid_15.jpg'" title="비밀번호 찾기" /></a>
+			</p>
+		</fieldset>
+	</div>
+</div>
+
+
+
+
+
+</div>
+
+
+</div><!--login bg end -->

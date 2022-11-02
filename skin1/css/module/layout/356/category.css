@@ -1,0 +1,14 @@
+.xans-layout-category { padding:0 0 19px; border-bottom: 1px solid #b6b6b6; }
+.xans-layout-category h2 { height:21px; line-height:21px; padding:0 0 3px 8px; color:#000; font-size:12px; font-family:Arial; background:url(http://img.echosting.cafe24.com/design/skin/service001/bul.gif) no-repeat 0 7px; }
+.xans-layout-category .postion { z-index:1; border:1px solid #dddddd;}
+.xans-layout-category ul { padding:6px;}
+.xans-layout-category li { position:relative;}
+.xans-layout-category li a { display:block; padding:4px 3px 5px; line-height:18px; color:#666; font-weight:bold; }
+.xans-layout-category li a:hover { padding-left:10px; background:#000; color:#fff; }
+.xans-layout-category li.on > a { padding-left:10px; background:#000; color:#fff; }
+
+.xans-layout-category .sub-category { position:absolute; left:166px; top:-10px; z-index:90; padding-left:6px; background:url(http://img.echosting.cafe24.com/design/skin/service001/bg_category.gif) no-repeat 0 14px; }
+.xans-layout-category .sub-category ul { padding:10px 0;background:#c2c2c2;}
+.xans-layout-category .sub-category a { display:block; width:150px; padding:3px 10px; color:#fff; font-weight:normal; text-decoration:underline; }
+.xans-layout-category .sub-category a:hover { text-decoration:underline; color:#000; background:none; }
+.xans-layout-category .sub-category li { position:static; border:0; }

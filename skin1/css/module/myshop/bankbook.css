@@ -1,0 +1,23 @@
+.xans-myshop-bankbook { margin:0 auto; padding:0; color:#333; width:900px;}
+
+.xans-myshop-bankbook ul { width:250px; height:150px; line-height:20px; padding:0 20px 20px 20px; color:#888888; background: #ffffff url("/test/images/logo_mini.png") no-repeat 10% 88%; font-size:11px; border-bottom:2px solid #cccccc;}
+.xans-myshop-bankbook li { padding:0; overflow:hidden; color:#888888; }
+.xans-myshop-bankbook li.mileage strong.cont { color:#888888; }
+.xans-myshop-bankbook li.mileage strong.cont span { color:#000; }
+.xans-myshop-bankbook li strong { float:left; }
+.xans-myshop-bankbook li strong.title { width:30%; font-weight:normal; }
+.xans-myshop-bankbook li strong.cont { width:70%; text-align:right; }
+.xans-myshop-bankbook li strong.cont span { font-weight:normal; }
+.xans-myshop-bankbook li a { margin:0; color:#333333;}
+.xans-myshop-bankbook li a:hover { margin:0; color:#888888;}
+
+
+/* 마이 쇼핑 메인 */
+#shopMain { margin:30px 0 0 170px; padding:0; width:300px;  position:absolute; left:50%; top:200px; z-index:2; padding:0 20px 20px 20px; color:#888888; text-align:right;}
+#shopMain .shopMain {  }
+#shopMain .shopMain h3 { margin-bottom:5px; padding:0; font-size:16px; color:#555555; font-weight:bold; }
+#shopMain .shopMain h3 a:hover { text-decoration:none; color:#333333;}
+#shopMain .shopMain p { margin-bottom:10px;}
+#shopMain .shopMain p a,
+#shopMain .shopMain p a:hover { font-size:11px; line-height:18px; color:#888888;}
+

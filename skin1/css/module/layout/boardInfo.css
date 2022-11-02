@@ -1,0 +1,9 @@
+.xans-layout-boardinfo { margin:35px 0; color:#555555; }
+.xans-layout-boardinfo p{padding-bottom:15px; }
+.xans-layout-boardinfo h2 { padding:30px 0 17px; }
+.xans-layout-boardinfo h2 img { display:block; }
+.xans-layout-boardinfo li { font-size:.9em; line-height:1.8em;}
+.xans-layout-boardinfo a { display:block; padding:7px 0 7px 2px; font-size:11px; line-height:10px; color:#555555; font-family: Verdana, Geneva, sans-serif,"돋움";}
+.xans-layout-boardinfo a:hover { background:#cccccc; color:#ffffff; text-decoration:none; font-weight:bold; }
+
+

@@ -1,0 +1,256 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--상단위치-->
+<div module="Product_menupackage">
+<!--@css(/css/module/product/menupackage.css)-->
+    <div class="path" module="product_headcategory">
+    <div class="titleArea">
+        <h2><span>My Account</span></h2>
+    </div>
+        <ol>
+		<li class="first"><a href="/">De r&ecirc;ve</a></li>
+		<li><a href="/myshop/index.html">My Page</a></li>
+		<li title="현재 위치">My Account</li>
+        </ol>
+    </div>
+</div>
+<!--상단위치끝-->
+
+<div module="myshop_benefit"><!--상단 마이페이지 메뉴-->
+<!--@css(/css/module/myshop/benefit.css)-->
+<div id="inner2">
+		<div class="myInfo2">
+		<h3>De r&ecirc;ve Member</h3>
+		<p>
+		Name : {$member_name}<br />
+		Level : {$group_name}
+		</p>
+        </div>
+
+		<div class="myInfo3">
+		<div class="mypage"><a href="/myshop/order/list.html">My Order List</a><img src="/test/images/dot.gif" />My Account<img src="/test/images/dot.gif" /><a href="/myshop/wish_list.html">Wish List</a><!--<img src="/test/images/dot.gif" /><a href="/myshop/mileage/historyList.html">My Point</a>--><img src="/test/images/dot.gif" /><a href="/myshop/board_list.html">My Question List</a></div>
+		<p></p>
+        </div>
+</div>
+</div><!--상단 마이페이지 메뉴-->
+
+
+
+<div module="member_edit">
+    <!--
+        $login_page = /member/login.html 
+     -->
+    <!--@css(/css/module/member/edit.css)-->
+<div class="titleArea">
+    <span>Tips</span> : 나의 개인정보를 최신 정보로 유지하여 편리한 쇼핑을 하세요.
+</div>
+
+	<h3>My Details</h3>
+
+	<div class="boardView">
+		<table summary="회원정보 중 기본정보 입력란입니다." class="boardView">
+            <caption>회원정보</caption>
+
+            <tr>
+                <th scope="row">ID</th>
+                <td>
+                    {$form.member_id}
+                    {$form.user_id_dupl} (영문소문자/숫자, 4~16자)
+                </td>
+            </tr>
+
+            <tr class="{$display_nick|display}">
+                <th scope="row">별명</th>
+                <td>
+                    {$form.nick_name} (한글2~10자/영문 대소문자4~20자/숫자 혼용가능)
+                </td>
+            </tr>
+
+            <tr>
+                <th scope="row">Password</th>
+                <td>{$form.passwd} &nbsp;&nbsp;&nbsp;{$passwd_type_desc} </td>
+            </tr>
+
+            <tr>
+                <th scope="row">Confirm<br />Password</th>
+                <td>{$form.user_passwd_confirm}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">비밀번호<br />확인 질문</th>
+                <td>{$form.hint}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">비밀번호<br />확인 답변</th>
+                <td>{$form.hint_answer}</td>
+            </tr>
+
+            <tr style="display:{$display_name}">
+                <th scope="row">Name</th>
+                <td>{$name}</td>
+            </tr>
+
+            <tr class="{$display_ssn|display}">
+                <th scope="row">주민등록번호</th>
+                <td>{$ssn1} {$dash} {$ssn2}</td>
+            </tr>
+
+            <tr class="{$display_foreigner_ssn|display}"> 
+                <th scope="row">{$foreigner_type}</th> 
+                <td>{$foreigner_ssn}</td> 
+            </tr> 
+             
+            <tr class="{$display_nation|display}"> 
+                <th scope="row">국적</th> 
+                <td>{$form.citizenship}</td> 
+            </tr> 
+
+            <tr>
+                <th scope="row">Address</th>
+                <td>
+                    {$form.postcode1} - {$form.postcode2} 
+                    <a href="#none" title="우편번호 검색(새창으로 열기)" onclick="{$action_find_address}" id="{$btn_find_post}"><img src="/test/images/btn_join_31.jpg" alt="우편번호 검색" /></a><br />
+                    {$form.addr1}
+                    {$form.addr2}
+                </td>
+            </tr>
+
+            <tr>
+                <th scope="row">Telephone</th>
+                <td>{$form.phone}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Mobile</th>
+                <td>{$form.mobile} <span class="noBorder {$display_is_sms|display}">{$form.is_sms}</span></td>
+            </tr>
+
+            <tr>
+                <th scope="row">E-mail</th>
+                <td>{$form.email}</td>
+            </tr>
+
+            <tr class="radioType {$display_is_news_mail|display}">
+                <th scope="row">News Letter</th>
+                <td>뉴스 메일을 받으시겠습니까? {$form.is_news_mail}</td>
+            </tr>
+        </table>
+	</div>
+
+<div class="addopt">	
+	<h3>Add Information</h3>
+<p class="chkAdd2">추가정보입니다.</p>
+    <div class="boardView2">
+        <table summary="회원정보 중 추가정보 입력란입니다." class="boardView joinForm">
+            <caption>회원 추가정보</caption>
+
+            <tbody>
+                <tr class="{$display_birthday|display}">
+                    <th scope="row">Birthdate</th>
+                    <td>{$form.birth_year}년 {$form.birth_month}월 {$form.birth_day}일<br /><br /><span class="noBorder">{$form.is_solar_calendar}</span></td>
+                </tr>
+
+                <tr class="{$display_sex|display}">
+                    <th scope="row">Sex</th>
+                    <td>{$form.sex}</td>
+                </tr>
+
+                <tr class="{$display_marry|display}">
+                    <th scope="row">결혼기념일</th>
+                    <td>{$form.marry_year}년 {$form.marry_month}월 {$form.marry_day}일</td>
+                </tr>
+
+                <tr class="{$display_partner|display}">
+                    <th scope="row">배우자 생일</th>
+                    <td>{$form.partner_year}년 {$form.partner_month}월 {$form.partner_day}일</td>
+                </tr>
+
+                <tr class="{$display_job|display}">
+                    <th scope="row">직업</th>
+                    <td>{$form.job}</td>
+                </tr>
+
+                <tr class="{$display_job_class|display}">
+                    <th scope="row">직종</th>
+                    <td>{$form.job_class}</td>
+                </tr>
+
+                <tr class="{$display_school|display}">
+                    <th scope="row">최종학력</th>
+                    <td>{$form.school}</td>
+                </tr>
+
+                <tr class="inter radioType {$display_inter|display}">
+                    <th scope="row">관심분야</th>
+                    <td>
+                        <fieldset>
+                            <legend>관심분야</legend>
+                            {$form.inter_check}
+                        </fieldset>
+                    </td>
+                </tr>
+
+                <tr class="{$display_region|display}">
+                    <th scope="row">지역</th>
+                    <td>{$form.region}</td>
+                </tr>
+
+                <tr class="{$display_internet|display}">
+                    <th scope="row">인터넷 이용장소</th>
+                    <td>{$form.internet}</td>
+                </tr>
+
+                <tr class="{$display_child|display}">
+                    <th scope="row">자녀</th>
+                    <td>{$form.child}</td>
+                </tr>
+
+                <tr class="{$display_car|display}">
+                    <th scope="row">자동차</th>
+                    <td>{$form.car}</td>
+                </tr>
+
+                <tr class="{$display_earning|display}">
+                    <th scope="row">연소득</th>
+                    <td>{$form.earning}</td>
+                </tr>
+
+                <tr class="{$display_add1|display}">
+                    <th scope="row">{$title_add1}</th>
+                    <td>{$form.add1}</td>
+                </tr>
+
+                <tr class="{$display_add2|display}">
+                    <th scope="row">{$title_add2}</th>
+                    <td>{$form.add2}</td>
+                </tr>
+
+                <tr class="{$display_add3|display}">
+                    <th scope="row">{$title_add3}</th>
+                    <td>{$form.add3}</td>
+                </tr>
+
+                <tr class="{$display_add4|display}">
+                    <th scope="row">{$title_add4}</th>
+                    <td>{$form.add4}</td>
+                </tr>
+
+                <tr class="{$display_reco_id|display}">
+                    <th scope="row">추천인 ID</th>
+                    <td>{$form.reco_id}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+	<div class="btnArea">
+		<ul>		
+			<li><a href="#none" onclick="{$action_func_join}">Save Changes</a> (회원정보수정)</li>
+			<li><a href="/product/list.html?cate_no=132">Continue Shopping</a> (계속쇼핑하기)</li>
+			<li class="leave"><a href="#none" onclick="{$action_func_del}">Delete My ID</a> (회원탈퇴)</li>
+			</ul>
+	</div>
+</div>

@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+/* LAYER POP */
+.layTable { font-size:.9em; background-color:#f1f1f1;}
+.typeCol th { padding:7px 0 0; height:33px; background:url(http://img.echosting.cafe24.com/design/skin/mono/bg_th.gif) 0 0 repeat-x; color:#000; font-weight:normal; }
+.typeCol td { padding:9px 0; color:#fff; background:url(http://img.echosting.cafe24.com/design/skin/mono/bg_layerDot.gif) 0 bottom repeat-x; }

@@ -1,0 +1,34 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="calendar_Write">
+<!--@css(/css/module/calendar/write.css)-->
+    <h1><span>캘린더 등록</span></h1>
+
+	<div class="layInner">
+        <table border="1" summary="캘린더 등록">
+        <caption>캘린더 등록</caption>
+        <tr>
+            <th scope="row">일시</th>
+            <td>{$form.date} {$form.start_hour} {$form.start_minute} ~ {$form.end_hour} {$form.end_minute}</td>
+        </tr>
+        <tr>
+            <th scope="row">제목</th>
+            <td>{$form.title}</td>
+        </tr>
+        <tr>
+            <th scope="row">내용</th>
+            <td>{$form.contents}</td>
+        </tr>
+        <tr>
+            <th scope="row">선택</th>
+            <td>{$form.field}<br />{$field_info}</td>
+        </tr>
+        </table>
+        
+        <!-- -->
+        <div class="btnArea">
+            <p>
+                <a href="#none" onclick="{$action_write}"><img src="http://img.echosting.cafe24.com/design/skin/mono/board/btn_wWrite.gif" alt="등록" /></a>
+            </p>
+        </div>
+    </div>
+</div>

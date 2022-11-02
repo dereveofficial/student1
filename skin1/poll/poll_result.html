@@ -1,0 +1,28 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="poll_result">
+<!--@css(/css/module/poll/result.css)-->
+	<h1><span>설문조사 결과</span></h1>
+	
+	<div class="layInner">
+		<h2>{$title}</h2>
+		<p>총 투표수: {$total_count}</p>
+
+		<ol>
+			<li>
+				<p class="title"><strong title="항목">{$comment_title}</strong><span title="투표수">{$comment_count}표</span></p>
+				<p class="graph">
+					<span class="box"><span style="width:{$comment_percentage}%;">&nbsp;</span></span>
+					<em title="투표율">{$comment_percentage}%</em>
+				</p>
+			</li>
+			<li>
+				<p class="title"><strong title="항목">{$comment_title}</strong><span title="투표수">{$comment_count}표</span></p>
+				<p class="graph">
+					<span class="box"><span style="width:{$comment_percentage}%;">&nbsp;</span></span>
+					<em title="투표율">{$comment_percentage}%</em>
+				</p>
+			</li>
+		</ol>
+
+	</div>
+</div>

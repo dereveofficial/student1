@@ -1,0 +1,30 @@
+.layPop { background:#b4bdc5; display:inline-block; .display:inline; zoom:1; position:relative; }
+.layPop .close { position:absolute; right:0; top:0; text-align:right; }
+.layPop .close img { cursor:pointer; }
+.layPop h1 { color:#272823; font-size:26px; text-decoration:underline; }
+.layPop h1 span { display:block; padding:28px 25px 25px; }
+.layPop .titleArea h2 { color:#fff; }
+.layInner { position:relative; padding:20px 25px 0; background:#fff; color:#000; border-top:1px solid #99a2aa; }
+
+.xans-order-boardlistpackage table { margin:0 0 20px; }
+.xans-order-boardlistpackage th { padding:7px 10px 0; height:33px; border-bottom:2px solid #99a2aa; border-top:2px solid #99a2aa; color:#000; font-weight:normal; }
+.xans-order-boardlistpackage td { padding:9px 4px; border-bottom:1px solid #99a2aa; color:#202020; }
+.xans-order-boardlistpackage .thumb { width:70px; text-align:center; }
+.xans-order-boardlistpackage .thumb img { width:54px; }
+.xans-order-boardlistpackage .prdName span { display:block; }
+.xans-order-boardlistpackage .date {}
+.xans-order-boardlistpackage .select { text-align:center; padding:9px 0; }
+
+.xans-order-boardpaging { clear:both; text-align:center; background:#fff; padding:13px 0; }
+.xans-order-boardpaging p,
+.xans-order-boardpaging ol,
+.xans-order-boardpaging li { display:inline; }
+.xans-order-boardpaging img {vertical-align:middle; }
+.xans-order-boardpaging p { margin-right:-4px; }
+.xans-order-boardpaging ol { margin:0 7px; }
+.xans-order-boardpaging li { margin:0 9px 0 0; padding:0 0 0 11px; font-size:.9em; background:url(http://img.echosting.cafe24.com/design/skin/mono/bg_page.gif) left center no-repeat; }
+.xans-order-boardpaging li:first-child { background:none; }
+.xans-order-boardpaging li strong { color:#f26522; }
+.xans-order-boardpaging li a { color:#202020; }
+.xans-order-boardpaging li a:hover { color:#f26522; text-decoration:underline; }
+.xans-order-boardpaging a.nolink { cursor:default; }

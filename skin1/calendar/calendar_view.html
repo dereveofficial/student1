@@ -1,0 +1,51 @@
+<!--@layout(/layout/basic/popup.html)-->
+
+<div module="Calendar_View">
+<!--@css(/css/module/calendar/view.css)-->
+<!-- 
+    $calendar_modify_url = calendar_modify.html
+ -->
+
+    <h1><span>일일 작성 내역 확인 ({$view_date})</span></h1>
+
+    <div class="layInner">
+        <table border="1" summary="일일 작성내역 확인 목록입니다.">
+            <caption>일일 작성내역 확인 목록</caption>
+
+            <thead>
+                <tr>
+                    <th scope="col">시간</th>
+                    <th scope="col">추가정보</th>
+                    <th scope="col">내용</th>
+                    <th scope="col">작성자</th>
+                    <th scope="col">확인</th>
+                </tr>
+            </thead>
+
+            <tbody class="{$list_display|display}">
+                <tr class="{$list_no}">
+                    <td class="time">{$list_hour}:{$list_minute}</td>
+                    <td class="detail">{$list_add_info}</td>
+                    <td class="cont"><a href="#none" onclick="{$action_view_content}">{$list_title}</a></td>
+                    <td class="writer">{$list_writer} <a href="#none" onclick="{$action_modify}"><img src="http://img.echosting.cafe24.com/design/skin/mono/attend/btn_calModify.gif" alt="수정" /></a>
+                    </td>
+                    <td class="check"><p class="{$list_confirm}"></p></td>
+                </tr>
+                <tr class="{$list_no}">
+                    <td class="time">{$list_hour}:{$list_minute}</td>
+                    <td class="detail">{$list_add_info}</td>
+                    <td class="cont"><a href="#none" onclick="{$action_view_content}">{$list_title}</a></td>
+                    <td class="writer">{$list_writer} <a href="#none" onclick="{$action_modify}"><img src="http://img.echosting.cafe24.com/design/skin/mono/attend/btn_calModify.gif" alt="수정" /></a>
+                    </td>
+                    <td class="check"><p class="{$list_confirm}"></p></td>
+                </tr>
+            </tbody>
+
+            <tbody class="{$list_none_display|display}">
+                <tr>
+                    <td colspan="5">등록 된 글이 없습니다.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

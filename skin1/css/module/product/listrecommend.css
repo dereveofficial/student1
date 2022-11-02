@@ -1,0 +1,34 @@
+.xans-product-listrecommend { margin:0 0 30px; padding:0 0 30px; }
+.xans-product-listrecommend .titleArea { height:21px; margin:17px 0 30px; border-bottom:1px solid #dedcdc; zoom:1; }
+.xans-product-listrecommend .titleArea:after {content:""; display:block; clear:both; }
+.xans-product-listrecommend .titleArea h2 { height:21px; padding:0 5px 0 0; color:#272823; font-size:16px; float:left; border-bottom:1px solid #272823;  }
+
+.xans-product-listrecommend ul { clear:both; zoom:1; min-width:756px; margin:0 0 0 -3%; }
+.xans-product-listrecommend ul:after {content:""; display:block; clear:both; }
+.xans-product-listrecommend ul li { float:left; width:22%; padding:0 0 30px 2.8%; line-height:1.6em; color:#838382; }
+.xans-product-listrecommend ul li a,
+.xans-product-listrecommend ul li a:hover { color:#838382; }
+.xans-product-listrecommend ul .prdImg { display:block; }
+.xans-product-listrecommend ul .prdImg img { display:block; width:100%; }
+.xans-product-listrecommend ul .zoom { float:right; padding:7px 0 0; cursor:pointer; }
+.xans-product-listrecommend ul .name { float:left; width:160px; padding:4px 0; line-height:16px; color:#838382; }
+.xans-product-listrecommend ul .icon { display:block; clear:both; }
+.xans-product-listrecommend ul .price {  display:block; clear:both; }
+.xans-product-listrecommend ul .mileage { display:block; clear:both; }
+.xans-product-listrecommend ul .mileage img { vertical-align:middle; }
+.xans-product-listrecommend ul .btns { overflow:hidden; zoom:1; }
+.xans-product-listrecommend ul .btns img { cursor:pointer; margin:0 4px 0 0; }
+.xans-product-listrecommend ul .btns .bag { float:left; padding:7px 10px 0 0; }
+.xans-product-listrecommend ul .btns .option { float:left; padding:7px 0 0; }
+.xans-product-listrecommend ul .custom {text-decoration:line-through; }
+.xans-product-listrecommend ul .manu { display:block; }
+.xans-product-listrecommend ul .btn { display:block; text-align:center; }
+
+.xans-product-listrecommend ul.prdColor { padding:5px 0 3px; margin:0; border:0; }
+.xans-product-listrecommend ul.prdColor li { width:8px; height:8px; padding:0; margin:0 2px 2px 0; border:1px solid #969696; }
+.xans-product-listrecommend ul.prdColor li span { display:block; height:100%; }
+
+.xans-product-listrecommend .xans-product-listitem { min-width:0; }
+.xans-product-listrecommend .xans-product-listitem { margin:0; }
+.xans-product-listrecommend .xans-product-listitem li { overflow:hidden; float:none; width:auto; padding:0; text-align:center; }
+.xans-product-listrecommend .xans-product-listitem li .title { font-weight:normal; }

@@ -1,0 +1,45 @@
+/* 게시판 전체 공통 */
+.xans-board-title .pathBoard { overflow:hidden; margin:3px 0 17px; }
+.xans-board-title .pathBoard h3 { float:left; text-indent:-9999em; margin:0; }
+.xans-board-title .pathBoard ol { float:right; }
+.xans-board-title .pathBoard li { padding:0 0 0 22px; display:inline; font-size:.9em; background:url(http://img.echosting.cafe24.com/design/skin/mono/bg_path.gif) 0 50% no-repeat; }
+.xans-board-title .pathBoard li.first { background:none; }
+
+.xans-board-title .titleAreaBoard { margin:17px 0 30px; *zoom:1; }
+.xans-board-title .titleAreaBoard:after {content:""; display:block; clear:both; }
+.xans-board-title .titleAreaBoard h2 { height:21px; border-bottom:1px solid #dedcdc; zoom:1;}
+.xans-board-title .titleAreaBoard h2 span { height:21px; padding:0 5px 0 0; color:#272823; font-size:16px; float:left; border-bottom:1px solid #272823; }
+.xans-board-title .titleAreaBoard p { padding:3px 0 0; clear:both; font-size:.9em; line-height:1.5em; color:#8f8f8f; }
+
+/* reply */
+.xans-board-reply div.boardView {clear:both;  margin:30px auto 0; padding:20px; color:#333; width:960px; font-size:11px;  border:8px solid #f1f1f1;  }
+
+.xans-board-reply table { background:#ffffff;   margin-top:0; font-size:11px; width:100%; }
+.xans-board-reply table input,
+.xans-board-reply table textarea {border:0px solid #bcbcbc;  background-color:#f1f1f1;  padding:2px; margin:0 5px 5px 5px; }
+.xans-board-reply table .first { border-top:0; padding-top:20px; }
+.xans-board-reply table th { width:80px; text-align:left;  padding:9px 10px; font-size:11px; color:#afafaf; font-weight:400; height:30px; line-height:20px;}
+
+.xans-board-reply table td { text-align:left;  padding:9px 10px; font-size:11px; color:#afafaf; font-weight:400; height:30px; line-height:20px; }
+.xans-board-reply table td.write { width:100%; padding:0;}
+.xans-board-reply table td img { vertical-align:middle; }
+.xans-board-reply table td.view { border-bottom:3px solid #333; }
+.xans-board-reply table td.view .detail { padding:30px 10px; }
+.xans-board-reply table td.consult { border:0; }
+
+.xans-board-reply table tr.agree th { vertical-align:middle; font-weight:bold; color:#8d91a2; background:#f0f4ed; border-top:3px solid #333; }
+.xans-board-reply table tr.agree td { padding:10px 0; background:#f0f4ed; border-top:3px solid #333; }
+.xans-board-reply table tr.agree td textarea { width:600px; height:140px; margin:0 0 10px; color:#8B8B8C; }
+.xans-board-reply table tr.agree td #privacy_agreement_radio0 { border:none; width:auto; height:auto; margin:0 3px 0 0; vertical-align:middle; background:none; }
+.xans-board-reply table tr.agree td #privacy_agreement_radio1 { border:none; width:auto; height:auto; margin:0 3px 0 0; vertical-align:middle; background:none; }
+
+.xans-board-reply table #subject { width:450px; }
+.xans-board-reply table #ucc_width { width:30px; padding:1px 0; text-align:center; }
+.xans-board-reply table #ucc_height { width:30px; padding:1px 0; text-align:center; }
+
+.xans-board-reply .btnArea { text-align:right; overflow:hidden; zoom:1; margin:20px auto; width:960px; }
+.xans-board-reply .btnArea.miniType { margin:10px 0 20px; padding:0 15px; }
+.xans-board-reply .btnArea img {  padding:0; cursor:pointer;  }
+.xans-board-reply .btnArea p.btnLeft { float:left; }
+.xans-board-reply .btnArea p.btnRight { }
+.xans-board-reply .btnArea p.btnRight img { margin:0 10px;  }

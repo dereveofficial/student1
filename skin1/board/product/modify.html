@@ -1,0 +1,143 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--상단위치-->
+<div module="Product_menupackage">
+<!--@css(/css/module/product/menupackage.css)-->
+    <div class="path" module="product_headcategory">
+    <div class="titleArea">
+        <h2><span>Item Q & A</span></h2>
+    </div>
+        <ol>
+		<li class="first"><a href="/">De r&ecirc;ve</a></li>
+		<li>About</li>
+		<li title="현재 위치">Item Question & Answer</li>
+        </ol>
+    </div>
+</div>
+<!--상단위치끝-->
+<div module="board_ModifyPackage_4">
+<!--@css(/css/module/board/modifyPackage.css)-->
+    <!--<div module="board_title_4">
+        <div class="pathBoard">
+            <h3>현재 위치</h3>
+            <ol>
+                <li class="first"><a href="/">홈</a></li>
+                <li><a href="/board/index.html">게시판</a></li>
+                <li title="현재 위치"><strong>{$board_name}</strong></li>
+            </ol>
+        </div>
+
+        <div class="titleAreaBoard">
+            <h2><span>{$board_name}</span></h2>
+            <p>{$board_info}</p>
+        </div>
+    </div>-->
+
+    <div module="board_modify_4">
+        <!--
+            $write_success_url = /board/product/list.html
+            $product_select_url = /product/search_board_list.html
+            $order_select_url = /order/search_board_list.html
+         -->
+         
+        <!-- 상품정보선택 -->
+        <div class="prdSelect {$display_product|display}">
+            <p class="prdArea"><a href="/product/detail.html{$param_product}"><img id="iPrdImg" src="{$url_product_img}" onError="this.src='http://img.echosting.cafe24.com/design/skin/mono/board/prdNoimg.gif'" alt="" /></a></p>
+            <div class="prdInfo">
+                <h3><a href="/product/detail.html{$param_product}" id="aPrdNameLink">{$product_name}</a>{$product_icon}</h3>
+                <p class="price">{$product_price}</p>
+                <p class="btn">
+                    <span id="iPrdView" class="{$display_product_info|display}"><a href="/product/detail.html{$param_product}" id="aPrdLink" target="_blank" ><img src="http://img.echosting.cafe24.com/design/skin/mono/board/btn_prdDetail.gif" alt="상세상품보기" /></a></span>
+                    <span class="{$display_product_select|display}"><a href="#none" onclick="{$action_product_select}"><img src="http://img.echosting.cafe24.com/design/skin/mono/board/btn_prdSelect.gif" alt="상품정보선택" /></a></span>
+                    <span class="{$display_order_select|display}"><a href="#none" onclick="{$action_order_select}"><img src="http://img.echosting.cafe24.com/design/skin/mono/board/btn_prdOrder.gif" alt="주문상품조회" /></a></span>
+                </p>
+            </div>
+        </div>
+
+        <div class="boardView">
+            <table border="1" summary="글 수정 폼 입니다.">
+            <caption>글 수정 폼</caption>
+
+            <tbody>
+                <tr>
+                    <th scope="row">Subject </th>
+                    <td>{$form.board_category} {$form.subject} {$form.notice}</td>
+                </tr>
+                <tr class="{$config.is_login|display}">
+                    <th scope="row">Name</th>
+                    <td>{$form.writer}</td>
+                </tr>
+                <tr class="{$config.use_write_email|display}">
+                    <th scope="row">E-mail</th>
+                    <td>{$form.email}</td>
+                </tr>
+                <tr class="radioType {$config.is_use_point|display}">
+                    <th scope="row">Point</th>
+                    <td>{$form.point}</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="write">
+                        {$form.content}
+                    </td>
+                </tr>
+                <!--<tr>
+                    <th scope="row">UCC URL</th>
+                    <td>{$form.ucc}</td>
+                </tr>-->
+            </tbody>
+
+            <tbody class="{$config.use_attach|display}">
+                <tr>
+                    <th scope="row">Add File 1</th>
+                    <td>{$form.attach_file} {$attached_file1}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Add File 2</th>
+                    <td>{$form.attach_file} {$attached_file2}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Add File 3</th>
+                    <td>{$form.attach_file} {$attached_file3}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Add File 4</th>
+                    <td>{$form.attach_file} {$attached_file4}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Add File 5</th>
+                    <td>{$form.attach_file} {$attached_file5}</td>
+                </tr>
+            </tbody>
+
+            <tbody>
+                <tr>
+                    <th scope="row">Password</th>
+                    <td>{$form.password}</td>
+                </tr>
+                <tr class="radioType {$config.use_secret|display}">
+                    <th scope="row">Choose</th>
+                    <td>{$form.secure}</td>
+                </tr>
+                <tr class="{$config.use_captcha_write|display}">
+                    <th scope="row">자동발송금지<br />보안문자</th>
+                    <td>
+                        {$captcha_image}
+                        <p>{$form.captcha} 영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</p>
+                    </td>
+                </tr>
+                <tr class="agree {$config.is_login|display}">
+                    <th scope="row">개인정보 수집 및 <br />이용 동의</th>
+                    <td>
+                        {$form.privacy_agreement}<br />
+                        개인정보 수집 및 이용에 동의하십니까? {$form.privacy_agreement_radio}
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+
+        <div class="btnArea">
+            <div class="btnRight"><a href="javascript:history.back(-1)"><img src="/test/images/acacacaca_42.jpg" onmouseover="this.src='/test/images/acacacaca_over_42.jpg'" onmouseout="this.src='/test/images/acacacaca_42.jpg'" title="취소" /></a><a href="#none" onclick="{$action_modify}"><img src="/test/images/btn_board_write_42.jpg" onmouseover="this.src='/test/images/btn_board_write_over_42.jpg'" onmouseout="this.src='/test/images/btn_board_write_42.jpg'" title="글쓰기" /></a>
+            </div>
+        </div>
+    </div>
+</div>

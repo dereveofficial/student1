@@ -1,0 +1,11 @@
+.xans-mall-faq { clear:both; margin:30px auto 30px; text-align:left;  width:960px;  padding:30px;  background:none; font-size:11px; color:#888888; line-height:16px; }
+.xans-mall-faq h3 { margin:50px 0 20px 0; color:#333; font-size:14px; }
+.xans-mall-faq .cont { color:#8f8f91; line-height:1.8em; }
+
+.xans-mall-faq ul.link { overflow:hidden; margin:30px 0;width:880px;}
+.xans-mall-faq ul.link li { float:left; width:115px; margin:0 1px 0 0; background:#999ca5; line-height:1.4em; }
+.xans-mall-faq ul.link li.on { background:#333; }
+.xans-mall-faq ul.link li a { display:block; height:23px; padding:7px 0 0; color:#fff; font-size:11px; text-align:center; }
+.xans-mall-faq ul.link li.on a {}
+
+

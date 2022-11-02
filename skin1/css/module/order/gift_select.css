@@ -1,0 +1,31 @@
+.layPop { background:#b4bdc5; display:inline-block; .display:inline; zoom:1; position:relative; }
+.layPop .close { position:absolute; right:0; top:0; text-align:right; }
+.layPop .close img { cursor:pointer; }
+.layPop h1 { color:#272823; font-size:26px; text-decoration:underline; }
+.layPop h1 span { display:block; padding:28px 25px 25px; }
+.layPop .titleArea h2 { color:#fff; }
+.layInner { position:relative; padding:20px 25px 0; background:#fff; color:#000; border-top:1px solid #99a2aa; }
+.layPop .btnArea { overflow:hidden; background:#fff; width:100%; padding:30px 30px 30px 27px; margin:0; position:relative; left:-25px; text-align:right; }
+.layPop .btnArea img { cursor:pointer; }
+
+.xans-gift-select .layInner { height:500px; width:500px; overflow:auto; overflow-x:hidden;  }
+.xans-gift-select .mygiftList th { padding:7px 0 0; height:33px; border-bottom:2px solid #99a2aa; border-top:2px solid #99a2aa; color:#000; font-weight:normal; }
+.xans-gift-select .mygiftList td { padding:9px 0; border-bottom:1px solid #99a2aa; color:#202020; }
+.xans-gift-select .mygiftList .thumb { width:70px; text-align:center; }
+.xans-gift-select .mygiftList .thumb img { width:54px; }
+.xans-gift-select .mygiftList td.point { width:100px; padding-right:10px; text-align:right; color:#f26522; font-weight:bold; }
+
+.xans-gift-select .product { line-height:20px; font-size:11px; }
+.xans-gift-select .product input { margin:0 3px 0 0;}
+.xans-gift-select .product p { padding:0 0 10px; }
+
+.xans-gift-select .amount { width:50px; }
+.xans-gift-select .amount input { float:left; border:1px solid #000; width:30px; padding:2px; text-align:center; font-size:11px; vertical-align:middle; }
+.xans-gift-select .amount span { float:left; position:relative; }
+.xans-gift-select .amount span img.up { position:absolute; top:0; left:2px; }
+.xans-gift-select .amount span img.down{ position:absolute; top:10px; left:2px; }
+
+.xans-gift-select .giftPoint { margin:30px 0; }
+.xans-gift-select .giftPoint.first { margin-top:0; }
+.xans-gift-select .giftPoint li { font-size:11px; line-height:18px; }
+.xans-gift-select .giftPoint .total { padding:5px 0 0; color:#f26522; }

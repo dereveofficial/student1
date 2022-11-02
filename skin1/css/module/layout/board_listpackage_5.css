@@ -1,0 +1,8 @@
+.xans-board-listpackage-5 { float:left; width:350px; }
+.xans-board-listpackage-5 h2 { height:20px; margin:0 0 20px; border-bottom:1px solid #dedcdc; }
+.xans-board-listpackage-5 p { margin:10px 0 0;}
+.xans-board-listpackage-5 thead {visibility:hidden; position:absolute; left:-1000px; top:-1000px; height:0; width:0; }
+.xans-board-listpackage-5 td { border:none; text-align:center; color:#8f8f91; font-size:.9em; line-height:1.8em; border-bottom:1px solid #dedcdc;}
+.xans-board-listpackage-5 td.title { width:68%; text-align:left; background:url(http://img.echosting.cafe24.com/design/skin/mono/ico_board_title.gif) 0 50% no-repeat; }
+.xans-board-listpackage-5 td.title a,
+.xans-board-listpackage-5 td.title a:hover { padding:0 0 0 7px; color:#8f8f91;}

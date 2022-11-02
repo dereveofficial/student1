@@ -1,0 +1,452 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset="utf-8"" />
+
+    <!--PG크로스브라우징필수내용 시작-->
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <!--PG크로스브라우징필수내용 끝-->
+    
+    
+    <!--Root의 test 폴더에 추가된 것들-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 	
+		<link rel="stylesheet" type="text/css" href="/test/css/default.css" />
+		<link rel="stylesheet" type="text/css" href="/test/css/component.css" />
+		<script src="/test/js/modernizr.custom.js"></script>
+    
+ <!-- light box -->
+<link rel="stylesheet" href="/test/css/lightbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/test/js/prototype.lite.js"></script>
+<script type="text/javascript" src="/test/js/moo.fx.js"></script>
+<script type="text/javascript" src="/test/js/litebox-1.0.js"></script>  
+<!-- light box end-->
+<!--아이프레임-->
+
+<script type="text/javascript">
+// iframe resize
+function autoResize(i)
+{
+    var iframeHeight=
+    (i).contentWindow.document.body.scrollHeight;
+    (i).height=iframeHeight+20;
+}
+
+</script>
+<!--아이프레임-->
+
+	<!--Root의 test 폴더에 추가된 것들-->	
+    
+    <title>De reve</title>
+    <!--@css(/layout/basic/css/common.css)--><!--해당 CSS는 쇼핑몰 전체 페이지에 영향을 줍니다. 삭제와 수정에 주의해주세요.-->
+    <!--@css(/layout/basic/css/layout.css)-->
+    <!-- 스마트디자인에서는 최신 JQuery가 내장되어있습니다. 추가로 호출하면 충돌이 생길 수 있습니다. -->
+	<!--@js(/layout/basic/js/basic.js)-->
+    <!--@js(/js/common.js)-->
+    <script type="text/javascript" src="/ec-js/common.js"></script><!-- 해당 JS는 플래시를 사용하기 위한 스크립트입니다. -->
+    
+
+    
+    <!-- show hide menu script -->
+    <script type="text/javascript" language="javascript">
+
+function toggle(id) {
+    var el = document.getElementById(id);
+    var img = document.getElementById("arrow");
+    var box = el.getAttribute("class");
+    if(box == "hide"){
+        el.setAttribute("class", "show");
+        delay(img, "/test/images/arrowup.png", 300);
+    }
+    else{
+        el.setAttribute("class", "hide");
+        delay(img, "/test/images/arrowdown.png", 300);
+    }
+}
+
+function delay(elem, src, delayTime){
+    window.setTimeout(function() {elem.setAttribute("src", src);}, delayTime);
+}
+</script>
+<!-- show hide menu script -->    
+</head>
+<body>
+    
+    
+<div id="accNav">
+    <p><a href="#contents">컨텐츠 바로가기</a></p>
+</div>
+
+<div id="wrap">
+<!-- header -->   
+<div id="header">
+  <!----상품 카테고리 메뉴 시작
+        <div module="Layout_category">---->
+<!--@js(/js/module/layout/298/category.js)-->
+<!--@css(/css/module/layout/298/category.css)-->
+        <!--
+        <div class="postion">
+            <ul>
+                <li class="pst1"><a href="/product/list.html{$param}">{$name}</a></li>
+                <li class="pst2"><a href="/product/list.html{$param}">{$name}</a></li>
+                <li class="pst3"><a href="/product/list.html{$param}">{$name}</a></li>
+                <li class="pst4"><a href="/product/list.html{$param}">{$name}</a></li>
+                <li class="pst5"><a href="/product/list.html{$param}">{$name}</a></li>
+                <li class="pst6"><a href="/product/list.html{$param}">{$name}</a></li>
+                <li class="pst7"><a href="/product/list.html{$param}">{$name}</a></li>
+                <li class="pst8"><a href="/product/list.html{$param}">{$name}</a></li>
+                <li class="pst9"><a href="/product/list.html{$param}">{$name}</a></li>
+            </ul>
+        </div>
+    </div>-->
+<!----상품 카테고리 메뉴 끝---->
+    
+    <!-- <div module="Layout_SearchHeader"> -->
+        <!--@css(/css/module/layout/searchHeader.css)-->
+        <!--
+        $product_page=/product/detail.html
+        $category_page=/product/list.html
+        -->
+       <!-- <fieldset>
+        <legend>검색</legend>
+            {$form.keyword}<img src="http://img.echosting.cafe24.com/design/skin/mono/btn_zoom_header.gif" alt="검색" onclick="{$action_search_submit}" /></fieldset>
+        </div> -->
+           
+
+
+        
+        
+
+
+
+            
+
+    
+<!-- 메뉴 시작-->     
+		<div class="containerm">
+			<div class="mainmenu">
+				<nav class="cbp-hsmenu-wrapper" id="cbp-hsmenu-wrapper">
+					<div class="cbp-hsinner">
+                        
+                                
+                        
+						<ul class="cbp-hsmenu">
+                           
+                             <li module="Layout_LogoTop"><!--@css(/css/module/layout/logotop.css)--><a href="/index.html"><img src="{$logo}" alt="{$mall_name}" isModify="1" /></a></li>
+							<li>
+								<a href="#">COLLECTIONS</a>
+								<ul class="cbp-hssubmenu">
+                                <li class="col"><a href="/collections2016/ss2016.htm"><span>WOMENS S/S 2016</span></a></li>
+								<li class="col"><a href="/collections2015/ss2015.htm"><span>WOMENS S/S 2015</span></a></li>
+								<li class="col"><a href="/collections2015/aw2015.htm"><span>WOMENS A/W 2015</span></a></li>
+								<li class="col"><a href="/collections/ss2014.htm"><span>WOMENS S/S 2014</span></a></li>
+								<li class="col"><a href="/collections/fw2014_python.htm"><span>Python Acc F/W 2014</span></a></li>
+								<li class="col"><a href="/collections/ss2014_python.htm"><span>Python Acc S/S 2014</span></a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">SHOP</a>
+								<ul class="cbp-hssubmenu cbp-hssub-rows">
+                                    <!--<li><a href="/product/list.html?cate_no=132"><span>NEW ARRIVAL</span></a></li>-->
+									<li><a href="/product/list.html?cate_no=133"><span>OUTWEAR</span></a></li>
+									<li><a href="/product/list.html?cate_no=134"><span>TOP</span></a></li>
+                                    <li><a href="/product/list.html?cate_no=135"><span>BOTTOM</span></a></li>
+                                    <li><a href="/product/list.html?cate_no=136"><span>DRESS</span></a></li>
+                                   <li><a href="/product/list.html?cate_no=137"><span>ACCESSORIES</span></a></li>
+                                    <li><a href="/product/list.html?cate_no=138"><span>LIVING</span></a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">ABOUT</a>
+								<ul class="cbp-hssubmenu">
+									<!-- <li><a href="#"><img src="images/10.png" alt="img10"/><span>Fresh Juice</span></a></li> -->
+									<li><a href="/shopinfo/company.html"><span>ABOUT US</span></a></li>
+                                    <!--<li><a href="/shopinfo/contact.htm"><span>CONTACT US</span></a></li>-->
+									<li><a href="/shopinfo/stock.html"><span>STOCKISTS</span></a></li>
+                                    <li><a href="/board/free/list.html?board_no=1"><span>NOTIFICATIONS</span></a></li>
+									<li><a href="/board/product/list.html?board_no=6"><span>Q & A</span></a></li>
+								</ul>
+							</li>
+                            
+							<li><a href="/shopinfo/contact_d.htm">CONTACT</a></li>
+
+							<li><a href="#">BLOG</a>
+							<ul class="cbp-hssubmenu cbp-hssub-rows">
+									<li><a href="http://dereve.tumblr.com" target="_blank"><span>TUMBLR</span></a></li>
+									<li><a href="http://www.facebook.com/dereve.co.kr" target="_blank"><span>FACEBOOK</span></a></li>
+                                    <li><a href="http://instagram.com/dereveofficial" target="_blank"><span>INSTAGRAM</span></a></li>
+								</ul>
+								</li>
+
+                            <li></li>
+                            
+                                                   
+                            <li class="cbp-hsmenu-side"><div module="Layout_stateLogon" style="background-color:#ffffff;"> <a href="{$action_logout}">LOG OUT</a><a href="/myshop/index.html">MY PAGE</a><a href="/order/basket.html"><span style="color:#333333;">SHOPPING BAG</span><a href="/myshop/order/list.html">MY ORDER</a>
+                            </div>
+                          <div module="Layout_statelogoff" style="background-color:#ffffff;">                        
+                           <a href="/member/login.html">LOGIN / REGISTER</a><a href="/order/basket.html"><span style=" color:#333333;">SHOPPING BAG</span></a><a href="/myshop/order/list.html">MY ORDER</a>
+                            </div>   </li>
+                            
+                         
+                            </ul>
+						
+					</div>
+				</nav>
+                
+			</div>       
+		</div>
+		<script src="/test/js/cbpHorizontalSlideOutMenu.js"></script>
+		<script>
+			var menu = new cbpHorizontalSlideOutMenu( document.getElementById( 'cbp-hsmenu-wrapper' ) );
+		</script>
+    
+    
+    <!-- 메뉴 끝-->
+ 
+</div>
+<!-- header 끝 -->
+    
+    
+    
+<hr class="layout" />
+
+<!-- 컨테이너 시작 -->
+    <div id="container">
+    
+    
+    
+
+    <div id="snbL">
+
+
+
+
+
+    
+
+        <!---상품검색창 시작---->
+        <!-- <div module="Layout_SearchSide" style="display:none;"> -->
+<!--@css(/css/module/layout/346/searchside.css)-->
+        <!--
+            $search_page = /product/search.html
+            $product_page = /product/detail.html
+        -->
+            <!-- <fieldset>
+                <legend>검색</legend>
+                <p class="searchBox">{$form.keyword}<img src="http://img.echosting.cafe24.com/design/skin/junior004/btn_snb_search.gif" alt="검색" onclick="{$action_search_submit}" /></p>
+            </fieldset>
+        </div> -->
+        <!---상품검색창 끝---->
+        
+        <!---게시판메뉴 시작
+                <div module="Layout_BoardInfo">---->
+<!--@css(/css/module/layout/231/boardinfo.css)-->
+        <!---<h2><img src="http://img.echosting.cafe24.com/design/skin/mono/h2_board.gif" alt="전체 게시판" /></h2>
+        <ul>
+            <li><a href="{$board_list_url}">{$board_name}</a></li>
+            <li><a href="{$board_list_url}">{$board_name}</a></li>
+        </ul>
+    </div>
+
+        게시판메뉴 끝---->
+
+        <!---고객센터 시작
+        <div module="Layout_Info">---->
+        <!--@css(/css/module/layout/info.css)-->
+         <!---고객센터 끝   <p>CUSTOMER CENTER</p>
+            <ul>
+                <li>tel number</li>
+                <li><span>{$phone}</span></li>
+                <li style="display:none;"><span>{$fax}</span></li>
+                <li>runtime</li>
+                <li><span>{$runtime}</span></li>
+            </ul>
+        </div>
+       고객센터 끝---->   
+        
+        
+        
+         <!-- 플레이어 시작 <div module="Layout_ProductBest"> -->
+        <!--@css(/css/module/layout/productBest.css)-->
+        <!--@js(/js/rotate.js)-->
+        <!--@js(/js/module/layout/productBest.js)-->
+        <!--
+        $count = 3
+        -->
+            <!-- 플레이어 시작 <h2><img src="http://img.echosting.cafe24.com/design/skin/mono/h2_best.gif" alt="인기상품 베스트" /></h2>
+            <ol>
+                <li>
+                    <a href="#none" class="{$best_product_class}"><img src="{$product_image_url}" alt="" /></a><br />
+                    <span>{$content1}<br/>{$content2}</span>
+                </li>
+                <li>
+                    <a href="#none" class="{$best_product_class}"><img src="{$product_image_url}" alt="" /></a><br />
+                    <span>{$content1}<br/>{$content2}</span>
+                </li>
+            </ol>
+            <p class="player">
+                <img src="http://img.echosting.cafe24.com/design/skin/mono/btn_playPrev.gif" alt="이전" class="prevButton" id="popular-prevButton" /><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_playNext.gif" alt="다음" id="popular-nextButton" class="nextButton"  />
+                <span><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_playPause.gif" alt="멈춤"  id="popular-stopButton" /><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_playPlay.gif" alt="재생" id="popular-playButton" /></span>
+            </p>
+        </div> 플레이어 끝-->
+        
+        
+        
+        </div>
+
+    <hr class="layout" />
+    
+    
+
+    <div id="contents">
+    <!--@contents-->
+    </div>
+    
+    
+    
+    
+</div> <!-- 컨테이너 끝 -->
+
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+<div id="footer"  onload="MM_preloadImages('/test/images/sns_icon_over_05.png','/test/images/sns_icon_over_03.png','/test/images/sns_icon_over_07.png')">
+  
+    <!-- 푸터 시작 -->
+     <div module="Layout_footer">  
+    <!--@css(/css/module/layout/footer.css)-->
+     
+         
+         
+<!-- show hide menu 시작 -->
+  <div id="box" class="hide">
+
+    <ul id="tab">
+        <li class="copyrighti"><span onclick="toggle('box');" style="cursor: pointer;">ⓒ De r&ecirc;ve. all rights reserved. more information &nbsp;&nbsp;&nbsp;<img id="arrow" src="/test/images/arrowdown.png" style="vertical-align:middle;"></span></li>
+
+		<li class="snslinks"><a href="http://www.facebook.com/dereve.co.kr" title="Became a Fan on our Facebook" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','/test/images/sns_icon_over_05.png',1)" target="_blank"><img src="/test/images/sns_icon_05.png" width="15" height="14" id="Image1" /></a>
+<a href="http://dereve.tumblr.com" target="_blank" title="Follow us! Tumblr Blog" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','/test/images/sns_icon_over_03.png',1)" ><img src="/test/images/sns_icon_03.png" width="15" height="14" id="Image2" /></a>
+<a href="http://instagram.com/dereveofficial" title="Instagram" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','/test/images/sns_icon_over_07.png',1)" target="_blank"><img src="/test/images/sns_icon_07.png" width="15" height="14" id="Image3" /></a></li>
+
+    </ul>
+
+    <div id="links">
+        <div id="linksin">
+            
+        <div id="deco">
+			<div class="bt">{$company_name} &nbsp;&nbsp; 대표:{$president_name} &nbsp;&nbsp; 사업자등록번호:{$company_regno} &nbsp;&nbsp; 통신판매업신고 {$network_regno} {$biz_no_link}<br />전화:{$phone}<!-- 팩스: {$fax} -->
+                주소:{$mall_zipcode} {$mall_addr1} {$mall_addr2} &nbsp;&nbsp; 개인정보관리책임자:{$cpo_name} &nbsp;&nbsp; E-mail:<a href="/shopinfo/contact.htm">{$cpo_email}</a> for more information.
+             </div>
+        </div>
+        <div id="deco2">
+            <div class="bt2"><a href="/shopinfo/guide.html">Shop Guide</a><a href="/member/agreement.html">Terms of use</a><a href="/member/privacy.html"><b>Privacy Policy</b></a><br /><a href="http://www.kangdongho.com" target="_blank"><span style="font-szie:9px;">Website Designed by kangdonghoGraphy</span></a></div>
+        </div>
+            
+            </div>
+
+    </div>
+
+
+</div>
+<!-- show hide menu 끝 -->
+
+         
+         <!-- 푸터   
+         <ul class="utilMenu">
+            <li><a href="/index.html">HOME</a></li>
+            <li><a href="/shopinfo/company.html">ABOUT COMPANY</a></li>
+            <li><a href="/member/agreement.html">AGREEMENT</a></li>
+            <li><a href="/member/privacy.html">PRIVACY POLICY</a></li>
+            <li><a href="/shopinfo/guide.html">GUIDE</a></li>
+            <li><a href="#header">GO TOP</a></li>
+        </ul>
+         
+        <p id="address">
+            <span>법인명(상호): {$company_name} </span> <span>대표자(성명): {$president_name}</span> <span>사업자 등록번호 안내: [{$company_regno}]</span> <span>통신판매업 신고 {$network_regno}</span> <span>{$biz_no_link}</span> <br />
+            <span>전화: {$phone}</span> <span>팩스: {$fax}</span> <span>주소: {$mall_zipcode} {$mall_addr1} {$mall_addr2}</span><br />
+            <span>개인정보관리책임자: <a href="mailto:{$cpo_email}">{$cpo_name}({$cpo_email})</a></span><br />
+            <span>Contact <strong><a href="mailto:{$email}">{$email}</a></strong> for more information.</span><br />
+             <span>Copyright &copy; 2010 <strong>{$mall_name}</strong> All rights reserved. </span><br />
+           <span> <img src="http://img.echosting.cafe24.com/design/skin/mono/logo_cafe24.png" alt="심플렉스인터넷" /><img src="http://img.echosting.cafe24.com/design/common/bn_fairTrade.gif"></span>
+        </p>    푸터 -->    
+
+    </div> 
+    
+    
+</div>
+
+    
+    
+    
+<!-- <div id="quickL">
+    <p><a href="#none"></a></p>
+</div>
+    
+<div id="quickR">
+         <div module="Layout_orderBasketcount"> 주석처리들 -->
+<!--@css(/css/module/layout/476/orderbasketcount.css)-->
+ <!--   주석처리들     <p><strong>장바구니</strong> <span><a href="/order/basket.html">{$basket_count}</a>개</span></p>
+    </div>
+
+    <div module="Layout_productRecent">-->
+<!--@css(/css/module/layout/381/productrecent.css)-->
+<!--   주석처리들           <h2><img src="http://img.echosting.cafe24.com/design/skin/general001/h2_today.gif" alt="최근 본 상품" /></h2>
+        <ul>
+            <li class="{$disp_recent|display}">
+                <a href="/product/detail.html{$param}">
+                    <img src="{$recent_img}" alt="" /><span>{$name}</span>
+                </a>
+            </li>
+            <li class="{$disp_recent|display}">
+                <a href="/product/detail.html{$param}">
+                    <img src="{$recent_img}" alt="" /><span>{$name}</span>
+                </a>
+            </li>
+        </ul>
+		<div class="quickBtnWrap">
+			<p class="btn"><img src="http://img.echosting.cafe24.com/design/skin/general001/btn_todayprev.gif" alt="이전 제품" class="prev" /></p>
+			<p class="btn"><img src="http://img.echosting.cafe24.com/design/skin/general001/btn_todaynext.gif" alt="다음 제품" class="next" /></p>
+		</div>
+    </div>
+
+    <p><a href="#none"></a></p>
+</div>-->
+
+
+</div>
+    
+    
+    
+<div id="progressPaybar" style="display:none;">
+    <!-- 배경 -->
+    <div id="progressPaybarBackground" class="layerProgress"></div>
+    <!-- 진행바 -->
+    <div id="progressPaybarView">
+        <div class="box">
+            <p class="graph">
+                <span><img src="http://img.cafe24.com/images/ec_hosting/popup/layer_guide/txt_prog_001.gif" alt="현재 결제가 진행중입니다." /></span>
+                <span><img src="http://img.cafe24.com/images/ec_hosting/popup/layer_guide/img_loading_bar.gif" alt="" /></span>
+            </p>
+            <p class="txt">
+                본 결체 창은 결제완료 후 자동으로 닫히며,결제 진행 중에 본 결제 창을 닫으시면<br />
+                주문이 되지 않으니 결제 완료 될 때 까지 닫지 마시기 바랍니다.
+            </p>
+        </div>
+    </div>
+</div>
+    
+ 
+    
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+	<h3>현재 위치</h3>
+	<ol>
+		<li class="first"><a href="/">홈</a></li>
+		<li title="현재 위치"><strong>쿠폰존</strong></li>
+	</ol>
+</div>
+
+<div class="titleArea">
+	<h2><span>쿠폰존</span></h2>
+</div>
+
+<div module="Coupon_zonePackage">
+<!--@css(/css/module/coupon/zonePackage.css)-->
+    <div>
+    	<div id="couponTab">
+    		<ul>
+    			<li class="first"><a href="#none" onclick="couponZone.showNewCoupon();"><img src="http://img.echosting.cafe24.com/design/skin/mono/product/btn_cpNew_off.gif" id="imgTitleNew" img_on="http://img.echosting.cafe24.com/design/skin/mono/product/btn_cpNew_on.gif" img_off="http://img.echosting.cafe24.com/design/skin/mono/product/btn_cpNew_off.gif" alt="New Coupon" /></a></li>
+    			<li><a href="#none" onclick="couponZone.showBestCoupon();"><img src="http://img.echosting.cafe24.com/design/skin/mono/product/btn_cpBest_on.gif" id="imgTitleBest" img_on="http://img.echosting.cafe24.com/design/skin/mono/product/btn_cpBest_on.gif" img_off="http://img.echosting.cafe24.com/design/skin/mono/product/btn_cpBest_off.gif" alt="Best Coupon" /></a></li>
+    		</ul>
+    	</div>
+    
+    	<div id="dNewCoupon"  module="Coupon_Zonenew" style="display:none">
+            <!--
+                $count = 2
+            -->
+			<ul class="couponArea">
+				<li>
+					<div class="coupon_content{$background_class}" {$call_coupon_detail} style="background-image: url('{$background_url}')">
+						<p class="name">{$coupon_name|cut:13,...}</p>
+						<p class="sale">{$coupon_content}</p>
+						<p class="date">사용기간 : {$coupon_period}</p>
+					</div>
+					<p class="btn"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="쿠폰 다운 받기" /></a></p>
+				</li>
+
+				<li>
+					<div class="coupon_content{$background_class}" {$call_coupon_detail} style="background-image: url('{$background_url}')">
+						<p class="name">{$coupon_name|cut:13,...}</p>
+						<p class="sale">{$coupon_content}</p>
+						<p class="date">사용기간 : {$coupon_period}</p>
+					</div>
+					<p class="btn"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="쿠폰 다운 받기" /></a></p>
+				</li>
+			</ul>
+    	</div>
+    
+    	<div id="dBestCoupon"  module="Coupon_Zonebest">
+            <!--
+                $count = 2
+            -->
+			<ul class="couponArea">
+				<li>
+					<div class="coupon_content{$background_class}" {$call_coupon_detail} style="background-image: url('{$background_url}')">
+						<p class="name">{$coupon_name|cut:13,...}</p>
+						<p class="sale">{$coupon_content}</p>
+						<p class="date">사용기간 : {$coupon_period}</p>
+					</div>
+					<p class="btn"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="쿠폰 다운 받기" /></a></p>
+				</li>
+				<li>
+					<div class="coupon_content{$background_class}" {$call_coupon_detail} style="background-image: url('{$background_url}')">
+						<p class="name">{$coupon_name|cut:13,...}</p>
+						<p class="sale">{$coupon_content}</p>
+						<p class="date">사용기간 : {$coupon_period}</p>
+					</div>
+					<p class="btn"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="쿠폰 다운 받기" /></a></p>
+				</li>
+			</ul>
+    	</div>
+    </div>
+    
+    <div module="Coupon_Zone">
+    	<div class="couponZone">
+    		<div class="titleArea">
+    			<h3>{$zone_title}</h3>
+    			<p class="btn">
+    				<a href="#none" onclick="couponZone.allCheck('{$zone_form_id}')"><img alt="전체 선택" src="http://img.echosting.cafe24.com/design/skin/mono/product/btn_couponAllSelect.gif" id="imgZonecheckAll" img_on="http://img.echosting.cafe24.com/design/skin/mono/product/btn_couponAllSelect.gif" img_off="http://img.echosting.cafe24.com/design/skin/mono/product/btn_couponAllDeselect.gif" /></a>
+    				<a href="#none" onclick="couponZone.setDown('{$zone_form_id}')"><img alt="선택 다운로드 받기" src="http://img.echosting.cafe24.com/design/skin/mono/product/btn_couponSelect.gif"></a>
+    			</p>
+    		</div>
+    		{$form_start}
+			<ul module="Coupon_aZonelist" class="couponArea">
+				<li>
+					<div class="coupon_content{$background_class}" {$call_coupon_detail} style="background-image: url('{$background_url}')">
+						<p class="name">{$coupon_name|cut:13,...}</p>
+						<p class="sale">{$coupon_content}</p>
+						<p class="date">사용기간 : {$coupon_period}</p>
+					</div>
+                    <p class="btn"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="쿠폰 다운 받기" /></a></p>
+					<p class="chkBtn">{$coupon_checkbox}</p>
+				</li>
+				<li>
+					<div class="coupon_content{$background_class}" {$call_coupon_detail} style="background-image: url('{$background_url}')">
+						<p class="name">{$coupon_name|cut:13,...}</p>
+						<p class="sale">{$coupon_content}</p>
+						<p class="date">사용기간 : {$coupon_period}</p>
+					</div>
+                    <p class="btn"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="쿠폰 다운 받기" /></a></p>
+					<p class="chkBtn">{$coupon_checkbox}</p>
+				</li>
+				<li>
+					<div class="coupon_content{$background_class}" {$call_coupon_detail} style="background-image: url('{$background_url}')">
+						<p class="name">{$coupon_name|cut:13,...}</p>
+						<p class="sale">{$coupon_content}</p>
+						<p class="date">사용기간 : {$coupon_period}</p>
+					</div>
+                    <p class="btn"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="쿠폰 다운 받기" /></a></p>
+					<p class="chkBtn">{$coupon_checkbox}</p>
+				</li>
+				<li>
+					<div class="coupon_content{$background_class}" {$call_coupon_detail} style="background-image: url('{$background_url}')">
+						<p class="name">{$coupon_name|cut:13,...}</p>
+						<p class="sale">{$coupon_content}</p>
+						<p class="date">사용기간 : {$coupon_period}</p>
+					</div>
+                    <p class="btn"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="쿠폰 다운 받기" /></a></p>
+					<p class="chkBtn">{$coupon_checkbox}</p>
+				</li>
+			</ul>
+    		{$form_end}
+    	</div>
+    
+    	<div class="couponZone">
+    		<div class="titleArea">
+    			<h3>{$zone_title}</h3>
+    			<p class="btn">
+    				<a href="#none" onclick="couponZone.allCheck('{$zone_form_id}')"><img alt="전체쿠폰 다운로드 받기" src="http://img.echosting.cafe24.com/design/skin/mono/product/btn_couponAll.gif"></a>
+    				<a href="#none" onclick="couponZone.setDown('{$zone_form_id}')"><img alt="선택 다운로드 받기" src="http://img.echosting.cafe24.com/design/skin/mono/product/btn_couponSelect.gif"></a>
+    			</p>
+    		</div>
+    		{$form_start}
+			<ul module="Coupon_aZonelist" class="couponArea">
+				<li>
+					<div class="coupon_content{$background_class}" {$call_coupon_detail} style="background-image: url('{$background_url}')">
+						<p class="name">{$coupon_name|cut:13,...}</p>
+						<p class="sale">{$coupon_content}</p>
+						<p class="date">사용기간 : {$coupon_period}</p>
+					</div>
+                    <p class="btn"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="쿠폰 다운 받기" /></a></p>
+					<p class="chkBtn">{$coupon_checkbox}</p>
+				</li>
+				<li>
+					<div class="coupon_content{$background_class}" {$call_coupon_detail} style="background-image: url('{$background_url}')">
+						<p class="name">{$coupon_name|cut:13,...}</p>
+						<p class="sale">{$coupon_content}</p>
+						<p class="date">사용기간 : {$coupon_period}</p>
+					</div>
+                    <p class="btn"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="쿠폰 다운 받기" /></a></p>
+					<p class="chkBtn">{$coupon_checkbox}</p>
+				</li>
+				<li>
+					<div class="coupon_content{$background_class}" {$call_coupon_detail} style="background-image: url('{$background_url}')">
+						<p class="name">{$coupon_name|cut:13,...}</p>
+						<p class="sale">{$coupon_content}</p>
+						<p class="date">사용기간 : {$coupon_period}</p>
+					</div>
+                    <p class="btn"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="쿠폰 다운 받기" /></a></p>
+					<p class="chkBtn">{$coupon_checkbox}</p>
+				</li>
+				<li>
+					<div class="coupon_content{$background_class}" {$call_coupon_detail} style="background-image: url('{$background_url}')">
+						<p class="name">{$coupon_name|cut:13,...}</p>
+						<p class="sale">{$coupon_content}</p>
+						<p class="date">사용기간 : {$coupon_period}</p>
+					</div>
+                    <p class="btn"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="쿠폰 다운 받기" /></a></p>
+					<p class="chkBtn">{$coupon_checkbox}</p>
+				</li>
+			</ul>
+    		{$form_end}
+    	</div>
+    </div>
+</div>
+
+<div id="message">
+	<h3>쿠폰이용안내</h3>
+	<ul>
+		<li>쿠폰 다운로드 및 사용은 <em>로그인 후 이용가능</em>합니다.</li>
+		<li>쿠폰 상세정보는 쿠폰을 클릭하면 확인하실 수 있습니다.</li>
+		<li>쿠폰의 이용기간이 만료되면 별도의 통보없이 자동 소멸됩니다.</li>
+		<li>동일쿠폰은 1장 이상 중복 소유가 불가능합니다. (쿠폰 사용 후 재발급은 가능합니다.)</li>
+		<li>쿠폰의 할인 적용은 <em>쿠폰 할인 속성에 따라 다르게 적용</em>될 수 있습니다.</li>
+	</ul>
+</div>

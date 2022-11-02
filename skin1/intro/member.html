@@ -1,0 +1,31 @@
+<!--@layout(/layout/basic/intro.html)-->
+<div module="Intro_memberPackage">
+<!--@css(/css/module/intro/memberPackage.css)-->
+<div class="loginBox">
+	<h1><img src="http://img.echosting.cafe24.com/design/skin/mono/intro/h1_login.gif" alt="로그인" /></h1>
+	<div class="msg">
+		<p><img src="http://img.echosting.cafe24.com/design/skin/mono/intro/h2_login.gif" alt="회원전용 쇼핑몰입니다." /></p>
+		<p>회원 로그인 후 상품구매가 가능합니다. 회원가입 후 사용 해 주십시요.</p>
+	</div>
+
+	<div class="idcheck" module="Member_Login">
+        <!--
+            $forbidIpUrl = member/adminFail.html
+            $defaultReturnUrl = /index.html
+        -->    
+		<p class="login">
+			<span class="inputType">
+				<span class="name"><strong>아이디</strong> {$form.member_id} </span>
+				<span class="number"><strong>비밀번호</strong> {$form.member_passwd}<br /></span>
+			</span>
+			<span class="btn"><a href="#none" onclick="{$action_func_login}"><img src="http://img.echosting.cafe24.com/design/skin/mono/intro/btn_login.gif" alt="로그인" /></a></span>
+		</p>
+
+		<p class="join">
+			<span><a href="/member/id/find_id.html{$skip_intro}" class="first">아이디</a></span>
+			<a href="/member/passwd/find_passwd_info.html{$skip_intro}">비밀번호 찾기</a>
+			<span class="joinus">아직 회원이 아니세요? <a href="/member/join.html{$skip_intro}'"><img src="http://img.echosting.cafe24.com/design/skin/mono/intro/btn_join.gif" alt="회원 가입" /></a></span>
+		</p>
+	</div>
+</div>
+</div>

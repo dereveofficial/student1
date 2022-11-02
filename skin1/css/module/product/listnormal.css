@@ -1,0 +1,95 @@
+.xans-product-normalmenu { overflow:hidden; padding:0; margin:0 auto; width:960px; border:0px solid #000; }
+.xans-product-normalmenu fieldset { float:left; }
+.xans-product-normalmenu p.prdCount {  float:left;  color:#888888; padding:0 0 0 5px;  font-size:9px;}
+.xans-product-normalmenu ul#type { float:right; padding:0;}
+.xans-product-normalmenu ul#type li { color:#888888; display:inline; padding:0 0 0 10px; margin:0 4px 0 0; font-size:9px; background:url(/test/images/bg_cate.gif) 0 center no-repeat; }
+.xans-product-normalmenu ul#type li:first-child { background:none; color:#888888;}
+.xans-product-normalmenu ul#type li a { color:#888888; }
+.xans-product-normalmenu ul#type li a:hover{ color:#333333; }
+.xans-product-normalmenu .compare { float:right; padding:0 0 0 10px; }
+
+.xans-product-listnormal { margin:0; padding:0; }
+.xans-product-listnormal .titleArea { }
+.xans-product-listnormal .titleArea:after {content:""; display:block; clear:both; }
+.xans-product-listnormal .titleArea h2 {}
+
+.xans-product-listnormal ul { clear:both; zoom:1; width:1000px; margin:0 auto; padding:10px 0 0 0;  border:0px solid #dedcdc; text-align:center;}
+.xans-product-listnormal ul:after {content:""; display:block; clear:both; padding:0;}
+.xans-product-listnormal ul li { display:inline-block; width:200px; padding:0; margin:10px 15px 10px 15px; line-height:16px; color:#838382; }
+.xans-product-listnormal ul li a,
+.xans-product-listnormal ul li a:hover { color:#838382; }
+.xans-product-listnormal ul .prdImg { display:block; }
+.xans-product-listnormal ul .prdImg img { display:block; width:200px; }
+.xans-product-listnormal ul .zoom { float:right; padding:0; cursor:pointer; }
+.xans-product-listnormal ul .name { float:left; width:200px; padding:0; line-height:16px; color:#838382; }
+.xans-product-listnormal ul .icon { display:block; clear:both; position: absolute; top:150px; width:200px;z-index: 101; background-color:rgba(255,255,255,0.6);  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;}
+.xans-product-listnormal ul .price {  display:block; clear:both; }
+.xans-product-listnormal ul .mileage { display:block; clear:both; }
+.xans-product-listnormal ul .mileage img { vertical-align:middle; }
+.xans-product-listnormal ul .btns { overflow:hidden; zoom:1; }
+.xans-product-listnormal ul .btns img { cursor:pointer; margin:0 4px 0 0; }
+.xans-product-listnormal ul .btns .bag { float:left; padding:7px 10px 0 0; }
+.xans-product-listnormal ul .btns .option { float:left; padding:7px 0 0; }
+.xans-product-listnormal ul .custom {text-decoration:line-through; }
+.xans-product-listnormal ul .manu { display:block; }
+.xans-product-listnormal ul .btn { display:block; text-align:center; }
+
+.xans-product-listnormal ul.prdColor { padding:5px 0 3px; margin:0; border:0; }
+.xans-product-listnormal ul.prdColor li { width:8px; height:8px; padding:0; margin:0 2px 2px 0; border:1px solid #969696; }
+.xans-product-listnormal ul.prdColor li span { display:block; height:100%; }
+
+.xans-product-listnormal .xans-product-listitem { min-width:0; }
+.xans-product-listnormal .xans-product-listitem { margin:0; }
+.xans-product-listnormal .xans-product-listitem li { overflow:hidden; float:none; width:auto; padding:0; text-align:center; }
+.xans-product-listnormal .xans-product-listitem li .title { font-weight:normal; }
+
+
+/* 롤오버 레이어 추가 */
+.xans-product-listnormal ul li p.information { position:absolute; left:0; width:100%; font-family: 'Roboto', 'sans-serif'; font-weight: 400;}
+.xans-product-listnormal ul li:hover p.information { display:block; }
+.xans-product-listnormal ul li p.information a { display:block; padding:10px; color:#ffffff; font-size:11px; }
+.xans-product-listnormal ul li p.information a:hover { text-decoration:none; #ffffff }
+.xans-product-listnormal ul li p.information a span { display:block; margin:3px 0 0; color:#ffffff; font-size:10px; }
+.box { 	position: relative;
+	overflow: hidden;
+	-webkit-transition: all 200ms ease-out;
+		-moz-transition: all 200ms ease-out;
+		-o-transition: all 200ms ease-out;
+		-ms-transition: all 200ms ease-out;	
+		transition: all 200ms ease-out;}
+
+
+.box .caption {
+	background-color: rgba(0,0,0,0.5); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+	position: absolute;
+	z-index: 100;
+		-webkit-transition: all 200ms ease-out;
+		-moz-transition: all 200ms ease-out;
+		-o-transition: all 200ms ease-out;
+		-ms-transition: all 200ms ease-out;	
+		transition: all 200ms ease-out;
+	left: 0;
+}
+ .box img {
+		-webkit-transition: all 200ms ease-out;
+		-moz-transition: all 200ms ease-out;
+		-o-transition: all 200ms ease-out;
+		-ms-transition: all 200ms ease-out;	
+	transition: all 200ms ease-out;
+}
+.simple-caption {
+	height: 65px;
+	width: 200px;
+	display: block;
+	bottom: -70px;
+	line-height: 16pxt;
+}
+.box:hover .simple-caption {
+	-moz-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	-webkit-transform: translateY(-100%);
+	opacity: 1;
+	transform: translateY(-100%);
+}

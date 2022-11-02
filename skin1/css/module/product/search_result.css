@@ -1,0 +1,27 @@
+.xans-search-result { margin:0 0 30px; }
+.xans-search-result .titleArea { margin:30px 0; }
+.xans-search-result ul { clear:both; zoom:1; margin:0 0 30px -2.8%; min-width:756px; }
+.xans-search-result ul:after {content:""; display:block; clear:both; }
+.xans-search-result ul li { float:left; width:22%; padding:0 0 30px 2.8%; line-height:1.6em; }
+
+.xans-search-result ul .prdImg { display:block; }
+.xans-search-result ul .prdImg img { display:block; width:100%; }
+.xans-search-result ul .zoom { float:right; padding:7px 0 0; cursor:pointer; }
+.xans-search-result ul .name { float:left; width:160px; padding:4px 0; line-height:16px; }
+.xans-search-result ul .icon { display:block; clear:both; }
+.xans-search-result ul .price {  display:block; clear:both; }
+.xans-search-result ul .mileage { display:block; clear:both; }
+.xans-search-result ul .mileage img { vertical-align:middle; }
+.xans-search-result ul .btns { overflow:hidden; zoom:1; }
+.xans-search-result ul .btns img { cursor:pointer; margin:0 4px 0 0; }
+.xans-search-result ul .btns .bag { float:left; padding:7px 10px 0 0; }
+.xans-search-result ul .btns .option { float:left; padding:7px 0 0; }
+.xans-search-result ul .custom {text-decoration:line-through; }
+.xans-search-result ul .manu { display:block; }
+.xans-search-result ul .btn { display:block; text-align:center; }
+
+.xans-search-form .nodata { padding:50px; text-align:center; font-weight:bold; border-bottom:1px solid #dedcdc; }
+
+.xans-search-result ul.prdColor { padding:5px 0 3px; margin:0; border:0; }
+.xans-search-result ul.prdColor li { width:8px; height:8px; padding:0; margin:0 2px 2px 0; border:1px solid #969696; }
+.xans-search-result ul.prdColor li span { display:block; height:100%; }

@@ -1,0 +1,132 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+	<h3>현재 위치</h3>
+	<ol>
+		<li class="first"><a href="/">홈</a></li>
+		<li title="현재 위치"><strong>출석 체크</strong></li>
+	</ol>
+</div>
+
+<div class="titleArea">
+	<h2><span>출석체크</span></h2>
+</div>
+
+<div module="Attend_calendarPackage">
+<!--@css(/css/module/attend/calendarPackage.css)-->
+    <div module="attend_calendarhead">
+        <!--
+            $login_page = /member/login.html 
+        -->
+    	<div class="inner">
+    		<p class="date">
+    			<span>{$year}</span>
+    			<span class="month">.{$month}</span>
+    		</p>
+    		<p class="prev"><a href="{$prev_month}"><img src="http://img.echosting.cafe24.com/design/skin/mono/attend/btn_calPrev.gif" alt="이전 달" /></a></p>
+    		<p class="next"><a href="{$next_month}"><img src="http://img.echosting.cafe24.com/design/skin/mono/attend/btn_calNext.gif" alt="다음 달" /></a></p>
+    	</div>
+    </div>
+    
+    <table module="attend_calendar" border="1" summary="출석이벤트 달력입니다. ">
+    <!--
+        $login_page = /member/login.html 
+    -->
+    	<caption>출석이벤트 달력</caption>
+    	<thead>
+    	<tr>
+    		<th scope="col"><img src="http://img.echosting.cafe24.com/design/skin/mono/attend/txt_calSun.gif" alt="일요일" /></th>
+    		<th scope="col"><img src="http://img.echosting.cafe24.com/design/skin/mono/attend/txt_calMon.gif" alt="월요일" /></th>
+    		<th scope="col"><img src="http://img.echosting.cafe24.com/design/skin/mono/attend/txt_calTue.gif" alt="화요일" /></th>
+    		<th scope="col"><img src="http://img.echosting.cafe24.com/design/skin/mono/attend/txt_calWed.gif" alt="수요일" /></th>
+    		<th scope="col"><img src="http://img.echosting.cafe24.com/design/skin/mono/attend/txt_calThu.gif" alt="목요일" /></th>
+    		<th scope="col"><img src="http://img.echosting.cafe24.com/design/skin/mono/attend/txt_calFri.gif" alt="금요일" /></th>
+    		<th scope="col"><img src="http://img.echosting.cafe24.com/design/skin/mono/attend/txt_calSat.gif" alt="토요일" /></th>
+    	</tr>
+    	</thead>
+    	<tbody>
+    		<tr>
+    			<td><p>{$sun}</p></td>
+    			<td><p>{$mon}</p></td>
+    			<td><p>{$the}</p></td>
+    			<td><p>{$wed}</p></td>
+    			<td><p>{$thu}</p></td>
+    			<td><p>{$fri}</p></td>
+    			<td><p>{$sat}</p></td>
+    		</tr>
+    		<tr>
+    			<td><p>{$sun}</p></td>
+    			<td><p>{$mon}</p></td>
+    			<td><p>{$the}</p></td>
+    			<td><p>{$wed}</p></td>
+    			<td><p>{$thu}</p></td>
+    			<td><p>{$fri}</p></td>
+    			<td><p>{$sat}</p></td>
+    		</tr>
+    	</tbody>
+    </table>
+    
+    <div module="attend_button">
+        <!--
+            $login_page = /member/login.html 
+        -->
+    	<p><a href="#none" onclick="{$action_attend}"><img src="http://img.echosting.cafe24.com/design/skin/mono/attend/btn_attend.gif" alt="출석체크" /></a></p>
+    </div>
+</div>
+
+<div module="Attend_commentPackage">
+<!--@css(/css/module/attend/commentPackage.css)-->
+    <div module="attend_commentwrite">
+        <!--
+            $login_page = /member/login.html 
+        -->
+    	<fieldset>
+    		<legend>댓글 작성</legend>
+    		<p class="memo">
+    
+    			<span id="attendCommentInputWrap">
+    				{$form.comment}
+    			</span>
+    			<span id="attendCommentBtnWrap">
+    				<a  href="#none" onclick="{$action_attend}"><input type="image" src="http://img.echosting.cafe24.com/design/skin/mono/board/btn_memoWrite.gif" alt="출석체크" /></a>
+    			</span>
+    		</p>
+    	</fieldset>
+    </div>
+    
+    <!-- 메모 반복 -->
+    <div module="attend_commentList">
+        <!--
+            $login_page = /member/login.html 
+        -->
+    	<div class="memoCont">
+    		<p class="user">[{$no}] 아이디 : {$member_id} | 이름 : {$member_name}</p>
+    		<p class="date">{$attend_date|date:Y-m-d}</p>
+    		<p class="memo">{$content}</p>
+    	</div>
+    
+    	<div class="memoCont">
+    		<p class="user">[{$no}] 아이디 : {$member_id} | 이름 {$member_name}</p>
+    		<p class="date">{$attend_date|date:Y-m-d}</p>
+    		<p class="memo">{$content}</p>
+    	</div>
+    </div>
+</div>
+
+<div module="attend_commentpaging">
+    <!--
+        $login_page = /member/login.html 
+    -->
+	<!--@css(/css/module/attend/commentpaging.css)-->
+	<!--@js(/js/module/attend/paging.js)-->
+	<p><a href="{$first_url}"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_pageFirst.gif" alt="첫 페이지" /></a></p>
+	<p><a href="{$prev_url}"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_pagePrev.gif" alt="이전 페이지" /></a></p>
+
+	<ol>
+		<li><a href="{$url_query}" title="페이지로 이동">[{$n}]</a></li>
+		<li><a href="{$url_query}" title="페이지로 이동">[{$n}]</a></li>
+		<li><a href="{$url_query}" title="페이지로 이동">[{$n}]</a></li>
+	</ol>
+
+	<p><a href="{$next_url}"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_pageNext.gif" alt="다음 페이지" /></a></p>
+	<p><a href="{$last_url}"><img src="http://img.echosting.cafe24.com/design/skin/mono/btn_pageLast.gif" alt="마지막 페이지" /></a></p>
+</div>

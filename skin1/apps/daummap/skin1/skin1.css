@@ -1,0 +1,8 @@
+.xans-daummap-map { width:100%;}
+.xans-daummap-map h2 { position:relative; overflow:hidden; font-size:0px; /*background:#6888ef url(http://img.echosting.cafe24.com/apps/daum-map/skin1/h2-daum.gif) 13px 8px no-repeat;*/ }
+.xans-daummap-map h2 span { position:absolute; top:0px; }
+.xans-daummap-map table { width:100%; }
+.xans-daummap-map th,
+.xans-daummap-map td { padding:0;  font-size:0px; }
+.xans-daummap-map th { width:0; color:#6888ef; }
+.xans-daummap-map td { padding-left:0; color:#767676; }

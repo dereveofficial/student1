@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fancyBox - Fancy jQuery Lightbox Alternative | Demonstration</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="/test/js/fancybox-jquery-1.10.1.min.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="/test/js/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="/test/css/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+
+		});
+	</script>
+	<style type="text/css">
+		.fancybox-custom .fancybox-skin {
+			box-shadow: 0 0 50px #222;
+		}
+
+	</style>
+</head>
+<body>
+<a class="fancybox" href="#inline1" title="sdddddddddddd" >Inline</a><br />
+<a class="fancybox fancybox.ajax" href="ajax.txt">Ajax</a><br />
+<a class="fancybox fancybox.iframe" href="iframe.html">Iframe</a><br />
+
+
+	<div id="inline1" style="width:400px; height:400px; display: none;overflow-y:auto;">
+		<h3>Etiam quis mi eu elit</h3>
+		<p><div class="paymenttxt">
+            {$payment_info}
+        </div>
+		</p>
+		</div>
+
+
+
+
+</body>
+</html>

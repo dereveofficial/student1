@@ -1,0 +1,33 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,500italic,700,900);
+
+.xans-member-checkid { margin:0 auto; padding:10px; font-size:11px; background:#f1f1f1; height:100%; width:380px;}
+.xans-member-checkid h1 { color:#555555; font-size:16px; padding:10px; background: #ffffff url("/test/images/logo_mini.png") no-repeat 94% center;}
+
+.xans-member-checkid .layInner {  margin:10px 0 0 0; padding:0; background:#ffffff; color:#555555; width:380px; border:1px solid #000;}
+.xans-member-checkid .inner {  float:left;text-align:center; margin:0 auto; width:100%; background:#ffffff;}
+.xans-member-checkid fieldset { display:block; padding:20px;}
+.xans-member-checkid fieldset input { padding:0px; width:150px; padding:0;  height:20px; }
+.xans-member-checkid fieldset p { margin:10px; padding:10px; color:#cccccc; }
+
+.xans-member-checkid .inner ul { color:#888888;  font-size:11px; padding:10px; clear:both;}
+.xans-member-checkid .inner ul li { color:#333333;  font-size:11px;}
+
+.xans-member-checkid .btnArea { overflow:hidden; width:100%; padding:0; margin:0 auto; text-align:center; }
+.xans-member-checkid .btnArea .popbtns { width:100%; height:40px; background-color:#ccc; margin:0; padding:0; text-align:center;  border: 1px solid #ccc;}
+.xans-member-checkid .btnArea .popbtns:hover { background-color:#ffffff; border: 1px solid #f1f1f1;}
+a.popbtna { text-align:center;  font-size:12px; font-weight:500;  color:#ffffff; line-height:40px;}	
+a.popbtna:hover { color:#888888; }
+
+
+
+
+.xans-member-checkid .layPop { background:#f1f1f1; display:inline-block; .display:inline; zoom:1; position:relative; }
+
+.xans-member-checkid .layPop .close { position:absolute; right:0; top:0; text-align:right; }
+.xans-member-checkid .layPop .close img { cursor:pointer; }
+
+.xans-member-checkid .layPop h1 span { display:block; padding:0; }
+.xans-member-checkid .layPop .titleArea h2 { color:#fff; }
+
+
+

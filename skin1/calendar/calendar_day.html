@@ -1,0 +1,74 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <h3>현재 위치</h3>
+    <ol>
+        <li class="first"><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>캘린더 게시판</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2><span>캘린더 게시판</span></h2>
+</div>
+
+<div module="Calendar_Daypackage">
+<!--@css(/css/module/calendar/daypackage.css)-->
+    <div class="tab">
+        <ul>
+            <li><a href="/calendar/calendar_day.html"><img src="http://img.echosting.cafe24.com/design/skin/mono/attend/btn_calDay_on.gif" alt="일간" /></a></li>
+            <li><a href="/calendar/calendar_week.html"><img src="http://img.echosting.cafe24.com/design/skin/mono/attend/btn_calWeek.gif" alt="주간" /></a></li>
+            <li><a href="/calendar/calendar_month.html"><img src="http://img.echosting.cafe24.com/design/skin/mono/attend/btn_calMonth.gif" alt="월간" /></a></li>
+            <li class="addType"><a href="/calendar/calendar_field.html"><img src="http://img.echosting.cafe24.com/design/skin/mono/attend/btn_calOther.gif" alt="추가정보" /></a></li>
+        </ul>
+    </div>
+
+    <div module="Calendar_HeadDay">
+    <!-- 
+        $calendar_write_url = calendar_write.html
+     -->
+        <p class="date">
+            <a href="#none" onclick="{$action_prev_day}"><img src="http://img.echosting.cafe24.com/design/skin/mono/attend/btn_calPrev.gif" alt="이전달" /></a>
+            <span>{$current_year}-{$current_month}-{$current_day}</span>
+            <a href="#none" onclick="{$action_next_day}"><img src="http://img.echosting.cafe24.com/design/skin/mono/attend/btn_calNext.gif" alt="다음달" /></a>
+            <a href="#none" onclick="{$action_today}"><img src="http://img.echosting.cafe24.com/design/skin/mono/attend/btn_calToday.gif" alt="오늘" /></a>
+        </p>
+
+        <p class="btn"><a href="#none" onclick="{$action_write}" class="{$write_display|display}"><img src="http://img.echosting.cafe24.com/design/skin/mono/attend/btn_calWrite.gif" alt="글쓰기" /></a></p>
+    </div>
+
+    <p module="Calendar_Category">{$form.category_no}</p>
+
+    <table border="1" summary="캘린더 일간형">
+        <caption>캘린더 일간형</caption>
+        <thead module="Calendar_ListDayhead">
+            <tr>
+                <th class="time" scope="col">time</th>
+                <th class="todo" scope="col"><p>{$calendar_day}</p></th>
+            </tr>
+        </thead>
+        
+        <tbody module="Calendar_ListDay">
+        <!-- 
+            $calendar_view_url = calendar_view.html
+         -->
+            <tr>
+                <th class="time" scope="row">{$calendar_time} 시</th>
+                <td class="todo {$today.class}">
+                    <ol module="Calendar_List">
+                        <li><a href="#none" onclick="{$action_list_view}">[{$calendar_start_hour}:{$calendar_start_minute}] {$calendar_title}</a></li>
+                        <li><a href="#none" onclick="{$action_list_view}">[{$calendar_start_hour}:{$calendar_start_minute}] {$calendar_title}</a></li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <th class="time" scope="row">{$calendar_time} 시</th>
+                <td class="todo {$today.class}">
+                    <ol module="Calendar_List">
+                        <li><a href="#none" onclick="{$action_list_view}">[{$calendar_start_hour}:{$calendar_start_minute}] {$calendar_title}</a></li>
+                        <li><a href="#none" onclick="{$action_list_view}">[{$calendar_start_hour}:{$calendar_start_minute}] {$calendar_title}</a></li>
+                    </ol>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,15 @@
+.xans-product-recentlistpaging { clear:both; text-align:center; }
+.xans-product-recentlistpaging { padding:13px 0; }
+.xans-product-recentlistpaging { text-align:center; margin:20px 0 0;}
+.xans-product-recentlistpaging p,
+.xans-product-recentlistpaging ol,
+.xans-product-recentlistpaging li { display:inline; }
+.xans-product-recentlistpaging img {vertical-align:middle; }
+.xans-product-recentlistpaging p { margin-right:-4px; }
+.xans-product-recentlistpaging ol { margin:0 7px; }
+.xans-product-recentlistpaging li { margin:0 9px 0 0; padding:0 0 0 11px; font-size:.9em; background:url(http://img.echosting.cafe24.com/design/skin/mono/bg_page.gif) left center no-repeat; }
+.xans-product-recentlistpaging li:first-child { background:none; }
+.xans-product-recentlistpaging li strong { color:#f26522; }
+.xans-product-recentlistpaging li a { color:#202020; }
+.xans-product-recentlistpaging li a:hover { color:#f26522; text-decoration:underline; }
+.xans-product-recentlistpaging li a.nolink { cursor:default; }

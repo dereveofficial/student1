@@ -1,0 +1,529 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--상단위치-->
+<div module="Product_menupackage">
+<!--@css(/css/module/product/menupackage.css)-->
+    <div class="path" module="product_headcategory">
+    <div class="titleArea">
+        <h2><span>My Order Details</span></h2>
+    </div>
+        <ol>
+		<li class="first"><a href="/">De r&ecirc;ve</a></li>
+		<li><a href="/myshop/index.html">My Page</a></li>
+		<li><a href="/myshop/order/list.html">My Order List</a></li>
+		<li title="현재 위치">My Order Details</li>
+        </ol>
+    </div>
+</div>
+<!--상단위치끝-->
+<div module="myshop_benefit"><!--상단 마이페이지 메뉴-->
+<!--@css(/css/module/myshop/benefit.css)-->
+<div id="inner2">
+		<div class="myInfo2">
+		<h3>De r&ecirc;ve Member</h3>
+		<p>
+		Name : {$member_name}<br />
+		Level : {$group_name}
+		</p>
+        </div>
+
+		<div class="myInfo3">
+		<div class="mypage">My Order List<img src="/test/images/dot.gif" /><a href="/member/modify.html">My Account</a><img src="/test/images/dot.gif" /><a href="/myshop/wish_list.html">Wish List</a><!--<img src="/test/images/dot.gif" /><a href="/myshop/mileage/historyList.html">My Point</a>--><img src="/test/images/dot.gif" /><a href="/myshop/board_list.html">My Question List</a></div>
+		<p></p>
+        </div>
+</div>
+</div><!--상단 마이페이지 메뉴-->
+
+<div module="MyShop_OrderHistoryDetail" unroll="1">
+<!--@css(/css/module/myshop/orderHistoryDetail.css)-->
+    <!--
+        $print_spec_url = /myshop/order/print/spec.html
+        $print_pg_card_url = /myshop/order/print/pg.html
+        $print_tax_url = /myshop/order/print/tax.html
+        $issue_tax_url = /myshop/order/issue/tax.html
+        $issue_cash_url = /myshop/order/issue/cash.html
+        $select_gift_url = /order/gift_select.html
+     -->
+<div class="titleArea">
+    <!-- <span>Tips</span> : Order Number(주문번호)를 클릭하시면 해당 주문에 대한 상세내역을 확인하실 수 있습니다.-->
+</div>
+
+    <!-- 상품 정보 -->
+    <div class="orderList">
+        <h3>Item Details</h3>
+
+        <table border="1" summary="주문서 상세중 기본 배송 내역입니다." class="ordDelivery1 {$basic_display|display}">
+            <caption>기본 배송 주문서</caption>
+            <thead>
+            <tr>
+                <th scope="col" class="thumb">ITEM</th>
+                <th scope="col" class="prduct">DESCRIPTION</th>
+                <th scope="col" class="sell">PRICE</th>
+                <th scope="col" class="mileage">POINT</th>
+                <th scope="col" class="quantity">QUANTITY</th>
+                <th scope="col" class="delivery">DELIVERY</th>
+                <th scope="col" class="state">STATE</th>
+                <th scope="col" class="delivery1">ETC</th>
+                <th scope="col" class="delivery2">TRACKER</th>
+            </tr>
+            </thead>
+
+            <!--<tfoot>
+            <tr>
+                <td colspan="9"><strong class="type">[ 기본 배송 ]</strong> 상품구매금액 <strong>{$basic.product_price}</strong> + 배송비 <strong>{$basic.ship_fee}</strong> + 특수지역배송비 <strong>{$basic.special_ship_fee}</strong> = <strong class="total">합계 : {$basic.total_price}</strong></td>
+            </tr>
+            </tfoot>-->
+
+            <tbody module="Myshop_OrderHistoryDetailBasic">
+            <tr>
+                <td class="thumb"><a href="/product/detail.html{$param_product}"><img src="{$thumbnail}" alt="{$name}" /></a></td>
+                <td class="prduct">
+                    <p><a href="/product/detail.html{$param_product}">{$name}</a></p>
+                    {$opt_str}
+                    {$option_add}
+                    <span class="{$opt_price_display|display}">(+{$opt_price}{$price_unit_tail})</span>
+                    <!--<strong class="btnPrdWrite"><a href="/board/product/write.html{$param_postscript}">구매후기</a></strong>-->
+                </td>
+                <td class="sell">{$price}</td>
+                <td class="mileage">{$mileage}</td>
+                <td class="quantity">{$quantity}</td>
+                <td class="delivery">{$type}</td>
+                <td class="state">{$state}</td>
+                <td class="delivery1">{$shipping_info}</td>
+                <td class="delivery2"><a href="#none" onclick="{$action_track}" class="{$track_display|display}"><img src="http://img.echosting.cafe24.com/design/skin/mono/myshop/btn_delivery.gif" alt="배송추적"></a></td>
+            </tr>
+            <tr>
+                <td class="thumb"><a href="/product/detail.html{$param_product}"><img src="{$thumbnail}" alt="{$name}" /></a></td>
+                <td class="prduct">
+                        <p><a href="/product/detail.html{$param_product}">{$name}</a></p>
+                        {$opt_str}
+                        {$option_add}
+                        <span class="{$opt_price_display|display}">(+{$opt_price}{$price_unit_tail})</span>
+                        <!--<strong class="btnPrdWrite"><a href="/board/product/write.html{$param_postscript}">구매후기</a></strong>-->
+                </td>
+                <td class="sell">{$price}</td>
+                <td class="mileage">{$mileage}</td>
+                <td class="quantity">{$quantity}</td>
+                <td class="delivery">{$type}</td>
+                <td class="state">{$state}</td>
+                <td class="delivery1">{$shipping_info}</td>
+                <td class="delivery2"><a href="#none" onclick="{$action_track}" class="{$track_display|display}"><img src="http://img.echosting.cafe24.com/design/skin/mono/myshop/btn_delivery.gif" alt="배송추적"></a></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <table border="1" summary="주문서 상세중 개인 배송 내역입니다." class="ordDelivery2 {$individual_display|display}">
+            <caption>개인 배송 주문서</caption>
+
+            <thead>
+            <tr>
+                <th scope="col" class="thumb">이미지</th>
+                <th scope="col" class="prduct">상품명</th>
+                <th scope="col" class="sell">판매가</th>
+                <th scope="col" class="mileage">적립예정</th>
+                <th scope="col" class="quantity">수량</th>
+                <th scope="col" class="delivery">배송구분</th>
+                <th scope="col" class="state">처리상태</th>
+                <th scope="col" class="delivery1">배송관련</th>
+                <th scope="col" class="delivery2">배송추적</th>
+            </tr>
+            </thead>
+
+            <!--<tfoot>
+                <tr>
+                    <td colspan="9"><strong class="type">[ 개별 배송 ]</strong> 상품구매금액 <strong>{$individual.product_price}</strong> + 배송비 <strong>{$individual.ship_fee}</strong> + 특수지역배송비 <strong>{$individual.special_ship_fee}</strong> = <strong class="total">합계 : {$individual.total_price}</strong></td>
+                </tr>
+            </tfoot>-->
+
+            <tbody module="Myshop_OrderHistoryDetailIndividual">
+                <tr>
+                    <td class="thumb"><a href="/product/detail.html{$param_product}"><img src="{$thumbnail}" alt="{$name}" /></a></td>
+                    <td class="prduct">
+                        <p><a href="/product/detail.html{$param_product}">{$name}</a></p>
+                        {$opt_str}
+                        {$option_add}
+                        <span class="{$opt_price_display|display}">(+{$opt_price}{$price_unit_tail})</span>
+                        <strong class="btnPrdWrite"><a href="/board/product/write.html{$param_postscript}">구매후기</a></strong>
+                    </td>
+                    <td class="sell">{$price}</td>
+                    <td class="mileage">{$mileage}</td>
+                    <td class="quantity">{$quantity}</td>
+                    <td class="delivery">{$type}</td>
+                    <td class="state">{$state}</td>
+                    <td class="delivery1">{$shipping_info}</td>
+                    <td class="delivery2"><a href="#none" onclick="{$action_track}" class="{$track_display|display}"><img src="http://img.echosting.cafe24.com/design/skin/mono/myshop/btn_delivery.gif" alt="배송추적"></a></td>
+                </tr>
+                <tr>
+                    <td class="thumb"><a href="/product/detail.html{$param_product}"><img src="{$thumbnail}" alt="{$name}" /></a></td>
+                    <td class="prduct">
+                        <p><a href="/product/detail.html{$param_product}">{$name}</a></p>
+                        {$opt_str}
+                        {$option_add}
+                        <span class="{$opt_price_display|display}">(+{$opt_price}{$price_unit_tail})</span>
+                        <strong class="btnPrdWrite"><a href="/board/product/write.html{$param_postscript}">구매후기</a></strong>
+                    </td>
+                    <td class="sell">{$price}</td>
+                    <td class="mileage">{$mileage}</td>
+                    <td class="quantity">{$quantity}</td>
+                    <td class="delivery">{$type}</td>
+                    <td class="state">{$state}</td>
+                    <td class="delivery1">{$shipping_info}</td>
+                    <td class="delivery2"><a href="#none" onclick="{$action_track}" class="{$track_display|display}"><img src="http://img.echosting.cafe24.com/design/skin/mono/myshop/btn_delivery.gif" alt="배송추적"></a></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <table border="1" summary="주문서 상세중 해외 배송 내역입니다." class="ordDelivery1 ordDelivery4 {$oversea_display|display}">
+            <caption>개인 배송 주문서</caption>
+
+            <thead>
+            <tr>
+                <th scope="col" class="thumb">이미지</th>
+                <th scope="col" class="prduct">상품명</th>
+                <th scope="col" class="sell">판매가</th>
+                <th scope="col" class="mileage">적립예정</th>
+                <th scope="col" class="quantity">수량</th>
+                <th scope="col" class="delivery">배송구분</th>
+                <th scope="col" class="state">처리상태</th>
+                <th scope="col" class="delivery1">배송관련</th>
+                <th scope="col" class="delivery2">배송추적</th>
+            </tr>
+            </thead>
+
+            <!--<tfoot>
+                <tr>
+                    <td colspan="9"><strong class="type">[ 해외 배송 ]</strong> 상품구매금액 <strong>{$oversea.product_price}</strong> + 배송비 <strong>{$oversea.ship_fee}</strong> + 특수지역배송비 <strong>{$oversea.special_ship_fee}</strong> = <strong class="total">합계 : {$oversea.total_price}</strong></td>
+                </tr>
+            </tfoot>-->
+
+            <tbody module="Myshop_OrderHistoryDetailOversea">
+                <tr>
+                    <td class="thumb"><a href="/product/detail.html{$param_product}"><img src="{$thumbnail}" alt="{$name}" /></a></td>
+                    <td class="prduct">
+                        <p><a href="/product/detail.html{$param_product}">{$name}</a></p>
+                        {$opt_str}
+                        {$option_add}
+                        <span class="{$opt_price_display|display}">(+{$opt_price}{$price_unit_tail})</span>
+                        <strong class="btnPrdWrite"><a href="/board/product/write.html{$param_postscript}">구매후기</a></strong>
+                    </td>
+                    <td class="sell">{$price}</td>
+                    <td class="mileage">{$mileage}</td>
+                    <td class="quantity">{$quantity}</td>
+                    <td class="delivery">{$type}</td>
+                    <td class="state">{$state}</td>
+                    <td class="delivery1">{$shipping_info}</td>
+                    <td class="delivery2"><a href="#none" onclick="{$action_track}" class="{$track_display|display}"><img src="http://img.echosting.cafe24.com/design/skin/mono/myshop/btn_delivery.gif" alt="배송추적"></a></td>
+                </tr>
+                <tr>
+                    <td class="thumb"><a href="/product/detail.html{$param_product}"><img src="{$thumbnail}" alt="{$name}" /></a></td>
+                    <td class="prduct">
+                        <p><a href="/product/detail.html{$param_product}">{$name}</a></p>
+                        {$opt_str}
+                        {$option_add}
+                        <span class="{$opt_price_display|display}">(+{$opt_price}{$price_unit_tail})</span>
+                        <strong class="btnPrdWrite"><a href="/board/product/write.html{$param_postscript}">구매후기</a></strong>
+                    </td>
+                    <td class="sell">{$price}</td>
+                    <td class="mileage">{$mileage}</td>
+                    <td class="quantity">{$quantity}</td>
+                    <td class="delivery">{$type}</td>
+                    <td class="state">{$state}</td>
+                    <td class="delivery1">{$shipping_info}</td>
+                    <td class="delivery2"><a href="#none" onclick="{$action_track}" class="{$track_display|display}"><img src="http://img.echosting.cafe24.com/design/skin/mono/myshop/btn_delivery.gif" alt="배송추적"></a></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        
+        <table border="1" summary="주문서 상세중 사은품 내역입니다." class="ordDelivery3 {$gift_display|display}">
+            <caption>사은품 주문서</caption>
+            <thead>
+            <tr>
+                <th scope="col" class="thumb">이미지</th>
+                <th scope="col" class="prduct">상품명</th>
+                <th scope="col" class="sell">판매가</th>
+                <th scope="col" class="mileage">적립예정</th>
+                <th scope="col" class="quantity">수량</th>
+                <th scope="col" class="delivery">배송구분</th>
+                <th scope="col" class="state">처리상태</th>
+                <th scope="col" class="delivery1">배송관련</th>
+                <th scope="col" class="delivery2">배송추적</th>
+            </tr>
+            </thead>
+
+            <tfoot>
+            <tr>
+                <td colspan="9"><strong class="type">[ 사은품 ]</strong></td>
+            </tr>
+            </tfoot>
+
+            <tbody module="Myshop_OrderHistoryDetailGift">
+            <tr>
+                <td class="thumb"><img src="{$thumbnail}" alt="{$name}" /></td>
+                <td class="prduct">
+                        <p>{$name}</p>
+                        {$opt_str}
+                        {$option_add}
+                        <span class="{$opt_price_display|display}">(+{$opt_price}{$price_unit_tail})</span>
+                </td>
+                <td class="sell"></td>
+                <td class="mileage"></td>
+                <td class="quantity">{$quantity}</td>
+                <td class="delivery">{$type}</td>
+                <td class="state">{$state}</td>
+                <td class="delivery1">{$shipping_info}</td>
+                <td class="delivery2"><a href="#none" onclick="{$action_track}" class="{$track_display|display}"><img src="http://img.echosting.cafe24.com/design/skin/mono/myshop/btn_delivery.gif" alt="배송추적"></a></td>
+            </tr>
+            <tr>
+                <td class="thumb"><img src="{$thumbnail}" alt="{$name}" /></td>
+                <td class="prduct">
+                        <p>{$name}</p>
+                        {$opt_str}
+                        {$option_add}
+                        <span class="{$opt_price_display|display}">(+{$opt_price}{$price_unit_tail})</span>
+                </td>
+                <td class="sell"></td>
+                <td class="mileage"></td>
+                <td class="quantity">{$quantity}</td>
+                <td class="delivery">{$type}</td>
+                <td class="state">{$state}</td>
+                <td class="delivery1">{$shipping_info}</td>
+                <td class="delivery2"><a href="#none" onclick="{$action_track}" class="{$track_display|display}"><img src="http://img.echosting.cafe24.com/design/skin/mono/myshop/btn_delivery.gif" alt="배송추적"></a></td>
+            </tr>
+            </tbody>
+        </table> 
+                
+        <table border="0" summary="" class="boardProduct">
+            <tfoot>
+                <tr>
+                    <td colspan="9" class="totalPrice">상품구매금액 <strong>{$total.product_price}</strong> + 배송비 <strong>{$total.ship_fee}<span class="{$total_insurance_display|display}">(보험료:{$total.total_insurance_price})</span></strong> = <strong class="total">총 주문합계 : {$total.total_price}</strong></td>
+                </tr>
+            <tfoot>
+        </table>
+
+    </div>   
+    <!-- //상품 정보 -->
+
+
+    <div class="orderArea" style="float:left;">
+        <h3>Customer Details</h3>
+        <div class="boardView">
+        <table border="1" class="ordInfo ordHead" summary="주문 정보입니다.">
+            <caption>주문 정보</caption>
+
+            <colgroup>
+                <col width="15%" />
+                <col width="35%" />
+                <col width="15%" />
+                <col width="35%" />
+            </colgroup>
+            
+            <tr>
+                <th scope="col">Order No.</th>
+                <td>{$order.order_id}</td>
+                <th scope="col">Date</th>
+                <td>{$order.date}</td>
+            </tr>
+            
+            <tr>
+                <th scope="col">Name</th>
+                <td>{$order.name}</td>
+                <th scope="col">State</th>
+                <td>
+                    {$order.state} 
+                    
+                    <input type="submit" value="주문취소" class="btn {$cancel_display|display}" />
+                    
+                    <span class="{$escrow_display|display}">
+                        <a href="#" onclick="{$action_escrow_confirm}"><img src="http://img.echosting.cafe24.com/design/skin/mono/myshop/btn_buy_Approval.gif" alt="구매확인" /></a>
+                        <a href="#" onclick="{$action_escrow_reject}"><img src="http://img.echosting.cafe24.com/design/skin/mono/myshop/btn_refund.gif" alt="환불요청" /></a>
+                    </span>
+                </td>                
+            </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="orderArea" style="float:right;">
+        <h3>Delivery Details</h3>
+        <div class="boardView">
+            <table border="1" class="ordInfo" summary="배송지정보입니다.">
+            <caption>배송지정보</caption>
+                <tbody>
+                <tr>
+                    <th scope="row">Name</th>
+                    <td>{$delivery.name}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Address</th>
+                    <td>{$delivery.addr}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Contact</th>
+                    <td>{$delivery.phone}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Message</th>
+                    <td>{$delivery.message}</td>
+                </tr>
+                <tr class="{$hope_shipping_date_display|display}">
+                    <th scope="row">희망 배송일</th>
+                    <td>{$delivery.hope_shipping_date}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <div class="orderArea" style="float:left;" module="Myshop_OrderHistoryDetailPayment">
+        <h3>Payment Details</h3>
+        <div class="boardView">
+            <table border="1" class="ordInfo" summary="결제 정보입니다.">
+            <caption>결제 정보</caption>
+            <colgroup>
+                <col width="15%" />
+                <col width="20%" />
+                <col width="65%" />
+            </colgroup>
+            <tr>
+                <th scope="col" class="type">Method</th>
+                <th scope="col" class="payment">Price</th>
+                <th scope="col">Details</th>
+            </tr>
+            <tr>
+                <td class="type">{$method}</td>
+                <td class="payment"><span style="font-size:13px; font-weight:bold; color:#000000;">{$price}</span> {$state}</td>
+                <td class="bank"><span style="font-size:11px; font-weight:bold; color:#000000;">{$detail}</span></td>
+            </tr>
+            <tr>
+                <td class="type">{$method}</td>
+                <td class="payment">{$price}<span style="font-size:11px; font-weight:bold; color:#000000;">{$state}</span></td>
+                <td class="bank"><span style="font-size:11px; font-weight:bold; color:#000000;">{$detail}</span></td>
+            </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="orderArea" style="float:left;" module="Myshop_OrderHistoryDetailRefund">
+        <h3>Refund Details</h3>
+        <div class="boardView">
+            <table border="1" class="ordInfo ordHead" summary="환불정보입니다.">
+                <caption>Payment / Refund</caption>
+                <colgroup>
+                    <col width="15%" />
+                    <col width="35%" />
+                    <col width="15%" />
+                    <col width="35%" />
+                </colgroup>
+            
+                <tbody>
+                <tr>
+                    <th scope="col" class="type">{$payment_type}금액</th>
+                    <td colspan="3">{$payment_amount}<span class="{$display_detail|display}"> = {$product_amount} {$additional_amount}</span></td>
+                </tr>
+                <tr>
+                    <th scope="col" class="type">결제(입금)자</th>
+                    <td>{$depositor}</td>
+                    <th scope="col">{$payment_type}수단</th>
+                    <td>{$payment_info_type} {$payment_info_data}</td> 
+                </tr>
+                <tr class="{$display_reason|display}">
+                    <th scope="col" class="type">환불사유</th>
+                    <td colspan="3">{$reason}</td>
+                </tr>
+                </tbody>
+                
+                <tbody>
+                 <tr>
+                    <th scope="col" class="type">{$payment_type}금액</th>
+                    <td colspan="3">{$payment_amount}<span class="{$display_detail|display}"> = {$product_amount} {$additional_amount}</span></td>
+                </tr>
+                <tr>
+                    <th scope="col" class="payment">결제(입금)자</th>
+                    <td>{$depositor}</td>
+                    <th scope="col">{$payment_type}수단</th>
+                    <td>{$payment_info_type} {$payment_info_data}</td> 
+                </tr>
+                <tr class="{$display_reason|display}">
+                    <th scope="col" class="type">환불사유</th>
+                    <td colspan="3">{$reason}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="orderArea" style="float:right;">
+    <h3>Customer Message</h3>
+    <div class="boardView">
+        <table border="1" class="ordInfo" summary="고객 알림입니다.">   
+        <caption>고객 알림</caption>
+        <tr>
+            <td>{$customer_msg}</td>
+        </tr>
+        </table>
+    </div>
+    </div>
+
+    <div class="btnArea" style="clear:both;">
+        <!--<p class="btnLeft">
+            <a href="#none" onclick="{$action_select_gift}" class="{$select_gift_display|display}">사은품 선택</a>
+            <a href="#none" onclick="{$action_print_spec}" class="{$print_spec_display|display}">거래명서서 인쇄</a>
+            <a href="#none" onclick="{$action_print_pg_card}" class="{$print_pg_card_display|display}">카드매출전표 인쇄</a>
+            <a href="#none" onclick="{$action_print_tax}" class="{$print_tax_display|display}"><img src="http://img.echosting.cafe24.com/design/skin/mono/myshop/btn_ordPrint3.gif" alt="세금계산서 인쇄" /></a>
+            <a href="#none" onclick="{$action_issue_tax}" class="{$issue_tax_display|display}"><img src="http://img.echosting.cafe24.com/design/skin/mono/myshop/btn_ordReceipt1.gif" alt="세금계산서 신청" /></a>
+            <a href="#none" onclick="{$action_issue_cash}" class="{$issue_cash_display|display}"><img src="http://img.echosting.cafe24.com/design/skin/mono/myshop/btn_ordReceipt2.gif" alt="현금영수증 신청" /></a>
+            <a href="#none" onclick="{$action_print_pg_cash}" class="{$print_pg_cash_display|display}"><img src="http://img.echosting.cafe24.com/design/skin/mono/myshop/btn_ordPrint4.gif" alt="현금영수증전표 인쇄" /></a>
+        </p>-->
+        
+        <p class="btnRight"><a  href="/myshop/order/list.html{$param_list}"><img src="/test/images/btn_mypage_orderlist_44.jpg" onmouseover="this.src='/test/images/btn_mypage_orderlist_over_44.jpg'" onmouseout="this.src='/test/images/btn_mypage_orderlist_44.jpg'" title="주문 목록보기" /></a></p>
+    </div>
+    
+    <div class="naverInfo {$naverinfo_display|display}">
+        <img src="http://img.cafe24.com/images/ec_admin/addservice/naver_ml/txt_001.gif" alt="[네이버 마일리지 관련 정책안내] 무통장입금 주문 후, 15일 이내 입금이 확인되지 않으면 네이버 마일리지 적립과 사용은 자동으로 취소됩니다. 주문한 상품을 교환할 경우 최초 주문금액 기준으로 지급됩니다. 주문한 상ㅍ무을 취소하거나 반품할 경우 적립은 취소되며, 사용금액은 환불처리 됩니다. " />
+    </div>
+</div>
+<!--
+<div class="basketInfo">
+    <ul>
+        <li><strong>거래명세서 발행 안내  </strong>
+            <ul>
+                <li>거래명세서는 영수증용도로도 사용이 가능합니다.  </li>
+            </ul>
+        </li>
+
+        <li><strong>신용카드매출전표 발행 안내  </strong>
+            <ul>
+                <li>신용카드 결제는 사용하는 PG사 명의로 발행됩니다.</li>
+            </ul>
+        </li>
+
+        <li><strong>세금계산서 발행 안내 </strong>
+            <ul>
+                <li>부가가치세법 제 54조에 의거하여 세금계산서는 배송완료일로부터 다음달 10일까지만 요청하실 수 있습니다. </li>
+                <li>세금계산서는 사업자만 신청하실 수 있습니다. </li>
+                <li>배송이 완료된 주문에 한하여 세금계산서 발행신청이 가능합니다. </li>
+                <li>[세금계산서 신청]버튼을 눌러 세금계산서 신청양식을 작성한 후 팩스()로 사업자등록증사본을 보내셔야 세금계산서 발생이 가능합니다.</li>
+                <li>[세금계산서 인쇄]버튼을 누르면 발행된 세금계산서를 인쇄하실 수 있습니다. </li>
+                <li>세금계산서는 실결제금액에 대해서만 발행됩니다.(적립금과 할인금액은 세금계산서 금액에서 제외됨)</li>
+            </ul>
+        </li>
+        <li><strong>부가가치세법 변경에 따른 신용카드매출전표 및 세금계산서 변경 안내</strong>
+            <ul>
+                <li>변경된 부가가치세법에 의거, 2004.7.1 이후 신용카드로 결제하신 주문에 대해서는 세금계산서 발행이 불가하며 신용카드매출전표로 부가가치세 신고를 하셔야 합니다.(부가가치세법 시행령 57조)  </li>
+                <li>상기 부가가치세법 변경내용에 따라 신용카드 이외의 결제건에 대해서만 세금계산서 발행이 가능함을 양지하여 주시기 바랍니다.</li>
+            </ul>
+        </li>
+
+        <li><strong>현금영수증 이용안내 </strong>
+            <ul>
+                <li>현금영수증은 5,000원 이상의 거래에 대해 발행이 됩니다.</li>
+                <li>현금영수증 발행 금액에는 배송비는 포함되고, 적립금사용액은 포함되지 않습니다.</li>
+                <li>발행신청 기간제한 현금영수증은 입금확인일로 부터 48시간안에 발행을 해야 합니다.</li>
+                <li>현금영수증 발행 취소의 경우는 시간 제한이 없습니다. (국세청의 정책에 따라 변경 될 수 있습니다.)  
+                <li>현금영수증이나 세금계산서 중 하나만 발행 가능 합니다.</li>
+            </ul>
+        </li>
+    </ul>
+</div>-->

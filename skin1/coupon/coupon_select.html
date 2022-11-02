@@ -1,0 +1,118 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Coupon_Select">
+<!--@css(/css/module/coupon/select.css)-->
+	<h1><span>쿠폰 조회/적용</span></h1>
+	<div class="layInner">
+
+    	<h2>쿠폰 사용에 따른 유의사항</h2>
+    	<ul class="cpselectInfo">
+    		<li>1. 사용 가능한 쿠폰만 보여지게 됩니다.</li>
+    		<li>2. 쿠폰은 회원등급 할인 이후에 적용되므로, 현재 페이지에서 보여지는 판매가와 실제 적용되는 금액과 다를 수 있습니다.</li>
+    	</ul>
+    
+    	<div class="cpselectList">
+    		<!-- 상품별 쿠폰적용 --> 
+            <div class="{$bPrdCoupon|display}">
+    		<h3>상품별 쿠폰 적용</h3>
+    
+    		<table border="1" summary="상품별 쿠폰 적용 가능한 쿠폰 리스트입니다.">
+    			<caption>상품별 쿠폰 적용</caption>
+    			<thead>
+    				<tr>
+    					<th scope="col" class="product">배송구분 &amp; 상품정보</th>
+    					<th scope="col" class="sell">판매가</th>
+    					<th scope="col" class="discount1">할인혜택</th>
+    					<th scope="col" class="discount2">상품별 쿠폰선택</th>
+    					<th scope="col" class="discount3">상품별 쿠폰 할인액</th>
+    				</tr>
+    			</thead>
+    
+    			<tbody>
+    				<tr module="Coupon_aPrd">
+    					<td class="product">
+                            <ul>
+                                <li>
+                                    <p class="type">{$sHidden}{$sShipType}</p>
+                                    <p class="detail"><img src="{$product_image}" alt="" class="img_basket" /><strong>
+                                    {$product_name}
+                                    <span>{$sOptStr}</span>
+                                </strong></p>
+                                </li>
+                            </ul>
+    					</td>
+    					<td class="sell">{$sOrdPrice}</td>
+    					<td class="discount1">{$sTotalMemberSalePrice}</td>
+    					<td class="discount2">{$sCoupon}</td>
+    					<td class="discount3">{$sCouponSaleSpan}</td>
+    				</tr>
+    			</tbody>
+    		</table>
+            </div>
+    		<!-- //상품별 쿠폰적용 -->
+    		
+    		<!-- 주문별 쿠폰적용 -->
+            <div class="{$bOrdCoupon|display}">
+    		<h3>주문별 쿠폰 적용</h3>
+    
+    		<table border="1" summary="주문별 쿠폰 적용 가능한 쿠폰 리스트입니다.">
+    			<caption>주문별 쿠폰 적용 리스트</caption>
+    			<thead>
+    				<tr>
+    					<th scope="col" class="product">배송구분 &amp; 상품정보</th>
+    					<th scope="col" class="sell">주문금액</th>
+    					<th scope="col" class="discount1">할인혜택</th>
+    					<th scope="col" class="discount2">주문별 쿠폰선택</th>
+    					<th scope="col" class="discount3">주문서 쿠폰 할인액</th>
+    				</tr>
+    			</thead>
+    
+    			<tbody>
+    				<tr>
+    					<td class="product">
+    						<ul module="Coupon_aOrd">
+    							<li>
+                                    <p class="type">{$sShipType}</p>
+                                    <p class="detail">
+                                        <img src="{$product_image}" alt="" class="img_basket" /><strong>
+                                            {$product_name}
+                                            <span>{$sOptStr}</span>
+                                        </strong>
+                                    </p>
+    							</li>
+    							<li>
+                                    <p class="type">{$sShipType}</p>
+                                    <p class="detail">
+                                        <img src="{$product_image}" alt="" class="img_basket" /><strong>
+                                            {$product_name}
+                                            <span>{$sOptStr}</span>
+                                        </strong>
+                                    </p>
+    							</li>
+    						</ul>
+    					</td>
+    					<td class="sell">{$ordTotalPrice}</td>
+    					<td class="discount1"><span id="txtOrdDcPrice">{$sTotalMemberSalePrice}</span></td>
+    					<td class="discount2">{$sOrdCoupon}</td>
+    					<td class="discount3"><span id="txtCpnOrdPrice"></span></td>
+    				</tr>
+    			</tbody>
+    		</table>
+            </div>
+    		<!-- //주문별 쿠폰적용 -->
+    
+    		<div class="priceTotal">
+    			<p>배송비: <span id="txtShipPrice">{$sShipfee}</span></p>
+    			<p><input type="hidden" name="totalPriceResult" value="76000"/>
+    			총 결제예정금액: <span id="txtTotalPrice">{$txtTotalPrice}</span></p>
+    		</div>
+    
+    		<!-- -->
+    		<div class="btnArea">
+    			<p>
+    				<a href="#none" onclick="{$action_result}"><img src="http://img.echosting.cafe24.com/design/skin/mono/order/ico_selectSave.gif" alt="쿠폰적용하기" /></a>
+    				<a href="#none" onclick="{$action_init}"><img src="http://img.echosting.cafe24.com/design/skin/mono/order/ico_selectCancle.gif" alt="적용취소" ></a>
+    			</p>
+    		</div>
+    	</div>
+    </div>
+</div>

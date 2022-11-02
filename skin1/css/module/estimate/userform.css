@@ -1,0 +1,22 @@
+.layPop { background:#b4bdc5; display:inline-block; .display:inline; zoom:1; position:relative; }
+.layPop .close { position:absolute; right:0; top:0; text-align:right; }
+.layPop .close img { cursor:pointer; }
+.layPop h1 { color:#272823; font-size:26px; text-decoration:underline; }
+.layPop h1 span { display:block; padding:28px 25px 25px; }
+.layPop .titleArea h2 { color:#fff; }
+.layInner { position:relative; padding:20px 25px 0; background:#fff; border-top:1px solid #99a2aa; }
+.layPop .btnArea { overflow:hidden; background:#fff; width:100%; padding:30px 30px 30px 27px; margin:0; position:relative; left:-25px; text-align:right; }
+.layPop .btnArea img { cursor:pointer; }
+
+.xans-estimate-userform { width:600px; }
+.xans-estimate-userform table { border:0; border-top:2px solid #99a2aa; border-bottom:2px solid #99a2aa; }
+.xans-estimate-userform th { padding:4px 0 5px; text-align:left; font-size:11px; font-weight:normal; border-bottom:1px solid #99a2aa; }
+.xans-estimate-userform td { padding:4px 0 5px; font-size:11px; border-bottom:1px solid #99a2aa; }
+.xans-estimate-userform td input { padding:2px 2px 1px; border:1px solid #99a2aa; }
+.xans-estimate-userform p.info {font-size:11px; }
+.xans-estimate-userform h2 { padding:27px 0 10px; color:#f26522; font-size:11px; text-decoration:underline; }
+.xans-estimate-userform #user_phone1 { width:40px; text-align:center; }
+.xans-estimate-userform #user_phone2 { width:60px; text-align:center; }
+.xans-estimate-userform #user_phone3 { width:60px; text-align:center; }
+.xans-estimate-userform #user_email { width:300px; }
+.xans-estimate-userform .agree { height:100px; padding:10px; margin:0 0 10px; overflow:auto; border:1px solid #99a2aa; }

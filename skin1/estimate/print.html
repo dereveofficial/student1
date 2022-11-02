@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset="utf-8"" />
+	<title>견적서 정보</title>
+	<script type="text/javascript">
+	window.resizeTo(820,500)
+	</script>
+</head>
+
+<div module="Estimate_EstimateInfo">
+<!--@css(/css/module/estimate/print.css)-->
+	<h1>{$logo_image} 견적서 (見積書) {$seal_image}</h1>
+
+	<!-- 견적받는자 정보 -->
+	<table border="1" summary="견적받는자 정보">
+		<caption>견적받는자 정보</caption>
+		<colgroup>
+			<col width="30%" />
+			<col width="auto" />
+		</colgroup>
+
+		<tr>
+			<th scope="row">담당자</th>
+			<td>{$user_name} 님 귀하 </td>
+		</tr>
+		<tr>
+			<th scope="row">견적일</th>
+			<td>{$estimate_date}</td>
+		</tr>
+		<tr>
+			<th scope="row">결제방법</th>
+			<td>{$paymethod}</td>
+		</tr>
+		<tr>
+			<th scope="row">견적금액</th>
+			<td>{$total_price}</td>
+		</tr>
+	</table>
+
+	<!-- 공급자 사업자정보 -->
+	<table border="1" summary="공급자 사업자정보">
+		<caption>공급자 사업자정보</caption>
+		<colgroup>
+			<col width="10%" />
+			<col width="20%" />
+			<col width="25%" />
+			<col width="20%" />
+			<col width="25%" />
+		</colgroup>
+
+		<tr>
+			<th rowspan="5" scope="row">공급자</th>
+			<th scope="row">상호</th>
+			<td colspan="3">{$mall_company_name}</td>
+		</tr>
+		<tr>
+			<th scope="row">대표자</th>
+			<td colspan="3">{$mall_president_name}</td>
+		</tr>
+		<tr>
+			<th scope="row">주소</th>
+			<td colspan="3">{$mall_addr}</td>
+		</tr>
+		<tr>
+			<th scope="row">업태</th>
+			<td>{$mall_company_condition}</td>
+			<th scope="row">종목</th>
+			<td>{$mall_company_line}</td>
+		</tr>
+		<tr>
+			<th scope="row">전화</th>
+			<td>{$mall_phone}</td>
+			<th scope="row">팩스</th>
+			<td>{$mall_fax}</td>
+		</tr>
+	</table>
+
+	<p>아래와 같이 견적합니다.</p>
+
+	<!-- 구매상품목록 -->
+	<div module="Estimate_PurchaseList">
+	<table border="1" summary="구매상품목록">
+		<caption>구매상품목록</caption>
+		<colgroup>
+			<col width="10%" />
+			<col width="20%" />
+			<col width="25%" />
+			<col width="10%" />
+			<col width="10%" />
+			<col width="auto" />
+			<col width="auto" />
+			<col width="auto" />
+		</colgroup>
+
+		<tr>
+			<th scope="col">NO</th>
+			<th scope="col">상품코드</th>
+			<th scope="col">상품명</th>
+			<th scope="col">{$title_manu_name}</th>
+			<th scope="col">{$title_made_in}</th>
+			<th scope="col">단가</th>
+			<th scope="col">수량</th>
+			<th scope="col">금액</th>
+		</tr>
+
+		<tbody module="Estimate_list">
+		<tr>
+			<td class="number">{$num}</td>
+			<td class="prdCode">{$product_no}</td>
+			<td class="prdName">{$img}{$product_name}</td>
+			<td class="maker">{$maker}</td>
+			<td class="resource">{$product_resource}</td>
+			<td class="unitPrice">{$unit_price}</td>
+			<td class="quantity">{$quantity}</td>
+			<td class="totalPrice">{$total_price}</td>
+		</tr>
+		<tr>
+			<td class="number">{$num}</td>
+			<td class="prdCode">{$product_no}</td>
+			<td class="prdName">{$img}{$product_name}</td>
+			<td class="maker">{$maker}</td>
+			<td class="resource">{$product_resource}</td>
+			<td class="unitPrice">{$unit_price}</td>
+			<td class="quantity">{$quantity}</td>
+			<td class="totalPrice">{$total_price}</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<!-- 하단 합계정보 -->
+	<div module="Estimate_TotalSummary">
+		<p>상기 가격은 VAT포함 가격임.</p>
+		<table border="1" summary="하단 합계정보">
+		<caption>하단 합계정보</caption>
+		<colgroup>
+			<col width="30%" />
+			<col width="auto" />
+		</colgroup>
+
+		<tr>
+			<th scope="row">상품구매액</th>
+			<td>{$purchase_price}</td>
+		</tr>
+		<tr>
+			<th scope="row">배송비</th>
+			<td>{$delv_price}</td>
+		</tr>
+		<tr>
+			<th scope="row">총합계</th>
+			<td>{$total_price}</td>
+		</tr>
+		</table>
+
+		<!-- 견적서 안내문구 -->
+		<p>{$comment}</p>
+
+		<!-- 프린트 -->
+		<p class="printInfo">
+			<span>브라우저 상단메뉴 [도구] => [인터넷옵션] => [고급] => [인쇄] 항목의 [배경색 및 이미지인쇄] 에 체크를 하셔야<br />
+			직인 인쇄가 가능합니다. </span>
+			<a href="#none" onclick="{$action_print}"><img src="http://img.echosting.cafe24.com/design/common/btn_estimate_print.gif" alt="견적서 인쇄"/></a></p>
+	</div>
+</div>

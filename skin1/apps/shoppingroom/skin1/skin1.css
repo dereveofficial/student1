@@ -1,0 +1,104 @@
+/* Shoppingroom */
+.xans-shoppingroom-display .shoppingroom-wrap { position:relative; margin:0 auto; padding:0; background-position:0 0; background-repeat:no-repeat; }
+.xans-shoppingroom-display .shoppingroom-title { overflow:hidden; display:block; height:25px; padding:5px 0 0 16px; background:url("http://img.echosting.cafe24.com/apps/shoppingroom/skin1/bg-title.png") 0 0 repeat-x; color:#fff; font-size:14px; line-height:160%; }
+
+.xans-shoppingroom-display .shoppingroom-product {}
+.xans-shoppingroom-display .shoppingroom-product li { position:absolute; }
+.xans-shoppingroom-display .shoppingroom-product p { display:none; position:absolute; width:120px; padding:8px 12px 5px 13px; border:1px solid #fff; border-radius:4px; background:url("http://img.echosting.cafe24.com/apps/shoppingroom/skin1/bg-tooltip.png") 0 0 repeat; color:#fff; font-size:11px; }
+.xans-shoppingroom-display .shoppingroom-product p .arrow { display:block; position:absolute; }
+.xans-shoppingroom-display .shoppingroom-product strong { display:block; margin:0 0 3px; }
+.xans-shoppingroom-display .shoppingroom-product .plus { overflow:hidden; display:block; width:27px; height:28px; background:url("http://img.echosting.cafe24.com/apps/shoppingroom/skin1/sfix-ico.png") 0 0 no-repeat; text-indent:100%; white-space:nowrap; }
+.xans-shoppingroom-display .shoppingroom-product .plus:hover,
+.xans-shoppingroom-display .shoppingroom-product .selected .plus { background-position:-37px 0; }
+.xans-shoppingroom-display .shoppingroom-product .selected { z-index:10; }
+.xans-shoppingroom-display .shoppingroom-product .selected p { display:block; }
+.xans-shoppingroom-display .shoppingroom-product .left p { left:42px; top:-7px; }
+.xans-shoppingroom-display .shoppingroom-product .left p .arrow { left:-11px; top:13px; width:11px; height:12px; background-image:url("http://img.echosting.cafe24.com/apps/shoppingroom/skin1/ico-arrow-left.png"); }
+.xans-shoppingroom-display .shoppingroom-product .right p { left:-161px; top:-7px; }
+.xans-shoppingroom-display .shoppingroom-product .right p .arrow { right:-11px; top:13px; width:11px; height:12px; background-image:url("http://img.echosting.cafe24.com/apps/shoppingroom/skin1/ico-arrow-right.png"); }
+.xans-shoppingroom-display .shoppingroom-product .top p { left:50%; top:40px; margin:0 0 0 -73px; }
+.xans-shoppingroom-display .shoppingroom-product .top p .arrow { left:50%; top:-11px; width:12px; height:11px; margin:0 0 0 -6px; background-image:url("http://img.echosting.cafe24.com/apps/shoppingroom/skin1/ico-arrow-top.png"); }
+.xans-shoppingroom-display .shoppingroom-product .bottom p { left:50%; top:-53px; margin:0 0 0 -73px; }
+.xans-shoppingroom-display .shoppingroom-product .bottom p .arrow { left:50%; bottom:-11px; width:12px; height:11px; margin:0 0 0 -6px; background-image:url("http://img.echosting.cafe24.com/apps/shoppingroom/skin1/ico-arrow-bottom.png"); }
+
+.xans-shoppingroom-display .shoppingroom-type { position:absolute; right:28px; bottom:72px; }
+.xans-shoppingroom-display .shoppingroom-type.type-center { left:50%; right:auto; bottom:30px; margin:0 0 0 -55px; }
+.xans-shoppingroom-display .shoppingroom-type button { overflow:hidden; display:inline-block; height:42px; margin:0 0 0 6px; background:url("http://img.echosting.cafe24.com/apps/shoppingroom/skin1/sfix-ico.png") 0 -38px no-repeat; }
+.xans-shoppingroom-display .shoppingroom-type button .title { overflow:hidden; position:absolute; left:100%; width:0; height:0; }
+.xans-shoppingroom-display .shoppingroom-type .list { width:45px; background-position:0 -38px; }
+.xans-shoppingroom-display .shoppingroom-type .list:hover,
+.xans-shoppingroom-display .shoppingroom-type .list.selected { background-position:-56px -38px; }
+.xans-shoppingroom-display .shoppingroom-type .gallery { width:46px; background-position:0 -90px; }
+.xans-shoppingroom-display .shoppingroom-type .gallery:hover,
+.xans-shoppingroom-display .shoppingroom-type .gallery.selected { background-position:-56px -90px; }
+.xans-shoppingroom-display .shoppingroom-type .list .tooltip { display:none; position:absolute; left:-17px; top:-38px; z-index:10; width:89px; height:35px; background:url("http://img.echosting.cafe24.com/apps/shoppingroom/skin1/txt-tooltip1.png") 0 0 no-repeat; }
+.xans-shoppingroom-display .shoppingroom-type .gallery .tooltip { display:none; position:absolute; left:52px; top:-38px; z-index:10; width:54px; height:35px; background:url("http://img.echosting.cafe24.com/apps/shoppingroom/skin1/txt-tooltip2.png") 0 0 no-repeat; }
+
+.xans-shoppingroom-display .shoppingroom-remote {}
+.xans-shoppingroom-display .shoppingroom-remote button { display:block; overflow:hidden; position:absolute; top:50%; z-index:11; width:53px; height:51px; margin:-26px 0 0; background:url("http://img.echosting.cafe24.com/apps/shoppingroom/skin1/sfix-ico.png") -112px -38px no-repeat; text-indent:100%; white-space:nowrap; }
+.xans-shoppingroom-display .shoppingroom-remote .prev { left:0; background-position:-112px -38px; }
+.xans-shoppingroom-display .shoppingroom-remote .prev:hover,
+.xans-shoppingroom-display .shoppingroom-remote .prev.selected { background-position:-175px -38px; }
+.xans-shoppingroom-display .shoppingroom-remote .prev.disabled { background-position:-112px -38px; cursor:default; }
+.xans-shoppingroom-display .shoppingroom-remote .next { right:0; background-position:-112px -99px; }
+.xans-shoppingroom-display .shoppingroom-remote .next:hover,
+.xans-shoppingroom-display .shoppingroom-remote .next.selected { background-position:-175px -99px; }
+.xans-shoppingroom-display .shoppingroom-remote .next.disabled { background-position:-112px -99px; cursor:default; }
+
+.xans-shoppingroom-display .shoppingroom-layer { display:none; position:absolute; z-index:12; padding:24px 0 0; border:1px solid #444; background-color:#fff; }
+.xans-shoppingroom-display .shoppingroom-layer .close { position:absolute; left:0; top:0; width:100%; height:24px; background-color:#444; text-align:right; }
+.xans-shoppingroom-display .shoppingroom-layer .btn-close { overflow:hidden; display:inline-block; width:10px; height:9px; padding:7px; background:url("http://img.echosting.cafe24.com/apps/shoppingroom/skin1/sfix-ico.png") -67px 7px no-repeat; }
+.xans-shoppingroom-display .shoppingroom-layer .btn-close span { overflow:hidden; position:absolute; left:100%; width:0; height:0; }
+.xans-shoppingroom-display .shoppingroom-layer .preview { display:block; border:1px solid #d3d3d3; }
+.xans-shoppingroom-display .shoppingroom-layer .title { display:block; color:#474848; }
+.xans-shoppingroom-display .shoppingroom-layer .price { display:block; color:#1b87d4; font-weight:bold; }
+.xans-shoppingroom-display .shoppingroom-layer .view { display:block; }
+
+.xans-shoppingroom-display .shoppingroom-detail { left:50%; top:50%; width:180px; margin:-180px 0 0 -105px; padding:39px 14px 15px; }
+.xans-shoppingroom-display .shoppingroom-detail .title,
+.xans-shoppingroom-display .shoppingroom-detail .price,
+.xans-shoppingroom-display .shoppingroom-detail .view { text-align:center; }
+.xans-shoppingroom-display .shoppingroom-detail .title { padding:10px 0 0; }
+.xans-shoppingroom-display .shoppingroom-detail .price { padding:2px 0 22px; }
+
+.xans-shoppingroom-display .shoppingroom-list { left:50%; top:50%; margin:-180px 0 0 -225px; }
+.xans-shoppingroom-display .shoppingroom-list ul { overflow-y:auto; width:448px; height:340px; }
+.xans-shoppingroom-display .shoppingroom-list li { overflow:hidden; margin:0 14px; padding:20px 0; border-top:1px solid #ccc; }
+.xans-shoppingroom-display .shoppingroom-list li:first-child { padding-top:15px; border-top:0; }
+.xans-shoppingroom-display .shoppingroom-list .preview { float:left; }
+.xans-shoppingroom-display .shoppingroom-list .title { padding:0 0 0 135px; font-size:14px; }
+.xans-shoppingroom-display .shoppingroom-list .price { padding:3px 0 5px 135px; }
+.xans-shoppingroom-display .shoppingroom-list .desc { padding:0 0 15px 135px; line-height:120%; }
+.xans-shoppingroom-display .shoppingroom-list .view { text-align:right; }
+
+.xans-shoppingroom-display .shoppingroom-gallery { left:50%; top:50%; margin:-180px 0 0 -215px; }
+.xans-shoppingroom-display .shoppingroom-gallery .gallery-list { position:relative; overflow-y:auto; width:424px; height:340px; }
+.xans-shoppingroom-display .shoppingroom-gallery ul { overflow:hidden; padding:5px 0 15px 4px; }
+.xans-shoppingroom-display .shoppingroom-gallery li { position:relative; float:left; width:120px; height:120px; margin:10px 0 0 10px;}
+.xans-shoppingroom-display .shoppingroom-gallery .selected { z-index:12; }
+.xans-shoppingroom-display .shoppingroom-gallery a:hover .preview,
+.xans-shoppingroom-display .shoppingroom-gallery .selected .preview { overflow:hidden; border:3px solid #1b87d4; }
+.xans-shoppingroom-display .shoppingroom-gallery a:hover .preview img,
+.xans-shoppingroom-display .shoppingroom-gallery .selected .preview img { margin:-2px; }
+.xans-shoppingroom-display .shoppingroom-gallery .title { display:none; position:absolute; left:120px; top:0; width:104px; padding:7px 8px 4px; background:#1b87d4; color:#fff; font-weight:normal; line-height:140%; }
+.xans-shoppingroom-display .shoppingroom-gallery .reverse .title { left:-120px; }
+.xans-shoppingroom-display .shoppingroom-gallery .selected .title { display:block; }
+
+
+/* add by shjung */
+.xans-shoppingroom-display .shoppingroom-cart { left:50%; top:50%; margin:-153px 0 0 -247px; }
+.xans-shoppingroom-display .shoppingroom-cart .inner { overflow-x:hidden; overflow-y:auto; width:271px; height:250px; padding:15px 14px 15px 208px; }
+.xans-shoppingroom-display .shoppingroom-cart .preview { float:left; margin:0 0 0 -194px; }
+.xans-shoppingroom-display .shoppingroom-cart .preview img { max-width:178px; }
+.xans-shoppingroom-display .shoppingroom-cart .title { padding:6px 0 0 0; }
+.xans-shoppingroom-display .shoppingroom-cart .price { margin:2px 0 0 0; }
+.xans-shoppingroom-display .shoppingroom-cart .view { margin:14px 0 0 1px; padding:0 0 18px; border-bottom:1px dashed #bcbcbc; }
+.xans-shoppingroom-display .shoppingroom-cart .option { margin:18px 0 0 0; }
+.xans-shoppingroom-display .shoppingroom-cart .option li { margin:8px 0 0 0; }
+.xans-shoppingroom-display .shoppingroom-cart .option label { color:#1c1c1c; }
+.xans-shoppingroom-display .shoppingroom-cart .option label span { display:block; margin:0 5px 0 0; padding:0 0 3px 6px; background:url("http://img.echosting.cafe24.com/apps/shoppingroom/skin1/ico-dot.gif") no-repeat 0 5px; }
+.xans-shoppingroom-display .shoppingroom-cart .option select { width:100%; margin:0; padding:0;  *width:93%; }
+.xans-shoppingroom-display .shoppingroom-cart .cart { margin:18px 0 0 0; }
+
+
+.xans-shoppingroom-display .shoppingroom-none-info { text-align:center; line-height:25px;font-weight:bold;font-size:12px; }

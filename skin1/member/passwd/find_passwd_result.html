@@ -1,0 +1,37 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--상단위치-->
+<div module="Product_menupackage">
+<!--@css(/css/module/product/menupackage.css)-->
+    <div class="pathlogin" module="product_headcategory">
+    <div class="titleArea">
+        <h2>Find Password</h2>
+    </div>
+        <ol>
+		<li class="first"><a href="/">De r&ecirc;ve</a></li>
+		<li>Login / Register</li>
+		<li title="현재 위치">Find Password</li>
+        </ol>
+    </div>
+</div>
+<!--상단위치끝-->
+<!--login bg start --><div class="bgbg">
+<div module="member_findpasswdresult">
+<!--@css(/css/module/member/find_passwd_result.css)-->
+	<div class="whitebg">
+	<div class="inner">
+		<p class="mainCopy">Found Password!</p>
+		<p class="memberInfo">
+			<span class="txt"><b>{$id}</b>님의 아이디를 찾았습니다.<br />회원님의 임시비밀번호를 <em>{$email}</em><br />으로 보내드렸습니다.
+			</span>
+		</p>
+		<p class="subCopy">아이디와 임시비밀번호로 로그인 후, 원하시는 비밀번호로 변경하세요.</p>	
+		<p class="btnArea">
+			<a href="/member/login.html"><img src="/test/images/btn_join_login_15.jpg" onmouseover="this.src='/test/images/btn_join_login_over_15.jpg'" onmouseout="this.src='/test/images/btn_join_login_15.jpg'" title="로그인하기" /></a>
+		</p>
+	</div>
+</div>
+
+</div>
+
+
+</div><!--login bg end -->

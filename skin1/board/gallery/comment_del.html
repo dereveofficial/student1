@@ -1,0 +1,39 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="board_CommentDeletePackage_8">
+<!--@css(/css/module/board/commentDeletePackage.css)-->
+    <div module="board_title_8">
+        <div class="pathBoard">
+            <h3>현재 위치</h3>
+            <ol>
+                <li class="first"><a href="/">홈</a></li>
+                <li><a href="/board/index.html">게시판</a></li>
+                <li title="현재 위치"><strong>{$board_name}</strong></li>
+            </ol>
+        </div>
+
+        <div class="titleAreaBoard">
+            <h2><span>{$board_name}</span></h2>
+            <p>{$board_info}</p>
+        </div>
+    </div>
+
+    <div module="Board_CommentDel_8">
+        <div class="login">
+            <h3><img src="http://img.echosting.cafe24.com/design/skin/mono/board/img_comment.gif" alt="비밀글" /></h3>
+            <fieldset>
+                <legend>비밀번호 입력</legend>
+                <p class="info">
+                    댓글 등록 시 입력한 <br />비밀번호를 입력하여 주십시요.
+                </p>
+                <p class="check">
+                    <img src="http://img.echosting.cafe24.com/design/skin/mono/board/txt_password.gif" alt="password" /> 
+                    {$form.comment_password}
+                </p>
+                <p class="btn">
+                    <a href="/board/gallery/list.html{$param_list}"><img src="http://img.echosting.cafe24.com/design/skin/mono/board/btn_secretList.gif" alt="목록" /></a>
+                    <input type="image" src="http://img.echosting.cafe24.com/design/skin/mono/board/btn_secretOk.gif" alt="확인" />
+                </p>
+            </fieldset>
+        </div>
+    </div>
+</div>

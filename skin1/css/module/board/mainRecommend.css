@@ -1,0 +1,13 @@
+.xans-board-mainrecommend { float:right; width:370px; padding:0 0 50px; }
+.xans-board-mainrecommend img { vertical-align:middle; margin:1px; }
+
+.xans-board-mainrecommend h3 { margin:0 0 15px; }
+.xans-board-mainrecommend h3 img { display:block; margin:0 0 0 -1px; }
+
+.xans-board-mainrecommend table { width:100%; }
+.xans-board-mainrecommend table th { display:none; }
+.xans-board-mainrecommend table td { height:20px; font-size:11px; line-height:20px; color:#8f8f91; }
+.xans-board-mainrecommend table td.subject {padding:0 0 0 7px; background:url(http://img.echosting.cafe24.com/design/skin/mono/board/bg_mainBoard.gif) 0 center no-repeat;}
+.xans-board-mainrecommend table td.subject a,
+.xans-board-mainrecommend table td.subject a:hover { color:#8f8f91; }
+.xans-board-mainrecommend table td.date { width:65px; text-align:right; }

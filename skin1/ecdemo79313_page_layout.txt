@@ -1,0 +1,1 @@
+page_name,module_id,location,is_display,bgcolor,border_color
