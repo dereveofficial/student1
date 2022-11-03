@@ -1,0 +1,160 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@js(/layout/basic/js/main.js)-->
+<!--@css(/layout/basic/css/main.css)-->
+<!--@import(/smart-banner/shop1/smart-banner-admin-RES00001.html)-->
+<section class="section main_product_list" data-ez-module="product-list/1" data-ez-layout="grid5 list_gallery" data-ez="contents-1fgd58p-1" style="margin-bottom: 119px;">
+	<ez-prop data-version="1.0.0">
+		<ez-var data-prop="layout" data-namespace="ez.module.product-list.layout" data-type="array">
+			<ez-item data-id="grid4" data-name="일반4단형(PC 4열/MOBILE 2열)"></ez-item>
+			<ez-item data-id="grid3" data-name="일반3단형(PC 3열/MOBILE 1열)"></ez-item>
+			<ez-item data-id="grid3 list_gallery" data-name="이미지강조3단형(PC 3열/MOBILE 1열)"></ez-item>
+			<ez-item data-id="grid4 list_gallery" data-name="이미지강조4단형(PC 4열/MOBILE 2열)"></ez-item>
+			<ez-item data-id="grid5 list_gallery" data-name="이미지강조5단형(PC 5열/MOBILE 2열)"></ez-item>
+		</ez-var>
+	</ez-prop>
+
+	<div class="main_title ez-align-left" data-ez-role="ez-align" data-ez-align="left"><!-- 베스트셀러 타이틀 수정하는곳 -->
+		<div class="main_title_txt01" data-ez-role="title">Best</div>
+		<div class="main_title_txt02" data-ez-role="subtitle"></div>
+	</div><!-- //main_title -->
+
+	<div data-ez-holder="product_listmain">
+		<div module="product_listmain_1" class="ec-base-product">
+			<!--
+				$count = 5
+				$basket_result = /product/add_basket.html
+				$basket_option = /product/basket_option.html
+				$moreview = yes
+				$cache = yes
+			-->
+			<ul class="prdList grid5 list_gallery" data-ez-role="layout">
+			<!--@import(/product/list_product.html)-->
+			</ul>
+		</div>
+		<div module="product_listmore_1" class="more">
+			<a href="#none" onclick="{$more_action}" class="btnMore">
+				MORE
+			</a>
+		</div>
+	</div>
+</section>
+<section class="section main_text ez-textsize-medium ez-align-center" data-ez-module="text/1" data-ez-role="style.background" data-ez-align="center" data-ez-textsize="medium" style="background-color: rgb(207, 206, 206); margin-bottom: 120px;" data-ez="contents-1qvioe9-1">
+	<div class="main_title_inner"><!-- 트랜드픽 타이틀 수정하는곳 -->
+		<div class="main_long_banner_txt">
+			<div class="main_title_txt01" data-ez-role="title" style="color: rgb(255, 255, 255);">Brand Instruction</div>
+			<div class="main_title_txt02" data-ez-role="desc" style="color: rgb(255, 255, 255);"><p>De rêve는 불어로 ‘꿈같은’, ‘이상적인’ 을 의미하며,</p><p>드레브가 전개하는 모든 제품들에는 ‘Women are always Elegant’라는 명확한 철학이 깃들어 있습니다.</p><p>모든 여성은 저마다의 우아함을 지니고 있고, 드레브는 클래식한 디자인과 페미닌한 소재, 디테일로 여성의 우아함을 그려냅니다.</p><p>유연한 미니멀리즘으로 입체적인 실루엣이 돋보이도록 디자인합니다.</p><p>궁극적으로는 클래식 무비의 주인공처럼 시대가 흘러도 변하지 않는 우아함을 추구합니다.</p></div>
+			<div class="main_text_link"><a data-ez-role="a" href="#" target="_blank">more</a></div>
+		</div>
+	</div><!-- //main_title_inner -->
+</section>
+<section class="section main_video ez-align-center" data-ez-module="video/1" data-ez-role="style.background" data-ez-align="center" data-ez="contents-1rdnqgl-1" data-ez-display="visible" style>
+	<div class="main_video_box">
+		<iframe data-ez-role="video" id="ytplayer" type="text/html" src="//www.youtube.com/embed/P5vTobU3DyM" frameborder="0" allowfullscreen data-ez-rawsrc="https://youtu.be/P5vTobU3DyM"></iframe>
+	</div>
+	<div class="main_video_title"><!-- 비디오 타이틀 수정하는곳 -->
+		<div class="main_title_txt01" data-ez-role="title">De rêve Fashion Show</div>
+		<div class="main_title_txt02" data-ez-role="desc">'De rêve’ means ideal/dreamlike in French and all of the De rêve’s products are inspired by the brand’s clear philosophy, 'Women are always Elegant'. De rêve strongly believes that all women have their own elegance. As such, De rêve pursues classical designs that can draw out the owner’s unique elegance by carefully incorporating feminine materials and flawless details. Also, De rêve’s products are developed to exhibit three-dimensional silhouette with concept of flexible minimalism.  Ultimately, De rêve pursues eternal elegance resembling that of the protagonist in a classical movie.</div>
+	</div><!-- //main_video_title -->
+</section>
+<section class="section main_image_text_gallery" data-ez-module="image-gallery/2" data-ez-role="style.background" data-ez-item-length="3" data-ez="contents-1hj5hlj-1" style="margin-bottom: 121px;">
+	<ez-prop data-version="1.0.0">
+		<ez-var data-prop="image" data-namespace="ez.module.image-gallery.image">
+			<ez-item data-id="size" data-pc="546 350" data-mobile="546 350"></ez-item>
+		</ez-var>
+		<ez-var data-prop="display" data-namespace="ez.module.image-gallery.display">
+			<ez-item data-id="item" data-max="10"></ez-item>
+			<ez-item data-id="column" data-default="3" data-min="1" data-max="5"></ez-item>
+		</ez-var>
+		<ez-var data-prop="layout" data-namespace="ez.module.image-gallery.layout">
+			<ez-item data-id="mobile" data-default="slide">
+				<ez-item data-id="options" data-type="array">
+					<ez-item data-id="slide" data-name="슬라이드"></ez-item>
+					<ez-item data-id="more" data-name="더보기"></ez-item>
+					<ez-item data-id="none" data-name="사용안함"></ez-item>
+				</ez-item>
+			</ez-item>
+		</ez-var>
+	</ez-prop>
+	<div class="main_title ez-align-left" data-ez-role="ez-align" data-ez-align="left"><!-- 커먼라이브 타이틀 수정하는곳 -->
+		<div class="main_title_txt01" data-ez-role="title">Dereve Live</div>
+		<div class="main_title_txt02" data-ez-role="desc"></div>
+	</div><!-- //main_title -->
+
+    <div class="main_3dan_banner ez-mobile-layout-slide" data-ez-role="ez-mobile-layout" data-ez-mobile-layout="slide"><!-- 메인 3단배너 수정하는곳 -->
+         <ul data-ez-role="image-list ez-column" class="ez-column-3" data-ez-column="3"><li data-ez-role="image-item ez-align">
+				<a data-ez-role="a" href="https://search.naver.com/search.naver?where=nexearch&amp;sm=tab_etc&amp;mra=bjky&amp;x_csa=%7B%22fromUi%22%3A%22kb%22%7D&amp;pkid=1&amp;os=4127800&amp;qvt=0&amp;query=%EB%B0%95%EC%9D%80%EB%B9%9B%20%ED%94%84%EB%A1%9C%ED%95%84" target="_blank">
+					<picture>
+						<source srcset="/web/upload/ezst/image/ez-image-contents-1hj5hlj-1-0zqu8bs-11.jpg?v=1664846201368" media="(max-width: 1024px)" data-ez-role="img-pc" data-ez-eb>
+						<img src="/web/upload/ezst/image/ez-image-contents-1hj5hlj-1-0zqu8bs-11.jpg?v=1664846201368" data-ez-role="img-mobile" loading="lazy" ez-prevent="img">
+					</picture>
+					<div class="main_3dan_banner_txt">
+						<div class="main_3dan_banner_txt01" data-ez-role="title" style="font-weight: bold; color: rgb(26, 26, 26);">De reve Designer</div>
+						<div class="main_banner_more" data-ez-role="desc" style="color: rgb(26, 26, 26);">드레브 디자이너 소개</div>
+					</div><!--//main_3dan_banner_txt-->
+				</a>
+            </li><li data-ez-role="image-item ez-align">
+				<a data-ez-role="a" href="#" target="_blank">
+					<picture>
+						<source srcset="/web/upload/ezst/image/ez-image-contents-1hj5hlj-1-0erlzi7-11.jpg?v=1664847265843" media="(max-width: 1024px)" data-ez-role="img-pc" data-ez-eb>
+						<img src="/web/upload/ezst/image/ez-image-contents-1hj5hlj-1-0erlzi7-11.jpg?v=1664847265843" data-ez-role="img-mobile" loading="lazy" ez-prevent="img">
+					</picture>
+					<div class="main_3dan_banner_txt">
+						<div class="main_3dan_banner_txt01" data-ez-role="title" style="font-weight: bold; color: rgb(26, 26, 26);">LookBook</div>
+						<div class="main_banner_more" data-ez-role="desc" style="color: rgb(26, 26, 26);">컬렉션 자세히보기</div>
+					</div><!--//main_3dan_banner_txt-->
+				</a>
+            </li><li data-ez-role="image-item ez-align">
+				<a data-ez-role="a" href="https://www.instagram.com/dereveofficial/" target="_blank">
+					<picture>
+						<source srcset="/web/upload/ezst/image/ez-image-contents-1hj5hlj-1-0mufuth-11.jpg?v=1664846147498" media="(max-width: 1024px)" data-ez-role="img-pc" data-ez-eb>
+						<img src="/web/upload/ezst/image/ez-image-contents-1hj5hlj-1-0mufuth-11.jpg?v=1664846147498" data-ez-role="img-mobile" loading="lazy" ez-prevent="img">
+					</picture>
+					<div class="main_3dan_banner_txt">
+						<div class="main_3dan_banner_txt01" data-ez-role="title" style="font-weight: bold; color: rgb(26, 26, 26);">SNS</div>
+						<div class="main_banner_more" data-ez-role="desc" style="color: rgb(26, 26, 26);">Instagram 바로가기</div>
+					</div><!--//main_3dan_banner_txt-->
+				</a>
+            </li></ul>
+		<div class="main_image_text_gallery_more"><a href="#none" class="main_image_text_gallery_more_btn">더보기</a></div>
+	</div><!-- //main_3dan_banner -->
+</section>
+<section class="section main_product_slide" data-ez-module="product-list-slide/1" data-ez="contents-0607rlu-1" style="margin-bottom: 120px;">
+	<div class="main_title ez-align-left" data-ez-role="ez-align" data-ez-align="left"><!-- 신상품 타이틀 수정하는곳 -->
+		<div class="main_title_txt01" data-ez-role="title">Latest</div>
+		<div class="main_title_txt02" data-ez-role="subtitle"></div>
+	</div><!-- //main_title -->
+
+	<div data-ez-holder="product_listmain">
+	<div module="product_listmain_2" class="ec-base-product swiper-container special_slide">
+		<ul class="swiper-wrapper prdList grid5_slide">
+			<!--@import(/product/list_product_slide.html)-->
+		</ul>
+		<div class="swiper-scrollbar"></div>
+	</div>
+	</div>
+	<div class="swiper-button-prev swiper-prev-special"></div>
+	<div class="swiper-button-next swiper-next-special"></div>
+</section>
+<section class="section main_map ez-align-center" data-ez-module="map/1" data-ez-align="center" data-ez="contents-1j4ds00-1" style="margin-bottom: 129px;">
+	<ez-prop data-version="1.0.0">
+		<ez-var data-prop="image" data-namespace="ez.module.map.image">
+			<ez-item data-id="size" data-pc="700 430" data-mobile="700 430"></ez-item>
+		</ez-var>
+	</ez-prop>
+	<div class="main_map_banner"><!-- 메인 지도 -->
+		<div class="main_map_box">
+			<div class="main_map_banner_txt01" data-ez-role="title" style="color: rgb(247, 247, 247); font-weight: bold;">Contact Us</div>
+			<picture>
+				<source srcset="/web/upload/ezst/image/ez-image-contents-1j4ds00-1-11.jpg?v=1662429102040?v=1662430065280" media="(max-width: 1024px)" data-ez-role="img-pc">
+				<img src="/web/upload/ezst/image/ez-image-contents-1j4ds00-1-11.jpg?v=1662429102040?v=1662430065281" data-ez-role="img-mobile" loading="lazy" ez-prevent="img">
+			</picture>
+			<div class="main_long_banner_link"><span class="displaynone" data-ez-role="address">서울특별시 동작구 보라매로5길 15</span><a data-ez-role="a" href="https://www.google.com/maps/dir/서울특별시%20동작구%20보라매로5길%2015" target="_blank">VIEW MORE<i aria-hidden="true" class="icon icoPlus">+</i></a></div>
+		</div>
+		<div class="main_map_banner_txt_box">
+			<div class="main_map_banner_txt" data-ez-role="desc" style="color: rgb(232, 232, 232);"><p>STAY TUNED, BE CONNECTED</p><p><br></p><p>For further assistance, please contact us via Email : <a href="mailto:derevekoreaofficial@gmail.com">derevekoreaofficial@gmail.com</a></p><p><br></p><p>We’re currently accepting new projects, so please get in touch.</p><p><br></p><p>Showroom Address509, Boneunsa-ro 420, Kangnam-gu, Seoul, South Korea</p><p><br></p><p>Telephone for Customer070-4798-9555</p><p>Monday - Friday / 14:00pm-18:00pm</p><p>Sat.Sun.Holiday Closed</p><p><br></p><p><br></p><p>E-mailBusiness : contact@dereve.co.kr</p><p>customer : cs@dereve.co.kr</p></div><!-- //main_map_banner_txt -->
+		</div><!-- //main_map_banner_txt_box -->
+	</div><!-- //main_map_banner -->
+</section>
+<!--@import(/smart-banner/shop1/smart-banner-admin-RES00002.html)-->
+<!--@define(cmc_log)-->
+<!--#ez="1/6"-->
