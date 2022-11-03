@@ -1,1 +1,0 @@
-module_no,image_id,image_url,has_target,target_url,alt,target,image_type,width,height,title
